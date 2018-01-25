@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投保信息</title>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <a class="btn-back" href="javascript:window.history.back();">返回</a>
+            <p class="title">投保信息</p>
+        </header>
+        <div class="content content-applicantInfo">
+            <p class="desc">
+                投保宠物健康医疗，需提供爱宠体检信息:
+            </p>
+            <ul class="section-body">
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            体重
+                        </p>
+                        <label class="mark">
+                            <input class="form-control  to-validate  pet-name" type="tel" placeholder="非必填" maxlength="11">
+                        </label>
+                        <span class="unit">kg</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            体温
+                        </p>
+                        <label class="mark">
+                            <input class="form-control  to-validate  pet-name" type="tel" placeholder="非必填" maxlength="11">
+                        </label>
+                        <span class="unit">℃</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-group-select">
+                        <p class="form-group-label">
+                            精神状态
+                        </p>
+                        <label>
+                            <select class="form-control form-control-select pet-sex">
+                                <option value="01">良好</option>
+                                <option value="02">差</option>
+                            </select>
+                        </label>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-group-select">
+                        <p class="form-group-label">
+                            食欲
+                        </p>
+                        <label>
+                                <select class="form-control form-control-select pet-sex">
+                                    <option value="01">良好</option>
+                                    <option value="02">差</option>
+                                </select>
+                            </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-group-select">
+                        <p class="form-group-label">
+                            是否绝育
+                        </p>
+                        <label>
+                                <select class="form-control form-control-select pet-sex">
+                                    <option value="01">是</option>
+                                    <option value="02">否</option>
+                                </select>
+                            </label>
+                    </div>
+                </li>
+            </ul>
+            <section class="img-wrapper" id="uploader-box">
+                <p class="img-title">
+                    <span class="icon"><i class="icon-color"></i></span>补充影像资料
+                </p>
+                <div class="img-container">
+                    <span class="upload-btn">+<input class="input-btn" accept="image/*" type="file"/></span>
+                </div>
+            </section>
+
+        </div>
+        <footer>
+            <a class="btn" href="javascript:void(0);"><span id="packageAmount"></span>元</a>
+            <a class="btn btn-red" href="javascript:void(0);" id="J-btn-submit">下一步<span class="dotting"></span></a>
+        </footer>
+
+        <div class="layer">
+            <img src>
+        </div>
+    </div>
+
+    <script src='../../js/lib/zepto.min.js'></script>
+    <script src='../../js/lib/LAB.min.js'></script>
+    <script>
+        (function () {
+            var loader = {
+                addCssLink: function (href) {
+                    var link = document.createElement('link');
+                    link.rel = "stylesheet";
+                    link.href = href;
+                    document.querySelector('head').appendChild(link);
+                }
+            };
+
+            loader.addCssLink('../../css/newGeneration/datetime.css');
+            loader.addCssLink('../../css/newGeneration/reset.css');
+            loader.addCssLink('pet.css');
+
+            $LAB
+                .script("../../js/lib/datetime-picker.js")
+                .script("../../js/util/validate.js")
+                .script("../../js/util/wAlert.js")
+                .script("../../js/util/lrz.bundle.js")
+                .script("../../js/util/toast.js")
+                .script("uploadPetImg.js")
+        })();
+    </script>
+</body>
+
+</html>

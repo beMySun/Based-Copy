@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品信息</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/step02.css">
+</head>
+<body>
+    <header>
+        <a class="icon-back" href="javascript:window.history.back();"></a>
+        <strong class="title">平安健身宝保险计划（一年保障）</strong>
+        <a href="tel:95511">咨询</a>
+    </header>
+    <section class="step-section">
+        <div class="step-container">
+            <div class="step-first active">
+                <div class="digit-desc">
+                    <p class="digit">1</p>
+                    <p class="desc">产品信息</p>
+                </div>
+            </div>
+            <div class="step active">
+                <div class="digit-desc">
+                    <p class="digit">2</p>
+                    <p class="desc">投保人信息</p>
+                </div>
+            </div>
+            <div class="step ">
+                <div class="digit-desc ">
+                    <p class="digit">3</p>
+                    <p class="desc">被保险人信息</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="digit-desc ">
+                    <p class="digit">4</p>
+                    <p class="desc">付款</p>
+                </div>
+            </div>
+        </div>
+    </section>
+	<section class="label-section">
+		<p class="label-title">投保人信息</p>
+		<div class="label-collections">
+			<div class="label-item">
+				<div class="label label-text">
+					<p>客户名称</p>
+				</div>
+				<div class="label input">
+					<input type="text" placeholder="请输入客户名称" id="groupName">
+				</div>
+				<div class="label right-icon">
+					<span class="icon icon-right"></span> 
+				</div>	
+			</div>
+			<div class="label-item">
+				<div class="label label-text">
+					<p>证件类型</p>
+				</div>
+				<div class="label input">
+					<select id="groupCertificateType" class="label-select">
+                        <option value="01">组织机构代码证</option>
+                        <option value="02">税务登记证</option>
+                        <option value="03">其他证件</option>
+					</select>
+				</div>
+				<div class="label right-icon">
+					<span class="icon icon-right"></span>
+				</div>	
+			</div>	
+
+			<div class="label-item">
+				<div class="label label-text">
+					<p>证件号码</p>
+				</div>
+				<div class="label input">
+					<input type="text" placeholder="请输入证件号码" id="groupCertificateNo">
+				</div>
+				<div class="label right-icon">
+					<span class="icon icon-right"></span>
+				</div>	
+			</div>			
+		</div>
+		<p class="label-title">联系人信息</p>
+		<div class="label-collections">
+			<div class="label-item">
+				<div class="label label-text">
+					<p>联系人姓名</p>
+				</div>
+				<div class="label input">
+					<input type="text" placeholder="请输入联系人姓名" id="linkManName">
+				</div>
+				<div class="label right-icon">
+					<span class="icon icon-right"></span>
+				</div>	
+			</div>
+			<div class="label-item">
+				<div class="label label-text">
+		            <p>手机号码</p>
+				</div>
+				<div class="label input">
+					<input type="text" placeholder="请输入手机号码" id="linkManMobileTelephone">
+				</div>
+				<div class="label right-icon">
+					<span class="icon icon-right"></span>
+				</div>	
+			</div>
+
+			<div class="label-item">
+				<div class="label label-text">
+					<p>发送电子保单</p>
+				</div>
+
+				<label for="email" class="email-label" id="email-label">
+					<input type="checkbox" id="email">
+				</label>
+
+			</div>	
+
+			<div class="label-item" id="show-email" style="display:none;">
+				<div class="label label-text">
+		            <p>邮箱</p>
+				</div>
+				<div class="label input">
+					<input type="text" placeholder="请输入邮箱" id="applicantEmail">
+				</div>
+				<div class="label right-icon">
+					<span class="icon icon-right"></span>
+				</div>	
+			</div>
+		</div>
+	</section>
+    <footer>
+    	<div id="error"  class="errorText" align="center"></div>
+        <a id="nextStep" class="btn-buy" href="javascript:;">下一步</a>
+        <p>©中国平安财产保险股份有限公司</p>
+    </footer>
+	<form name="savepolicyholder" id="savepolicyholder" action="" method="post">
+		<input type="hidden" name="account" value="CZBX18">
+		<input type="hidden" name="plansId" value="LXWY">
+		<input type="hidden" name="productCode" value="01888">
+		<input type="hidden" name="productName" value="白银计划">
+		<input type="hidden" name="insuranceBeginTime" value="2017-02-14">
+		<input type="hidden" name="insuranceEndTime" value="2017-05-14">
+		<input type="hidden" name="oldDigestTexts" value="f014d6aea3e73767710fe5aee26c5587a556d901">
+		<input type="hidden" name="startDate" value="">
+		<input type="hidden" name="endDate" value="">
+		<input type="hidden" name="insuranceMonth" value="">
+		<input type="hidden" name="insuranceDay" value="90">
+		<input type="hidden" name="topAcceptInsurAge" value="80">
+		<input type="hidden" name="leastAcceptInsurAge" value="18">
+		<input type="hidden" name="insuredLimitedSex" value="0">
+		<input type="hidden" name="insuranceCategory" value="A">
+		<input type="hidden" name="pageView" value="ahsLXWY">
+		<input type="hidden" name="amount" value="855.0"><!-- 标准保费 -->
+		<input type="hidden" name="discountAmount" value=""><!-- 优惠金额 -->
+
+		<input type="hidden" name="linkManName" value="">
+		<input type="hidden" name="linkManMobileTelephone" value="">
+		<input type="hidden" name="applicantCertType" value="">
+		<input type="hidden" name="applicantCertNo" value="">
+		<input type="hidden" name="applicantBirthday" value="">
+		<input type="hidden" name="applicantSex" value="">
+		<input type="hidden" name="applicantEmail" value="">
+		<!-- 团意产品 -->
+		<input type="hidden" name="groupName" value="">
+		<input type="hidden" name="industryCode" value="">
+		<input type="hidden" name="groupCertificateType" value="">
+		<input type="hidden" name="groupCertificateNo" value="">
+
+		<input type="hidden" name="secondMediaSource" value="ZP1Jp03tM/9xCa4cfWNJ5g==">
+		<input type="hidden" name="mediaSource" value="PACZ_CBPS">
+		<input type="hidden" name="orderNo" value="">
+		<input type="hidden" name="salesManCode" value="2050002472">
+		<input type="hidden" name="saleCode" value="">
+		<input type="hidden" name="applicantIdNo" value="j+Yt1KfZ5MoJwCwB+346VuB1dUcDKWceYh4uGKD4GpQ=">
+		<input type="hidden" name="remark" value="">
+
+		<input type="hidden" name="taocan" value="">
+		<input type="hidden" name="outgoingPurpose" value="美国">
+	</form>
+    <script src="js/libs/zepto.min.js"></script>
+    <script src="js/step02.js"></script>
+</body>
+</html>

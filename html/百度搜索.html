@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度搜索</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <input id="search" type='text' autocomplete="off" placeholder="输入关键字">
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+
+        var popTip = {
+
+            init: function () {
+                this.bindEvents();
+            },
+            bindEvents: function () {
+                $('#search').on('input focus', function (event) {
+                    var $this = $(this);
+                    if (event.type != 'focus') {
+                        //如果有改变，则状态定为必须重新选择，因为纯人手输入会导致value无法插入 
+                        $this.data('ok', false);
+                    }
+
+                    //获取input框位置并计算提示层应出现的位置 
+                    var top = 1 * $this.offset().top + 25;
+                    var left = 1 * $this.offset().left;
+                    var width = 1 * $this.width() + 12;
+
+                    var liketips = $('.liketips');
+
+                    //重建储存提示层并让其在适当位置显示 
+                    $(liketips).remove();
+
+                    liketips = document.createElement('div');
+                    $liketips = $(liketips);
+                    //class样式这里不提供，最主要是position:absolute 
+                    $liketips.addClass("liketips");
+                    $liketips.css({ top: top + 'px', left: left + 'px', width: width + 'px' });
+
+
+                    $liketips.appendTo($this.parent());
+                    $liketips.show();
+
+
+                    //定义ajax去获取json，type参数通过data-type设置，keyword则是目前已输入的值 
+                    //返回值以table形式展示 
+                    $.get('data.json', function (json) {
+                        $liketips.empty();
+                        console.log(json)
+                        var htmlcode = "<table cellspacing='0' cellpadding='2'><tbody>";
+                        for (var i = 0; i < json.result.length; i++) {
+                            //这里我需要用到value和title两项，所以用data-value传递多一个参数，在回车或鼠标点击后赋值到相应的地方，以此完美地替代select 
+                            htmlcode += '<tr data-value="' + json.result[i].key + '"><td>' + json.result[i].key + '</td></tr>';
+                        }
+                        htmlcode += "</tbody></table><span>请务必在此下拉框中选择</span>";
+                        //把loading动态图替换成内容 
+                        $liketips.html(htmlcode);
+                    }, "json");
+
+
+                })
+            }
+
+        }
+
+        popTip.init();
+
+    </script>
+</body>
+
+</html>

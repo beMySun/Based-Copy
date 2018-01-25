@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id = "a">
+		some text;
+	</div>
+
+	<a href="2.html">
+		
+		click me !
+	</a>
+</body>
+<script>
+	// var a = document.querySelector('#a');
+	// a.onclick = function(){
+	// 	this.style.background = '#ddd';
+	// }
+	var a = ['a','b','c','u'];
+	var b = ['d','e','f','uu'];
+	var new_arr = []; // a d b e c f
+
+	function merge(a,b) {
+		for(var i = 0 ; i < a.length; i++){
+			new_arr.push(a[i]);
+			new_arr.push(b[i]);
+		}
+
+	}
+
+	merge(a, b);
+	console.log(new_arr);
+</script>
+</html>

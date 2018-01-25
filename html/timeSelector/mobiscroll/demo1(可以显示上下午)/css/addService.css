@@ -1,0 +1,26 @@
+.container{
+    background: #fff;
+}
+.m-content{
+    padding: 20px;
+}
+.f-fw{
+    font-weight: bold;
+}
+.f-lh24{
+    line-height: 24px;
+}
+.u-content{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.u-con{
+    padding: 10px 0px;
+}
+.u-price{
+    padding-left:20px;
+}
+.u-phone{
+    white-space: nowrap;
+    color: #37cdcc;
+}

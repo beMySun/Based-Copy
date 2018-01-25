@@ -1,0 +1,333 @@
+{
+  "template": "ptsCommon|standardGroupInsurance",
+  "templateType": "newGeneration",
+  "color": "/icp_core_dmz/web/selfCardCss.css",
+  "PRODUCTCODE": "ICPP100095",
+  "accountInfo": {
+    "AGENT_DOT_CODE": null,
+    "BRANCH_DEPART_CODE": "202",
+    "SUB_AGENT_CONFER_NO": null,
+    "ACCOUNT": "b3b6800d98134293869b359d6bc65f14",
+    "IS_VALID": "1",
+    "BROKER_NAME": null,
+    "BUSINESS_SOURCE_CODE": "1",
+    "SALE_AGENT_NAME": "于雷",
+    "BROKER_CHARGE_PROPORTION": null,
+    "userId": null,
+    "CHANNEL_SOURCE_DETAIL_CODE": "K",
+    "DEPARTMENT_CODE": "20240",
+    "AGENT_DOT_NAME": null,
+    "BUSINESS_SOURCE_DETAIL_CODE": "D",
+    "DEPARTMENT_CHN_NAME": "上海分公司互联网+业务部",
+    "BROKER_CODE": null,
+    "mediaSource": "icp-core",
+    "productCode": "ICPP100095",
+    "ACCOUNT_NAME": "寿险E行销",
+    "AGENT_CONFER_NO": null,
+    "AGENT_CHINESE_NAME": null,
+    "BONUSES_CODE": "0",
+    "BRANCH_DEPART_CHN_NAME": "上海分公司互联网+业务部",
+    "SALE_AGENT_CODE": "2020003890",
+    "APPLICANT_BUSINESS_TYPE": null,
+    "CHANNEL_SOURCE_CODE": "J",
+    "CSS_ID": "1025",
+    "AGENT_CODE": null
+  },
+  "code": "00",
+  "ACCOUNT": "b3b6800d98134293869b359d6bc65f14",
+  "msg": "ok",
+  "planInfoList": [
+    {
+      "localProMap": {
+        "isDynamicAmount": "1",
+        "planName": "前程无忧计划一",
+        "paySystem": "0",
+        "resultMsg": "操作成功",
+        "maxUnderWriteDay": "90",
+        "maxUnderWriteMonth": "",
+        "planType": "1",
+        "pageTemplateId": "ptsOverseaCommon|ptsOverseaCommon",
+        "resultCode": "00",
+        "ID_ICP_MP_CX_PLAN_INFO": "8448db9caa794dd0ae0a711eb24dfed1",
+        "premiumDiscount": "",
+        "applicantMaxAge": "35",
+        "cssId": "1025",
+        "typeCode": "01",
+        "planSource": "N",
+        "insuredLimitedSex": "0",
+        "maxInsuranceMonth": "",
+        "smsCode": "",
+        "planCode": "MP03000152",
+        "applicantMiniAge": "12",
+        "payType": "1,2,3",
+        "isContainPackage": "1",
+        "applicantLimitedSex": "0",
+        "applicantStatement": "投保人声明",
+        "maxInsuranceDay": "365",
+        "planDesc": "平安，让留学更平安",
+        "id": "8448db9caa794dd0ae0a711eb24dfed1",
+        "productImageTopUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80372961423424818941.png&channelType=1",
+        "productImageIproblemUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565601267918507.png&channelType=1",
+        "productImageMiddleUrl": null,
+        "productImageNoticeUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565552983777659.png&channelType=1",
+        "productImageIntroduceUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565090978054341.png&channelType=1",
+        "applicantStatementUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565623895957502.png&channelType=1",
+        "productImageClaimUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565578929126450.png&channelType=1",
+        "amount": null
+      },
+      "packageList": [
+        {
+          "insuredMiniAge": "12",
+          "insuredMaxAge": "35",
+          "packageName": "套餐1",
+          "packageId": "be2042a391414546a75901e486e2aa0c",
+          "packageAmount": 0,
+          "packageCode": "PK00002486",
+          "liabilityList": [
+            {
+              "liabilityDesc": "222222222",
+              "liabilityCode": "CVYA005",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外身故",
+              "liabilityId": "a9617a21fb1349128b6418eb3c4bd678",
+              "insuranceTypeCode": "PL03Y0068",
+              "deductiblesType": "",
+              "insuranceCoverage": "100000"
+            },
+            {
+              "liabilityDesc": "旅行延误",
+              "liabilityCode": "CVYM004",
+              "insuranceDeductibles": "",
+              "liabilityName": "旅行延误",
+              "liabilityId": "f5c40b99176c46bd8f90ca9615ba03d8",
+              "insuranceTypeCode": "PL03Y0074",
+              "deductiblesType": "",
+              "insuranceCoverage": "1000"
+            },
+            {
+              "liabilityDesc": "",
+              "liabilityCode": "CVYM017",
+              "insuranceDeductibles": "",
+              "liabilityName": "行李延误",
+              "liabilityId": "4b3e4abcda264fed864ef9af7b229ced",
+              "insuranceTypeCode": "PL03Y0075",
+              "deductiblesType": "",
+              "insuranceCoverage": "1000"
+            },
+            {
+              "liabilityDesc": "",
+              "liabilityCode": "CVYM020",
+              "insuranceDeductibles": "",
+              "liabilityName": "学业中断",
+              "liabilityId": "4672a890d06c42f3a3253971d5286f2d",
+              "insuranceTypeCode": "PL03Y0082",
+              "deductiblesType": "",
+              "insuranceCoverage": "20000"
+            },
+            {
+              "liabilityDesc": "意外伤害身故、残疾",
+              "liabilityCode": "CVYA012",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外伤害身故、残疾",
+              "liabilityId": "b736503e00dd489db6618891d1ba24c1",
+              "insuranceTypeCode": "PL03Y0067",
+              "deductiblesType": "",
+              "insuranceCoverage": "100000"
+            },
+            {
+              "liabilityDesc": "",
+              "liabilityCode": "CVJE003",
+              "insuranceDeductibles": "",
+              "liabilityName": "医疗运送和送返",
+              "liabilityId": "c46b1ecaec3e431c8795f91395acf395",
+              "insuranceTypeCode": "PL03J0020",
+              "deductiblesType": "",
+              "insuranceCoverage": "400000"
+            },
+            {
+              "liabilityDesc": "身故遗体/骨灰送返",
+              "liabilityCode": "CVJE004",
+              "insuranceDeductibles": "",
+              "liabilityName": "身故遗体/骨灰送返",
+              "liabilityId": "c8bfe605d0a04a649bb7c12521e4d163",
+              "insuranceTypeCode": "PL03J0020",
+              "deductiblesType": "",
+              "insuranceCoverage": "100000"
+            },
+            {
+              "liabilityDesc": "亲属前往处理后事保险金",
+              "liabilityCode": "CVJE005",
+              "insuranceDeductibles": "",
+              "liabilityName": "亲属前往处理后事保险金",
+              "liabilityId": "d8e321998a414421bf9147becc2ed934",
+              "insuranceTypeCode": "PL03J0020",
+              "deductiblesType": "",
+              "insuranceCoverage": "10000"
+            },
+            {
+              "liabilityDesc": "",
+              "liabilityCode": "CVJE006",
+              "insuranceDeductibles": "",
+              "liabilityName": "亲属慰问探访",
+              "liabilityId": "b316b64e120c48b1b276865073468811",
+              "insuranceTypeCode": "PL03J0020",
+              "deductiblesType": "",
+              "insuranceCoverage": "10000"
+            },
+            {
+              "liabilityDesc": "",
+              "liabilityCode": "CVJE007",
+              "insuranceDeductibles": "",
+              "liabilityName": "紧急搜救",
+              "liabilityId": "36e2e151b7714289b0f62f6e06e854ce",
+              "insuranceTypeCode": "PL03J0020",
+              "deductiblesType": "",
+              "insuranceCoverage": "40000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "localProMap": {
+        "isDynamicAmount": "1",
+        "planName": "前程无忧计划二",
+        "paySystem": "0",
+        "resultMsg": "操作成功",
+        "maxUnderWriteDay": "90",
+        "maxUnderWriteMonth": "",
+        "planType": "1",
+        "pageTemplateId": "ptsOverseaCommon|ptsOverseaCommon",
+        "resultCode": "00",
+        "ID_ICP_MP_CX_PLAN_INFO": "c15d2dbd5b534ddb8186bf4a3f51e7d1",
+        "premiumDiscount": "",
+        "applicantMaxAge": "35",
+        "cssId": "1025",
+        "typeCode": "01",
+        "planSource": "N",
+        "insuredLimitedSex": "0",
+        "maxInsuranceMonth": "",
+        "smsCode": "",
+        "planCode": "MP03000155",
+        "applicantMiniAge": "12",
+        "payType": "1,2,3",
+        "isContainPackage": "1",
+        "applicantLimitedSex": "0",
+        "applicantStatement": "理解的负担",
+        "maxInsuranceDay": "365",
+        "planDesc": "平安，让留学更平安",
+        "id": "c15d2dbd5b534ddb8186bf4a3f51e7d1",
+        "productImageTopUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80372961423424818941.png&channelType=1",
+        "productImageIproblemUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565601267918507.png&channelType=1",
+        "productImageMiddleUrl": null,
+        "productImageNoticeUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565552983777659.png&channelType=1",
+        "productImageIntroduceUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565090978054341.png&channelType=1",
+        "applicantStatementUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565623895957502.png&channelType=1",
+        "productImageClaimUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565578929126450.png&channelType=1",
+        "amount": null
+      },
+      "packageList": [
+        {
+          "insuredMiniAge": "12",
+          "insuredMaxAge": "35",
+          "packageName": "套餐1",
+          "packageId": "c096ec1b0f1c4942902fe28c71fa581b",
+          "packageAmount": 0,
+          "packageCode": "PK00002486",
+          "liabilityList": [
+            {
+              "liabilityDesc": "意外和疾病住院和门急诊",
+              "liabilityCode": "CVJA019",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外和疾病住院和门急诊",
+              "liabilityId": "cb9b663c33924f048e296f9f06fccd66",
+              "insuranceTypeCode": "PL03J0018",
+              "deductiblesType": "",
+              "insuranceCoverage": "300000"
+            },
+            {
+              "liabilityDesc": "意外和疾病住院津贴",
+              "liabilityCode": "CVJD001",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外和疾病住院津贴",
+              "liabilityId": "48ecdc3cf50b4b7ab8832233c46e9786",
+              "insuranceTypeCode": "PL03J0023",
+              "deductiblesType": "",
+              "insuranceCoverage": "18000"
+            },
+            {
+              "liabilityDesc": "行李损失",
+              "liabilityCode": "CVYM014",
+              "insuranceDeductibles": "",
+              "liabilityName": "行李损失",
+              "liabilityId": "a51e624778de430ba5499695d1995a93",
+              "insuranceTypeCode": "PL03Y0069",
+              "deductiblesType": "",
+              "insuranceCoverage": "5000"
+            },
+            {
+              "liabilityDesc": "票证损失",
+              "liabilityCode": "CVYM015",
+              "insuranceDeductibles": "",
+              "liabilityName": "票证损失",
+              "liabilityId": "d80ddde65c164a1c989d322973661ba4",
+              "insuranceTypeCode": "PL03Y0072",
+              "deductiblesType": "",
+              "insuranceCoverage": "5000"
+            },
+            {
+              "liabilityDesc": "紧急搜救",
+              "liabilityCode": "CVJE007",
+              "insuranceDeductibles": "",
+              "liabilityName": "紧急搜救",
+              "liabilityId": "36e2e151b7714289b0f62f6e06e854ce",
+              "insuranceTypeCode": "PL03J0020",
+              "deductiblesType": "",
+              "insuranceCoverage": "40000"
+            },
+            {
+              "liabilityDesc": "意外身故",
+              "liabilityCode": "CVYA005",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外身故",
+              "liabilityId": "a9617a21fb1349128b6418eb3c4bd678",
+              "insuranceTypeCode": "PL03Y0068",
+              "deductiblesType": "",
+              "insuranceCoverage": "200000"
+            },
+            {
+              "liabilityDesc": "旅行延误",
+              "liabilityCode": "CVYM004",
+              "insuranceDeductibles": "",
+              "liabilityName": "旅行延误",
+              "liabilityId": "f5c40b99176c46bd8f90ca9615ba03d8",
+              "insuranceTypeCode": "PL03Y0074",
+              "deductiblesType": "",
+              "insuranceCoverage": "2000"
+            },
+            {
+              "liabilityDesc": "行李延误",
+              "liabilityCode": "CVYM017",
+              "insuranceDeductibles": "",
+              "liabilityName": "行李延误",
+              "liabilityId": "4b3e4abcda264fed864ef9af7b229ced",
+              "insuranceTypeCode": "PL03Y0075",
+              "deductiblesType": "",
+              "insuranceCoverage": "2000"
+            },
+            {
+              "liabilityDesc": "学业中断",
+              "liabilityCode": "CVYM020",
+              "insuranceDeductibles": "",
+              "liabilityName": "学业中断",
+              "liabilityId": "4672a890d06c42f3a3253971d5286f2d",
+              "insuranceTypeCode": "PL03Y0082",
+              "deductiblesType": "",
+              "insuranceCoverage": "60000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

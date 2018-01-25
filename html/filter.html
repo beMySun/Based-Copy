@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter-find-child</title>
+</head>
+<body>
+	<div class="name">  
+		<p>	
+			<span> 1</span>
+		</p>
+	</div>	
+
+
+	<div>
+		<p class="name">
+			2
+		</p>
+	</div>
+
+
+	<script src="jquery-3.1.1.js"></script>
+	<script>
+
+
+		// filter 是在当前指定的元素集合中查找符合条件的元素，是对自身集合元素的操作
+		$('div').filter('.name').css('background','#ccc');
+
+		// find 是在当前制定元素中查找符合条件的字元素，是对自己的子集的操作
+		$('div').find('.name').css('background','red');
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+ul{
+	list-style: none;
+	width: 94%;
+  margin: 6px auto;
+  line-height: 30px;
+  padding:0;
+}
+.box {
+    width: 94%;
+    margin: 3% auto;
+    font-size: 0.9rem;
+    /* font-family: '微软雅黑'; */
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+    background: #fff;
+    border-radius: 5px;
+}
+.box-content li{
+	line-height: 36px;
+}
+.left{
+	font-weight: bold;
+}
+.box-span-left {
+  display: inline-block;
+  width: 50%;
+}
+.border-top{
+	border-top: 1px solid #ddd;
+}
+.box-p,.box-p-url {
+  text-align: center;
+  width: 100%;
+  color: #aaa;
+}
+.box-button {
+  padding: 2% 9%;
+  font: 1.25rem '微软雅黑';
+  border: 1px solid #FF7614;
+  border-radius: 5px; 
+  background: #fff;
+  color:#FF7614;
+}
+.box-p-url a{
+	color: #0066CC;
+}
+/*.foot {
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
+  margin-bottom: 1%;
+}*/
+.foot{
+  text-align: center;
+  width: 100%;
+  font-size: 1.13rem;
+}

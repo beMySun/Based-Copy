@@ -1,0 +1,292 @@
+<!-- <!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<meta name="Android" content="Martin_Cui">
+		<title>产品详情</title>
+		 <link rel="stylesheet" type="text/css" href="orderPayResult.css">
+	</head> 
+	<body id="body">
+		#=没加载页面时 --> 
+		<div class="loading js-loading"></div>
+		<!--#=主要内容-->
+		<div class="contaitent" style="position:initial;overflow: auto;display:block">
+			<!--#=头部-->
+			<header>
+		        <a class="icon-back" href="javascript:window.history.back();" style="display: none;"></a>
+		        <a class="icon-close" href="javascript:void(0);" style="display:none;">关闭</a>
+		        <img src="./img/btn_arrow_black_back@2x.png" id="goBackImg" class="head-img go-back" alt="返回">
+		        <strong class="title aacc"></strong>
+		        <!-- <a class="icon-tel" href="tel:95511">咨询</a> -->
+		    </header>
+			<!--#=主要部分-->
+			<main class="content"  style="position:initial;">
+				<section class="show-picture">
+					<img src="" alt="" class="show-img img" id="bgImg">
+					<p class="show-des"><span id="show-des"></span></p>
+				</section>
+				<section class="" id="tab1">
+					<div class="tab-div">
+						<ul class="tab-ul">
+							<li><a href="javascript:void(0);" id="js" class="a a-active tj-product" data-id="01">产品介绍</a></li>
+							<li><a href="javascript:void(0);" id="tx" class="a tj-know" data-id="02">投保须知</a></li>
+							<li><a href="javascript:void(0);" id="lz" class="a tj-claim" data-id="03">理赔指南</a></li>
+							<li><a href="javascript:void(0);" class="a tj-question" id="cj" data-id="04">常见问题</a></li>
+						</ul>
+					</div>
+				</section>
+				<section class="" id="tab" style="display:none;">
+					<div class="tab-div">
+						<ul class="tab-ul">
+							<li><a href="javascript:void(0);" id="js-fixed" class="a a-active tj-product" data-id="01">产品介绍</a></li>
+							<li><a href="javascript:void(0);" id="tx-fixed" class="a tj-know" data-id="02">投保须知</a></li>
+							<li><a href="javascript:void(0);" id="lz-fixed" class="a tj-claim" data-id="03">理赔指南</a></li>
+							<li><a href="javascript:void(0);" class="a tj-question" id="cj-fixed" data-id="04">常见问题</a></li>
+						</ul>
+					</div>
+				</section>
+				<section class="product" id="product">
+					<div class="product-ts">
+						<div id="productDes">
+							<p class="name">产品特色:</p>
+							<img src="" alt="" class="img">
+						</div>
+						<div class="label-select" id="productBox">
+							<label> 选择产品 :</label>
+							<select id="productList">
+							</select>
+						</div>
+					</div>
+
+					<div class="product-tc">
+						<ul id="tcUl" class="tcUl">
+							
+						</ul>
+						<div class="tc-detail">
+							<p class="tc-detail-title">
+								<span>保障内容</span>
+								<span class="money">保障金额(元)</span>
+							</p>
+							<ul id="tcDetailText" class="tc-detail-text">
+							</ul>
+						</div>
+						<div class="more" id="more" data-code="">更多详情请查看《保险条款》</div>
+					</div>
+				</section>
+				<section id="insurance">
+					<p class="title-head"><span>投保须知</span></p>
+					<p class="tb-picture"><img src="" alt="" class="tb-img img"></p>
+				</section>
+				<section id="claim">
+					<p class="title-head"><span>理赔指南</span></p>
+					<p class="lp-picture"><img src="" alt="" class="lp-img img"></p>
+				</section>
+				<section id="quesion">
+					<p class="title-head"><span>常见问题</span></p>
+					<p class="cw-picture"><img src="" alt="" class="cw-img img"></p>
+				</section>
+			</main>
+		</div>
+		<footer class="footer">
+			<ul class="pay-ul">
+        		<li class="amount" id="amount">
+        			0元
+        		</li>
+        		<li class="border-left buy_tytj" id="pay">
+        			立即投保
+        		</li>
+        	</ul>
+		</footer>
+		<div id="mask" style="display:none;z-index: 90;">
+			<div class="mask"></div>
+			<div class="info">
+				<ul class="box-content1">
+					<li class="box-li" id="selectcityBox">
+
+						<p class="info-left">
+							目&nbsp;的&nbsp;地
+						</p>		                
+						<p class="info-right1">
+
+							<span class="span destination">
+		                        <input type="text" placeholder="请选择目的地" id="selectCityDIV" readonly="readonly" class="list-ct" style="width: 100%;">
+								<img src="./img/icon_right.png" alt="" class="start-img">
+							</span>		                	
+
+						</p>		
+					</li>
+					<li class="box-li" id="visaBox">
+						<p class="info-left">
+							是否用于办理签证
+						</p>
+						<p class="info-right1">
+		                    <span class="applyForVisa">
+		                        <input type="radio" name="applyForVisa" value="Y" id="handleVisa">
+		                        <span>是</span>
+		                    </span>
+		                    <span class="applyForVisa">
+		                        <input type="radio" name="applyForVisa" value="N" id="cancelVisa" checked>
+		                         <span>否</span>
+		                      
+		                    </span>
+						</p>
+					</li>
+					<li class="box-li1" id="plans">
+						<p class="info-left">
+							保障方案
+						</p>
+						<p class="info-right" id="choosePlan">
+						</p>
+					</li>
+					<li class="box-li">
+						<p class="info-left">
+							保险起期
+						</p>
+						<p class="info-right1">
+							<span class="span">
+								<span class="ins-date ins-start-date"></span>
+	                    		<input class="datePicker" type="text" id="J-datePicker-start">
+								<span class="sd">00时</span>
+								<img src="./img/icon_right.png" alt="" class="start-img">
+							</span>
+						</p>
+					</li>
+					<li class="box-li">
+						<p class="info-left">
+							保险止期
+						</p>
+						<p class="info-right1">
+							<span class="span">
+								<span class="ins-date ins-end-date"></span>
+	                    		<input class="datePicker" type="text" id="J-datePicker-end">
+								<span class="sd">24时</span>
+								<img src="./img/icon_right.png" alt="" class="start-img">
+							</span>							
+						</p>
+					</li>
+					<li class="box-li">
+						<p class="info-left">
+							保险期限
+						</p>
+						<p class="info-right1">
+							<span class="ds" id="insuranceDay"></span>
+						</p>
+					</li>
+<!-- 					<li class="box-li" style="border-bottom: none;">
+						<p class="info-left">
+							投保份数
+						</p>
+						<p class="info-right1">
+							<span class="span">
+								<img src="img/btn_-_black@2x.png" alt="" class="num" id="minus">
+								<input type="text" class="input-num" value="1" id="inputNum">
+								<img src="img/btn_+_black@2x.png" alt="" class="num" id="plus">
+							</span>
+						</p>
+					</li> -->
+				</ul>				
+			</div>
+		</div>
+		<div id="hideInsuranceClause" style="display:none">
+		    <div class="contaitenttitle ruleHeader">
+		    	<a class="icon-back icon-goback"></a>
+		    	<img src="./img/btn_arrow_black_back@2x.png" id="tkBackImg" class="head-img icon-goback">
+		    	<span id="title">保险条款</span></div>
+		    <div id="hideContent" class="hideContent">
+				
+		    </div>
+		</div>
+<div class="list-city" id="city" style="display: none;height: 100%;">
+    <span class="move-box"></span>
+    <ul class="list-country" style="display:block ">
+        <li class="search">
+            <div class="search-box">
+                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAIAAABL1vtsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM3OEMyMkE3M0I3MDExRTY5MEIzRjEwQ0UwQTVBMkUzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM3OEMyMkE4M0I3MDExRTY5MEIzRjEwQ0UwQTVBMkUzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Mzc4QzIyQTUzQjcwMTFFNjkwQjNGMTBDRTBBNUEyRTMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Mzc4QzIyQTYzQjcwMTFFNjkwQjNGMTBDRTBBNUEyRTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5LiuHyAAABWklEQVR42uRUTauCUBBNffmBlbVIjLSgaKNb/0H/34VLU3EhSQUlURpp+g5ciDJSqM2DN4vLMMycOTNzlCrLsvWd0a2v7W9A/LyGbrfber3ebDZpmjIM0+/3VVXt9XrvIKjKOlFm2/bxeHxKoqjFYjGdTptZoD+p53l+MplIkpRlWRRFYOQ4DsdxiqI0QIRhSOpN0xQEgQSHw+FqtQqCwHVd+Bitbp3ohnc2m93ric3nc0QwYxzHDRdJkgRjDwaDahJNY6lwzudz81E/EOsThCiKePf7fSWpKIrD4QCn0+k0QIxGI7ye551Op8c4znG5XFiWxY0adIFulmWhYbvd1jSt2+3meY6jEl5YE45qGAacOmldr1dIg9B+lNY9DUwrKNTr/sAFnXe7HciTW6Bsu936vk8SxuOxrut1EO8MOyIowF0ul3Wf2TuDwCBNKFiW5bpd/Oe/1q8AAwAOS60s1q+dswAAAABJRU5ErkJggg==" class="search_icon"></span>
+                <input type="search" placeholder="输入关键字" class="search_input">
+            </div>
+        </li>
+    </ul>
+    <div id="wrapper">
+        <div>
+        </div>
+        <p id="title-city" class="com_list_table_title">
+            <span>热门</span></p>
+        <p class="com_list_table pseudo_province">
+            <span style="margin-left: 5%;" class="chinese">申根地区</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">Schengen Area</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">日本</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">Japan</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">韩国</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">Korea Rep</span><img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">泰国</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">Thailand</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">美国</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">United States</span><img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">英国</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">United Kingdom</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">法国</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">France</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">香港</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">Hong Kong</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">澳大利亚</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">Australia</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">台湾</span>
+            <span style="margin-left:5%;color:#b1b1b1 " class="english">Taiwan prov</span>
+            <img class="img active-img"></p>
+        <div id="id_province">
+        </div>
+    </div>
+    <div id="search" style="padding: 43px 0;width: 100%;height: 100%; overflow-y: scroll;background-color: rgb(255, 255, 255);display:none">
+        <div id="search-list" style="overflow-y: scroll;"></div>
+    </div>
+    <ul class="sure">
+        <li id="no"><span>取消</span></li>
+        <li id="yes">确定</li>
+    </ul>
+</div>		
+	<!-- </body> -->
+	<script type="text/javascript">
+		(function() {
+		    //文件加载器
+		    $("#common-css").remove();
+		    var urlParams = JSON.parse(window.sessionStorage.getItem('urlParameters'));
+		    var loader = {
+		        addCssLink: function(href) {
+		            var link = document.createElement('link');
+		            link.rel = "stylesheet";
+		            link.href = href;
+		            document.querySelector('head').appendChild(link);
+		        }
+		    };
+		    $(".icon-close").on('click',function(){
+		    	window.location.href = 'newGeneration/productList.html?agentNo='+urlParams.agentNo+'&ciph='+urlParams.ciph+'&flag='+urlParams.flag;
+		    });
+		    $(".icon-goback").on('click touchend',function(e){
+		    	window.history.back(-1);
+		    	e.preventDefault();
+		    })
+		    //加载css template/newGeneration/template-step01/common
+		    loader.addCssLink('css/newGeneration/newdatetime.css');
+		    loader.addCssLink('css/newGeneration/newCommon.css');
+		    loader.addCssLink('template/newGeneration/template-step01/ptsOverseaCommon/productDetail.css');
+
+		    //按次序加载js
+		    $LAB.script("js/lib/datetime-picker.js")
+		    .script("js/util/check.js")
+		    .script("js/util/errCreat.js")
+		    .script("js/checkEXX.js")
+		    .script("template/newGeneration/template-step01/ptsOverseaCommon/selectCityOverseas.js")
+		    .script("js/lib/wechatShare.js")
+		    .script("template/newGeneration/template-step01/ptsOverseaCommon/productDetail.js");
+		    
+		})();
+	</script>
+<!-- </html>

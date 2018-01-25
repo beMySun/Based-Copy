@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>投保人信息</title>
+    <link rel="stylesheet" href="css/wAlert.css">
+</head>
+
+<body>
+    <div class="loading"></div>
+    <script src="js/lib/zepto.min.js"></script>
+    <script src="js/lib/LAB.min.js"></script>
+    <script src="js/tool.js"></script>
+    <script src="js/util/wAlert.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var urlParameters = window.tool.getSessionStorage('urlParameters');
+
+        if (!urlParameters) {
+            $('.loading').hide();
+            window.wAlert('请配置正确的参数');
+            return false;
+        }
+
+        if (urlParameters.flag == 'EXX') { //E行销
+            window.tool.getScript('js/newApplicant.js');
+        } else {
+            var productData = tool.getSessionStorage('productData');
+            var themeStyle = window.sessionStorage.getItem('themeStyle');
+
+            if (!productData) {
+                $('.loading').hide();
+                window.wAlert('请配置产品信息');
+                return false;
+            }
+            if (themeStyle) {
+                window.tool.setStyle(themeStyle);
+            }
+
+            tool.getTemplate(productData, 'step02', 2);
+        }
+    });
+    </script>
+    <script src="js/tianYanStatistics/pay_tytj.js"></script>
+</body>
+
+</html>

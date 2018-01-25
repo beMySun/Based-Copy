@@ -1,0 +1,126 @@
+<div class="page" id="mainInfo">
+    <header>
+        <a class="icon-back" id="insurant-back" href="javascript:window.history.back();"></a>
+        <strong class="title">平安健身宝保险计划（一年保障）</strong>
+        <a class="icon-tel" href="tel:95511">咨询</a>
+    </header>
+    <div class="content">
+        <section class="step-section">
+            <div class="step-container">
+                <div class="step-first active">
+                    <div class="digit-desc">
+                        <p class="digit">1</p>
+                        <p class="desc">产品信息</p>
+                    </div>
+                </div>
+                <div class="step active">
+                    <div class="digit-desc">
+                        <p class="digit">2</p>
+                        <p class="desc">投保人信息</p>
+                    </div>
+                </div>
+                <div class="step active">
+                    <div class="digit-desc ">
+                        <p class="digit">3</p>
+                        <p class="desc">被保险人信息</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="digit-desc ">
+                        <p class="digit">4</p>
+                        <p class="desc">付款</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="object-section">
+            <p class="label-title">标的信息</p>
+            <div class="label-item clear">
+                <div class="label label-text">
+                    <p>手机品牌</p>
+                </div>
+                <div class="label input">
+                    <input type="text" placeholder="请输入手机品牌" id="licenseNo">
+                </div>
+            </div>
+            <div class="label-item clear">
+                <div class="label label-text">
+                    <p>手机型号</p>
+                </div>
+                <div class="label input">
+                    <input type="text" placeholder="请输入手机型号" id="skeletonNo">
+                </div>
+            </div>
+            <div class="label-item clear">
+                <div class="label label-text">
+                    <p>IMEI码</p>
+                </div>
+                <div class="label input">
+                    <input type="text" placeholder="请输入手机的IMEI码" id="magineNo">
+                </div>
+            </div>
+        </section>
+        <section class="label-section">
+            <p class="show-instuction">
+                <input type="checkbox" id="isAgree">
+                <span>我已阅读并同意</span>
+                <span id="clause" class="showClause">《适用条款》</span>
+                <span>及</span>
+                <span id="statement" class="showState">《投保人声明》</span>
+            </p>
+            <p class="show-fee">
+                <span>应付保费</span>
+                <span id="show-amount" class="standardAmount discount">100</span>
+                <span class="show-unit discount">元</span>
+            </p>
+        </section>
+    </div>
+    <footer>
+        <div id="errorMain" class="errorText" align="center"></div>
+        <a id="gotopay" class="btn-buy btn-buy-disabled" href="javascript:;">支付</a>
+        <p>©中国平安财产保险股份有限公司</p>
+    </footer>
+</div>
+<!-- 适用条款 -->
+<div class="contaitent" id="sytkInfo" style="display:none;">
+    <header>
+        <a class="icon-back" href="javascript:window.history.back();"></a>
+        <strong class="title" id="contaitentTitle">平安健身宝保险计划（一年保障）</strong>
+        <a class="icon-tel" href="tel:95511">咨询</a>
+    </header>
+    <div id="cui_tbsm_container"></div>
+</div>
+<script type="text/javascript">
+(function() {
+    //文件加载器
+    var loader = {
+        //添加样式文件
+        addCssLink: function(href) {
+            var link = document.createElement('link');
+            link.rel = "stylesheet";
+            link.href = href;
+            document.querySelector('head').appendChild(link);
+        },
+        //添加脚本文件
+        addJsLink: function(href) {
+            var script = document.createElement('script');
+            script.src = href;
+            document.querySelector('body').appendChild(script);
+        }
+    };
+
+    //异步加载样式和脚本
+    loader.addCssLink('css/common.css');
+    loader.addCssLink('template/property/template-step03/commonBreakScreen/index.css');
+    loader.addCssLink('css/datetime-picker.css');
+
+    $LAB
+        .script("js/lib/datetime-picker.js")
+        .script('js/util/check.js')
+        .script("js/util/removeTel.js")
+        .script('template/property/template-step03/commonBreakScreen/index.js');
+
+})();
+</script>
+<form action="" method="" id="sendForm">
+</form>

@@ -1,0 +1,118 @@
+<div class="page">
+    <header>
+        <a class="btn-back" href="javascript:window.history.back();">返回</a>
+        <p class="title">投保信息</p>
+    </header>
+    <div class="content content-applicantInfo">
+        <section id="applicantInfo">
+            <h2 class="section-title">投保人信息</h2>
+            <ul class="section-body" data-order="投保人">
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-man"></i></span>客户名称
+                        </p>
+                        <label>
+                            <input type="text" class="form-control to-validate to-validate-null  to-validate-company" placeholder="必填">
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-group-select">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-man"></i></span>行业分类
+                        </p>
+                        <label id="industry">
+                            <input type="text" id="industryText" class="form-control form-control-select to-validate to-validate-null  to-validate-category" placeholder="请选择行业分类" readonly="true">
+                            <input type="hidden" id="industryCode" readonly="true">
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-group-select">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-card"></i></span>证件类型
+                        </p>
+                        <label>
+                            <select class="form-control form-control-select group-certificate-type">
+                                <option value="01">组织机构代码证</option>
+                                <option value="02">税务登记证</option>
+                                <option value="03">异常证件</option>
+                            </select>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-card-num"></i></span>证件号码
+                        </p>
+                        <label>
+                            <input type="text" class="form-control to-validate  to-validate-certificate" placeholder="必填">
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-man"></i></span>联系人
+                        </p>
+                        <label>
+                            <input type="text" class="form-control to-validate to-validate-null  to-validate-contact" placeholder="必填">
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-phone "></i></span>手机号码
+                        </p>
+                        <label>
+                            <input class="form-control  to-validate  to-validate-phone" type="tel" placeholder="必填" maxlength="11">
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-email"></i></span>邮箱
+                        </p>
+                        <label>
+                            <input type="email" class="form-control to-validate to-validate-email" placeholder="必填,用于接收电子保单">
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <div class="readme">
+        </div>
+        <footer>
+            <a class="btn" href="javascript:void(0);"><span id="packageAmount"></span>元</a>
+            <a class="btn btn-red pay_tytj" href="javascript:void(0);" id="pay">支付<span class="dotting"></span></a>
+        </footer>
+    </div>
+</div>
+<div id="selectIndustry"></div>
+<script type="text/javascript">
+(function() {
+
+    var loader = {
+        addCssLink: function(href) {
+            var link = document.createElement('link');
+            link.rel = "stylesheet";
+            link.href = href;
+            document.querySelector('head').appendChild(link);
+        }
+    };
+
+    loader.addCssLink('css/newGeneration/reset.css');
+    loader.addCssLink('template/newGeneration/template-step02/companyGroupInsurance/applicantInfo.css');
+    loader.addCssLink('css/newGeneration/datetime.css');
+
+    $LAB
+        .script("js/lib/datetime-picker.js")
+        .script("js/util/validate.js")
+        .script("template/newGeneration/template-step02/companyGroupInsurance/applicantInfo.js")
+        .script("template/newGeneration/template-step02/companyGroupInsurance/selectIndustry.js");
+})();
+</script>

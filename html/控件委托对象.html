@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script>
+	var Widget = {
+		init: function(width,height){
+			this.width = width;
+			this.height = height || 50;
+			this.$elem = null;
+		},
+		insert: function($where){
+			if (this.elem) {
+				this.elem.css({
+					width: this.width + "px",
+					height: this.height + "px"
+				}).appendTo($where);
+			}
+		}
+	};
+
+	var Button = Object.create(Widget);
+
+	Button.setUp  = function(width,height,label){
+		this.init(width,height);
+		this.label = label || 'Default';
+		this.$elem = $("button").text(this.label);
+	};
+
+	Button.build = function($where) {
+		this.insert($where);
+		this.$elem.click( this.onClick.bind(this));
+	};
+
+	Button.onClick = function(e) {
+		console.log('Button' + this.label + 'clicked !');
+	};
+
+	window.onload = function(){
+		var $body  = $(document.body);
+
+		var btn1 = Object.create(Button);
+		btn1.setUp(123,30,'hello');
+
+		var btn2 = Object.create(Button);
+		btn2.setUp(123,30,'world');
+
+		btn1.build($body);
+		btn2.build($body);
+	}
+
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>share</title>
+</head>
+<body>
+	
+</body>
+<script src="MyShare.js"></script>
+<script>
+	iShare({
+	 shareTitle:'分享标题', //不设置或设置为空时，页面有title，则调取title
+	 shareDesc:'分享详情', //不设置或设置为空时，页面有Description，则调取Description
+	 shareImgUrl:'https://xxx/share.jpg', //分享图片尺寸200*200，且填写绝对路径
+	 shareLink:'', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URL
+	}, {
+		url: 'http://www.example.com/wechat/config',  // 包含接口地址和参数信息
+		param_1 : 'xxx'
+	})
+</script>
+</html>

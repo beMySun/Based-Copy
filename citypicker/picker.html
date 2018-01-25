@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+ <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link rel="stylesheet" href="weui2.css"/>
+      <script src="zepto.min.js"></script>
+      <script src="picker.js"></script>
+      <script src="picker-city.js"></script>
+      <script>
+  $(function(){
+    
+ $("#ss").cityPicker({
+        title: "选择省市",
+        showDistrict: false
+      });   
+      
+      
+      
+      
+
+	  
+	  });      
+         
+      </script>
+</head>
+
+<body ontouchstart style="background-color: #f8f8f8;">
+<div class="page-hd">
+        <h1 class="page-hd-title">
+            picker为基础的弹出框
+        </h1>
+        <p class="page-hd-desc">使用picker,需加载picker.js,使用省市县还需要加载picker-city.js</p>
+    </div>
+<form id="form">
+<div class="weui_cells weui_cells_form ">   
+            
+
+            <div class="weui_cell">
+                  <div class="weui_cell_hd"><label for="" class="weui_label">省市:</label></div>
+                 <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" value="" id='ss'/>
+                    
+                </div>
+              
+            </div>  
+ 
+ </div>
+
+ </form>
+ 
+
+</body>
+</html>

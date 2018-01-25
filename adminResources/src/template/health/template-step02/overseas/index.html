@@ -1,0 +1,233 @@
+<header>
+    <a class="icon-back" href="javascript:window.history.back();"></a>
+    <strong class="title">平安健身宝保险计划（一年保障）</strong>
+    <a class="icon-tel" href="tel:95511">咨询</a>
+</header>
+<div class="content">
+    <section class="step-section">
+        <div class="step-container">
+            <div class="step-first active">
+                <div class="digit-desc">
+                    <p class="digit">1</p>
+                    <p class="desc">产品信息</p>
+                </div>
+            </div>
+            <div class="step active">
+                <div class="digit-desc">
+                    <p class="digit">2</p>
+                    <p class="desc">投保人信息</p>
+                </div>
+            </div>
+            <div class="step ">
+                <div class="digit-desc ">
+                    <p class="digit">3</p>
+                    <p class="desc">被保险人信息</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="digit-desc ">
+                    <p class="digit">4</p>
+                    <p class="desc">付款</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="label-section">
+        <!-- 投保人信息集合 -->
+        <p class="label-title">投保人信息</p>
+        <div class="label-collections" id="groupDatas">
+            <div class="label-item">
+                <div class="label label-text">
+                    <p>客户名称</p>
+                </div>
+                <div class="label input">
+                    <input type="text" placeholder="请输入客户名称" id="groupName">
+                </div>
+                <div class="label right-icon">
+                    <span class="icon icon-right"></span>
+                </div>
+            </div>
+            <div class="label-item">
+                <div class="label label-text">
+                    <p>证件类型</p>
+                </div>
+                <div class="label input">
+                    <select id="groupCertificateType" class="label-select">
+                        <option value="01">组织机构代码证</option>
+                        <option value="02">税务登记证</option>
+                        <option value="03">其他证件</option>
+                    </select>
+                </div>
+                <div class="label right-icon">
+                    <span class="icon icon-right"></span>
+                </div>
+            </div>
+            <div class="label-item last ">
+                <div class="label label-text">
+                    <p>证件号码</p>
+                </div>
+                <div class="label input">
+                    <input type="text" placeholder="请输入证件号码" id="groupCertificateNo">
+                </div>
+                <div class="label right-icon">
+                    <span class="icon icon-right"></span>
+                </div>
+            </div>
+            <p class="label-title">联系人信息</p>
+        </div>
+        <!-- 联系人信息集合 -->
+        <div class="label-collections" id="applicantDatas">
+            <div class="label-item">
+                <div class="label label-text">
+                    <p>联系人姓名</p>
+                </div>
+                <div class="label input">
+                    <input type="text" placeholder="请输入联系人姓名" id="linkManName">
+                </div>
+                <div class="label right-icon">
+                    <span class="icon icon-right"></span>
+                </div>
+            </div>
+            <div class="label-item">
+                <div class="label label-text">
+                    <p>姓名拼音</p>
+                </div>
+                <div class="label input">
+                    <input type="text" placeholder="请输入联系人姓名" id="linkManNamePY">
+                </div>
+                <div class="label right-icon">
+                    <span class="icon icon-right"></span>
+                </div>
+            </div>
+            <div id="link_man_datas" style="display: none;">
+                <div class="label-item">
+                    <div class="label label-text">
+                        <p>证件类型</p>
+                    </div>
+                    <div class="label input">
+                        <select id="applicantCertType" class="label-select">
+                            <option value="01">身份证</option>
+                            <option value="02">护照</option>
+                            <option value="03">军官证</option>
+                            <option value="05">驾驶证</option>
+                            <option value="06">港澳回乡证或台胞证</option>
+                            <option value="99">其他</option>
+                        </select>
+                    </div>
+                    <div class="label right-icon">
+                        <span class="icon icon-right"></span>
+                    </div>
+                </div>
+                <div class="label-item">
+                    <div class="label label-text">
+                        <p>证件号码</p>
+                    </div>
+                    <div class="label input">
+                        <input type="text" placeholder="证件号码中X用*号代替" id="for_paperNo1" maxlength="18">
+                        <input type="text" id="for_paperNo_other1" maxlength="18" class="left" value="" placeholder="请输入证件号码" disabled="disabled" style="display:none;">
+                    </div>
+                    <div class="label right-icon">
+                        <span class="icon icon-right"></span>
+                    </div>
+                </div>
+                <div class="label-item" style="display: none" id="birth_box">
+                    <div class="date-row date-row-icon date-to-select">
+                        <label class="start-date-label">出生日期</label>
+                        <p>
+                            <span class="ins-date ins_start_date"></span>
+                            <input class="datePicker" type="text" id="datePicker">
+                        </p>
+                    </div>
+                </div>
+                <div class="label-item" style="display: none" id="sex_box">
+                    <div class="label label-text">
+                        <p>性别</p>
+                    </div>
+                    <p class="label sexbox">
+                        <label for="boy" class="label sexBox">
+                            <span class="sexText">男</span>
+                            <input type="radio" name="sex" value="M" id="boy">
+                        </label>
+                        <label for="girl" class="label sexBox">
+                            <span class="sexText">女</span>
+                            <input type="radio" name="sex" value="F" id="girl">
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <div class="label-item clear">
+                <div class="label label-text">
+                    <p>手机号码</p>
+                </div>
+                <div class="label input">
+                    <input type="tel" placeholder="请输入手机号码" id="linkManMobileTelephone" maxlength="11">
+                </div>
+                <div class="label right-icon">
+                    <span class="icon icon-right"></span>
+                </div>
+            </div>
+            <div class="label-item  clear">
+                <div class="label label-text">
+                    <p>发送电子保单</p>
+                </div>
+                <label for="email_checkbox" class="email-label" id="email_label">
+                    <input type="checkbox" id="email_checkbox">
+                </label>
+            </div>
+            <div class="label-item last" id="email_box" style="display:none;">
+                <div class="label label-text">
+                    <p>邮箱</p>
+                </div>
+                <div class="label input">
+                    <input type="email" placeholder="请输入邮箱" id="applicantEmail">
+                </div>
+                <div class="label right-icon">
+                    <span class="icon icon-right"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <div id="error" class="errorText" align="center"></div>
+    <a id="nextStep" class="btn-buy clear" href="javascript:;">下一步</a>
+    <p>©中国平安财产保险股份有限公司</p>
+</footer>
+<script type="text/javascript">
+(function() {
+
+    //文件加载器
+    var loader = {
+        //添加样式文件
+        addCssLink: function(href) {
+            var link = document.createElement('link');
+            link.rel = "stylesheet";
+            link.href = href;
+            document.querySelector('head').appendChild(link);
+        },
+
+        //添加脚步文件
+        addJsLink: function(href) {
+            var script = document.createElement('script');
+            script.src = href;
+            document.querySelector('body').appendChild(script);
+        }
+    };
+
+    //异步加载样式和脚本
+    loader.addCssLink('css/common.css');
+    loader.addCssLink('template/health/template-step02/overseas/index.css');
+    loader.addCssLink('css/datetime-picker.css');
+
+
+    $LAB
+        .script("js/lib/datetime-picker.js")
+        .script("js/util/removeTel.js")
+        .script("template/health/template-step02/overseas/pinyin.js")
+        .script("template/health/template-step02/overseas/index.js");
+
+})();
+</script>
+</body>
+
+</html>

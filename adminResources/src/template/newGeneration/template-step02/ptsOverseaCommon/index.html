@@ -1,0 +1,314 @@
+<!--<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<meta name="Android" content="Martin_Cui">
+		<link rel="stylesheet" href="../../adminResources/src/css/common.css">
+		<title>投保信息</title>
+	</head>
+	<body>
+		#=没加载页面时
+		<div class="loading js-loading"></div>-->
+		<!--#=主要内容-->
+		<div class="contaitent" style="position:initial;padding-bottom:16%;display:block;">
+			<header>
+				<a href="javascript:void(0);" class="icon-back go-back" id="goBack" style="display:none;"></a>
+				<img src="./img/btn_arrow_black_back@2x.png" id="goBackImg" class="head-img go-back" alt="返回">
+		        <strong class="title aacc">投保信息</strong>
+		    </header>
+			<main class="content2"  style="position:initial;height: auto;margin-top: 40px;">
+				<div class="big-box">
+					<section class="label-section">
+			            <div class="label-title">
+			            	<p>投保人信息</p>
+			            </div>
+			            <div class="label-collections" id="applicantDatas">		            
+			                <div class="label-item">
+			                    <div class="label label-text">
+			                        <span>姓名</span>
+			                    </div>
+			                    <div class="label input">
+			                        <input type="text" placeholder="必填" id="applicantName">
+			                    </div>
+			                </div>
+
+			                <div class="label-item">
+			                    <div class="label label-text">
+			                        <span>姓名拼音</span>
+			                    </div>
+			                    <div class="label input">
+			                        <input type="text" placeholder="必填" id="applicantNamePY">
+			                    </div>
+			                </div>
+
+			                <div id="link-man-id-datas">
+			                    <div class="label-item">
+			                        <div class="label label-text">
+			                            <span>证件类型</span>
+			                        </div>
+			                        <div class="label input">
+			                            <select id="applicantCertType" class="label-select">
+											<option value="01">身份证</option>
+											<option value="02">护照</option>
+											<option value="03">军官证</option>
+											<option value="05">驾驶证</option>
+											<option value="06">港澳回乡证或台胞证</option>
+											<option value="99">其他</option>
+			                            </select>
+			                        </div>
+			                    </div>
+			                    <div class="label-item">
+			                        <div class="label label-text">
+			                            <span>证件号码</span>
+			                        </div>
+			                        <div class="label input">
+			                            <input type="text" placeholder="必填" id="applicantForPaperNo1">
+			                        </div>
+			                    </div>
+			                    <div class="label-item" style="display:none" id="applicantBirthdayBox">
+			                        <div class="label label-text">
+			                            <span>出生日期</span>
+			                        </div>
+			                        <div class="label input">
+			                            <input class="" readonly="readonly" type="text" id="J-datePicker-applicant" placeholder="请点击选择出生日期">
+			                        </div>
+			                    </div>
+			                    <div class="label-item" style="display:none" id="applicantSexBox">
+			                        <div class="label label-text">
+			                            <span>性别</span>
+			                        </div>
+			                        <div class="label1 sexBox">
+				                        <p class="box-sex">
+				                        	<label for="applicantBoy" class="label1">
+				                                <span class="sexText">男</span>
+				                                <input type="radio" name="applicant" value="M" id="applicantBoy">
+				                            </label>
+				                            <label for="applicantGirl" class="label1">
+				                                <span class="sexText">女</span>
+				                                <input type="radio" name="applicant" value="F" id="applicantGirl">
+				                            </label>
+				                        </p>
+			                        </div>
+			                    </div> 
+				                <div class="label-item clear">
+				                    <div class="label label-text">
+				                        <span>手机号码</span>
+				                    </div>
+				                    <div class="label input">
+				                        <input type="tel" placeholder="必填" id="applicantMobile" maxlength="11">
+				                    </div>
+				                </div>
+				                <div class="label-item clear">
+				                    <div class="label label-text">
+				                        <span>电子邮箱</span>
+				                    </div>
+				                    <div class="label input">
+				                        <input type="text" placeholder="用于接收电子保单" id="applicantEmail" >
+				                    </div>
+				                </div>				                                          
+			                </div>
+			            </div>		            
+			        </section>
+
+
+					<section class="label-section">
+			            <div class="label-title">
+			            	<p>被保险人信息</p>
+			            </div>
+			            <div class="label-collections" id="insurantDatas">
+			                <div class="label-item">
+			                    <div class="label label-text">
+			                        <span>为本人投保</span>
+			                    </div>
+			                    <div class="label input">
+				                    <label for="forSelf" style="display: block;">
+				                    	<input type="checkbox"  id="forSelf" class="checkBox">
+				                    </label>
+			                    </div>
+			                </div>			            
+			                <div class="label-item">
+			                    <div class="label label-text">
+			                        <span>姓名</span>
+			                    </div>
+			                    <div class="label input">
+			                        <input type="text" placeholder="必填" id="insurantName">
+			                    </div>
+			                </div>
+
+			                <div class="label-item">
+			                    <div class="label label-text">
+			                        <span>姓名拼音</span>
+			                    </div>
+			                    <div class="label input">
+			                        <input type="text" placeholder="必填" id="insurantNamePY">
+			                    </div>
+			                </div>
+
+			                <div id="">
+			                    <div class="label-item">
+			                        <div class="label label-text">
+			                            <span>证件类型</span>
+			                        </div>
+			                        <div class="label input">
+			                            <select id="insurantCertType" class="label-select">
+			                                <option value="01">身份证</option>
+			                                <option value="02">护照</option>
+			                                <option value="03">军官证</option>
+			                                <option value="05">驾驶证</option>
+			                                <option value="06">港澳回乡证或台胞证</option>
+			                                <option value="99">其他</option>
+			                            </select>
+			                        </div>
+			                    </div>
+			                    <div class="label-item">
+			                        <div class="label label-text">
+			                            <span>证件号码</span>
+			                        </div>
+			                        <div class="label input">
+			                            <input type="text" placeholder="必填" id="insurantForPaperNo1">
+			                        </div>
+			                    </div> 
+			                    <div class="label-item" style="display:none" id="insurantBirthdayBox">
+			                        <div class="label label-text">
+			                            <span>出生日期</span>
+			                        </div>
+			                        <div class="label input">
+			                            <input class="" readonly="readonly" type="text" id="J-datePicker-insurant" placeholder="请点击选择出生日期">
+			                        </div>
+			                    </div> 
+			                    <div class="label-item" style="display:none" id="insurantSexBox">
+			                        <div class="label label-text">
+			                            <span>性别</span>
+			                        </div>
+			                        <div class="label1 sexBox">
+				                        <p class="box-sex">
+				                        	<label for="insurantBoy" class="label1">
+				                                <span class="sexText">男</span>
+				                                <input type="radio" name="insurant" value="M" id="insurantBoy">
+				                            </label>
+				                            <label for="insurantGirl" class="label1">
+				                                <span class="sexText">女</span>
+				                                <input type="radio" name="insurant" value="F" id="insurantGirl">
+				                            </label>
+				                        </p>
+			                        </div>
+			                    </div>
+				                	
+			                </div>
+			            </div>
+						<div id="paperLabel" class="label-item" style="text-align: right;">
+							<span id="">
+								<input id="needPapper" type="checkbox" name="checkbox1" value="checkbox" class="checkBox">
+							</span>
+							<span style="vertical-align: sub;">需要纸质保单</span>
+						</div>			            
+			        </section>
+					<section class="label-section" style="display: none" id="needPapperBox">
+			            <div class="label-title">
+			            	<p>寄送信息</p>
+			            </div>
+			                <div class="label-item">
+			                    <div class="label label-text">
+			                        <span>收件人</span>
+			                    </div>
+			                    <div class="label input">
+			                        <input type="text" placeholder="请填写收件人姓名" id="receiverName">
+			                    </div>
+			                </div>
+			                <div class="label-item clear">
+			                    <div class="label label-text">
+			                        <span>手机号码</span>
+			                    </div>
+			                    <div class="label input">
+			                        <input type="tel" placeholder="请填写手机号码" maxlength="11" id="linkManMobileTelephone">
+			                    </div>
+			                </div>
+			                <div class="label-item clear">
+			                    <div class="label label-text">
+			                        <span>收货地址</span>
+			                    </div>
+			                    <div class="label input">
+			                        <input type="text"  placeholder="请选择 省／直辖市" value="" id="selectProvence" >
+			                    </div>
+			                </div>
+			                <div class="label-item clear">
+			                    <div class="label label-text">
+			                        <span>详细地址</span>
+			                    </div>
+			                    <div class="label input">
+			                        <input type="text" placeholder="请填写详细的地址信息" id="addressDetail" >
+			                    </div>
+			                </div>				                				                			                  
+			            </section>			        
+				</div>
+				<div id="u" class="label-item">
+					<span id="checkbox_footer"><input id="checkbox_send" type="checkbox" name="checkbox1" value="checkbox" checked="checked"></span>
+					<span id="confirm_read">本人已阅读并同意<span id="confirm_know_tbxz" class="confirm_know">《投保人声明》</span>和<span id="confirm_know_bxtk" class="confirm_know">《保险条款》</span></span>
+				</div>
+			</main>
+		</div>
+		<footer class="footer">
+			<ul class="pay-ul">
+        		<li class="amout-li">
+        			<p class="amout-p"><span class="amount" id="amount"></span>元</p>
+        		</li>
+        		<li class="border-left pay_tytj" id="pay">
+        			<p>支付</p>
+        		</li>
+        	</ul>
+		</footer>
+        <div id="hideInsuranceClause" style="display: none">
+		    <div class="contaitenttitle ruleHeader">
+				<a href="" class="icon-arrow-back"></a> 	
+		    	<span id="title"></span>
+		    </div>
+		    <div id="hideContent" class="hideContent">
+				投保声明
+		    </div>
+		</div>
+	<script type="text/javascript">
+		(function() {
+		    $("#common-css").remove();
+		    var urlParams = JSON.parse(window.sessionStorage.getItem('urlParameters')) || {};
+		    var loader = {
+		        addCssLink: function(href) {
+		            var link = document.createElement('link');
+		            link.rel = "stylesheet";
+		            link.href = href;
+		            document.querySelector('head').appendChild(link);
+		        }
+		    };
+
+		    $(".icon-goback").on('click',function(e) {
+		    	window.history.back(-1);
+		    	e.preventDefault();
+		    });
+
+		    $('.icon-arrow-back').on('click',function(e) {
+		    	window.history.back(-1);
+		    	e.preventDefault();
+		    });
+
+		    $("#J-datePicker").on('click',function() {
+		    	document.activeElement.blur();
+		    	$("#for-paperNo1").blur();
+		    });
+
+
+		    loader.addCssLink('css/newGeneration/newdatetime.css');
+		    loader.addCssLink('css/newGeneration/newCommon.css');
+		    loader.addCssLink('template/newGeneration/template-step02/ptsOverseaCommon/applicantInfo.css');
+
+
+		    $LAB
+		        .script("js/lib/datetime-picker.js")
+		        .script("js/lib/pinyin.js")
+		        .script("js/lib/picker/picker-city.js")
+		        .script("js/util/check.js")
+		    	.script("js/util/errCreat.js")
+		    	.script("js/checkEXX.js")
+		    	.script("js/lib/wechatShare.js")
+		        .script("template/newGeneration/template-step02/ptsOverseaCommon/applicantInfo.js")
+		})();
+	</script>

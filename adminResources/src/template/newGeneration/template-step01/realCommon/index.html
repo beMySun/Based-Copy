@@ -1,0 +1,56 @@
+<div class="page">
+    <header>
+        <a class="btn-back" href="javascript:window.history.back();">返回</a>
+        <p class="title"></p>
+    </header>
+    <div class="content">
+        <section class="nav">
+            <ul class="nav-tab">
+                <li class="nav-tab-item active tj-product" data-scroll-to="product"><a href="javascript:void(0);">产品介绍</a></li>
+                <li class="nav-tab-item tj-know" data-scroll-to="notice"><a href="javascript:void(0);">投保须知</a></li>
+                <li class="nav-tab-item tj-claim" data-scroll-to="claim"><a href="javascript:void(0);">理赔指南</a></li>
+                <li class="nav-tab-item tj-question" data-scroll-to="question"><a href="javascript:void(0);">常见问题</a></li>
+            </ul>
+        </section>
+        <section class="product" id="product">
+        </section>
+        <div class="slide-up-wrap">
+            <ul class="wrap">
+                <li class="wrap-item">
+                    <label>保险期限</label>
+                    <div class="wrap-item-right" id="insuranceTime"></div>
+                </li>
+                <li class="wrap-item">
+                    <label>投保份数</label>
+                    <div class="wrap-item-right"><span id="applyNum">1</span>份</div>
+                </li>
+            </ul>
+            <div class="ui-mask">遮罩</div>
+        </div>
+        <footer>
+            <a class="btn" href="javascript:void(0);" id="btnPrice"><span id="packageAmount"></span>元</a>
+            <a class="btn btn-red buy_tytj" id="buy" href="javascript:void(0);">立即投保</a>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+(function () {
+
+    var loader = {
+        addCssLink: function (href) {
+            var link = document.createElement('link');
+            link.rel = "stylesheet";
+            link.href = href;
+            document.querySelector('head').appendChild(link);
+        }
+    };
+    loader.addCssLink('css/newGeneration/reset.css');
+    loader.addCssLink('template/newGeneration/template-step01/realCommon/productInfo.css');
+    loader.addCssLink('css/newGeneration/datetime.css');
+
+    $LAB
+        .script("js/lib/datetime-picker.js")
+        .script("template/newGeneration/template-step01/realCommon/productInfo.js");
+
+})();
+</script>

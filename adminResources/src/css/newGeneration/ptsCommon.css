@@ -1,0 +1,59 @@
+  /*    
+    @name:新一代模板主题色
+    @date:2017-05-24
+ */
+  
+  @charset "utf-8";
+  html header {
+      background: #fff;
+      color: #000;
+  }
+  
+  html header .btn-back {
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+  }
+  
+  html .nav-tab>li.active>a {
+      color: #000;
+      border-bottom: 1px solid #000;
+  }
+  
+  html .more-detail {
+      color: #007afa;
+  }
+  
+  html footer .btn {
+      color: #d71e0b;
+      background: #fff;
+  }
+  
+  html footer .btn-red {
+      border-top: 1px solid #d71e0b;
+      color: #fff;
+      background: #d71e0b;
+  }
+  
+  html .toolbar .picker-button {
+      color: #04BE02;
+  }
+  
+  html .readme-desc .text-inner {
+      color: #ff6601;
+  }
+  /*begin 支付结果*/
+  
+  .pay-result-page header,
+  .pay-result-page footer .btn {
+      background: #FF7614;
+      color: #fff;
+  }
+  
+  .pay-result-page .list-group-item p {
+      color: #FF7614;
+  }
+  
+  .pay-result-page footer .help {
+      border-color: #FF7614;
+  }
+  /*end 支付结果*/

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>继承</title>
+</head>
+<body>
+
+<script>
+
+
+	/*
+		eg1: 借用构造函数
+
+		重用性不好	
+	*/
+	function Father(name) {
+		this.name = name;
+	}
+	function Child(name){
+		Father.call(this,name);
+	}
+
+	let someBody = new Child('jj');
+
+	console.log(someBody.name);
+
+
+	/*
+		eg2: 组合继承
+		两次调用到父类型，对内存影响还是比较大的。 所以有人提出中间创建一个寄生组合式继承. 
+		但这个真的很鸡肋。 JS的一个继承能扯出这么多东西，也是醉了。 
+	*/
+
+	function A(){
+		this.name = 'jimmy';
+	}
+	A.prototype.speak = function() {
+		console.log('my name is ' + this.name);
+	};
+
+	function B(){
+		A.call(this);
+	}
+	B.prototype = new A();
+	B.prototype.constructor = B;
+
+	var b = new B();
+	console.log(b.name);
+	b.speak();
+
+
+
+	/*
+		eg3: class
+	*/
+
+	//原生的混合模式:
+	function Point_1(x,y){
+	  this.x = x;
+	  this.y = y;}
+
+	Point_1.prototype.toString = function () {
+	  return '(' + this.x + ', ' + this.y + ')';
+	  }
+	var point1 = new Point_1(1,2); 
+	console.log(point1);
+
+
+	// class
+	class Point_2 {
+
+		 constructor(x, y) {  //本质上还是原型链上的方法
+			 this.x = x;  //这里的this和上面的一样都代表实例对象
+			 this.y = y;
+		}
+		//需要注意，请不要手贱在每个{} 后面加上 "," 
+		toString() {
+			return '(' + this.x + ', ' + this.y + ')';
+		}
+	}
+	var point2 = new Point_2(1,2);
+
+	console.log(point2);
+
+
+
+	class Jimmy{
+	    constructor(name){
+	        this.name = name;  //这里的this和构造函数里面的this的属性是一致的
+	    }
+	    speak(){
+	        console.log(`my name is ${this.name}`);
+	    }
+	}
+	let jimmy = new Jimmy("jimmy");
+	jimmy.speak();  //my name is jimmy;
+
+	Jimmy instanceof Function; //true
+
+	//所以说 其实 类就是js混合模式的一个syntax candy(语法糖).当然类也可以使用字面量形式书写(废话，类本来就是函数类型)
+
+	// or 1:
+	const MyClass = class Me {  
+		getClassName() {
+			return Me.name;  //这里的Me 就和使用函数是一样的道理
+		}
+	};
+	// or 2:
+	var MyClass = function Me(){
+	    console.log(Me.name);  //Me
+	}
+
+
+
+</script>	
+</body>
+</html>

@@ -1,0 +1,139 @@
+<div class="page">
+    <header>
+        <a class="btn-back" href="javascript:window.history.back();">返回</a>
+        <p class="title">投保信息</p>
+    </header>
+    <div class="content content-applicantInfo">
+        <section id="applicantInfo">
+            <h2 class="section-title">投保人信息</h2>
+            <ul class="section-body" data-order="投保人">
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-man"></i></span>姓名
+                        </p>
+                        <label>
+                            <input type="text" class="form-control to-validate  to-validate-name" placeholder="必填">
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-group-select">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-card"></i></span>证件类型
+                        </p>
+                        <label>
+                            <select class="form-control form-control-select certificate-type">
+                                <option value="01">身份证</option>
+                                <option value="02">护照</option>
+                                <option value="03">军官证</option>
+                                <option value="05">驾驶证</option>
+                                <option value="06">港澳回乡证或台胞证</option>
+                                <option value="99">其他</option>
+                            </select>
+                        </label>
+                    </div>
+                </li>
+                <li class="dynamic-item">
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-card-num"></i></span>证件号码
+                        </p>
+                        <label>
+                            <input type="text" class="form-control to-validate  to-validate-certificate" placeholder="必填">
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-phone "></i></span>手机号码
+                        </p>
+                        <label>
+                            <input class="form-control  to-validate  to-validate-phone" type="tel" placeholder="必填" maxlength="11">
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group">
+                        <p class="form-group-label">
+                            <span class="icon"><i class="icon-email"></i></span>邮箱
+                        </p>
+                        <label>
+                            <input type="email" class="form-control to-validate to-validate-email" placeholder="选填">
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <div class="readme">
+            <p class="toast-msg">投保人必须为被保险人父母，否则可能无法理赔</p>
+        </div>
+        <footer>
+            <a class="btn" href="javascript:void(0);"><span id="packageAmount"></span>元</a>
+            <a class="btn btn-red pay_tytj" href="javascript:void(0);" id="pay">支付<span class="dotting"></span></a>
+        </footer>
+    </div>
+    <input type="hidden" name="provinceName" value="">
+    <input type="hidden" name="provinceCode" value="">
+    <input type="hidden" name="cityName" value="" />
+    <input type="hidden" name="cityCode" value="" />
+    <input type="hidden" name="areaName" value="">
+    <input type="hidden" name="areaCode" value="">
+    <form type="hidden" id="payData">
+        <input type="hidden" name="keyCode" value="">
+        <input type="hidden" name="productName" value="">
+        <input type="hidden" name="applyPolicyNo" value="">
+    </form>
+
+    <form type="hidden" id="goPay" onclick="this.submit();">
+        <input type="hidden" name="applyPolicyNo" value="">
+        <input type="hidden" name="businessNo" value="">
+        <input type="hidden" name="totalInsuredAmount" value="">
+        <input type="hidden" name="totalActualPremium" value="">
+        <input type="hidden" name="dataSource" value="">
+        <input type="hidden" name="callBackUrl" value="">
+        <input type="hidden" name="returnUrl" value="">
+        <input type="hidden" name="customerName" value="">
+        <input type="hidden" name="phoneNo" value="">
+        <input type="hidden" name="currencyNo" value="">
+        <input type="hidden" name="certType" value="">
+        <input type="hidden" name="certNo" value="">
+        <input type="hidden" name="productName" value="">
+        <input type="hidden" name="amount" value="">
+        <input type="hidden" name="npsPayUrl" value="">
+        <input type="hidden" name="signMsg" value="">
+        <input type="hidden" name="inSystem" value="CZP">
+    </form>
+
+</div>
+<script type="text/javascript">
+    (function () {
+
+        var loader = {
+            addCssLink: function (href) {
+                var link = document.createElement('link');
+                link.rel = "stylesheet";
+                link.href = href;
+                document.querySelector('head').appendChild(link);
+            }
+        };
+
+        loader.addCssLink('css/newGeneration/reset.css');
+        loader.addCssLink('template/newGeneration/template-step02/xdm/city.css');
+        loader.addCssLink('template/newGeneration/template-step02/xdm/applicantInfo.css');
+        loader.addCssLink('css/newGeneration/datetime.css');
+
+        $LAB
+            // .script("js/lib/picker/picker-city.js")
+            .script("js/lib/datetime-picker.js")
+            .script("template/newGeneration/template-step02/xdmTest/city.js")
+            // .script("js/plugin/cityPicker.js")  
+            .script("js/util/validate.js")
+            .script("template/newGeneration/template-step02/xdmTest/applicantInfo.js");
+    })();
+
+</script>
+<script>
+
+</script>

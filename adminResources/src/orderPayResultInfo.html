@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>支付结果</title>
+    <link rel="stylesheet" href="css/newGeneration/reset.css">
+    <link rel="stylesheet" href="css/orderPayResultInfo.css">
+</head>
+
+<body>
+    <div class="page pay-result-page">
+        <header>
+            <p class="title">支付结果</p>
+            <a class="btn-finish" id="pageFinish" href="javascript:void(0);">完成</a>
+        </header>
+        <section class="content">
+            <div class="pay-result">
+                <div class="pay-result-title">
+                    <div class="title-container" id="payStatus">
+                        <p class="title-text">
+                            <span class="inner-text">正在承保</span>
+                            <dot class="dotting"></dot>
+                        </p>
+                    </div>
+                </div>
+                <div class="pay-result-content">
+                    <ul class="list-group" id="InsuranceDetail">
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <a class="btn hidden" id="pageRefresh" href="javascript:void(0);">刷新</a>
+            <p class="help">祝您平安，如需理赔或帮助，请拨打95511</p>
+            <p class="copyright">©中国平安财产保险股份有限公司</p>
+        </footer>
+    </div>
+    <script src="js/lib/zepto.min.js"></script>
+    <script src="js/orderPayResultInfo.js"></script>
+</body>
+
+</html>

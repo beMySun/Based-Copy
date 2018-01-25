@@ -1,0 +1,49 @@
+.g-Box{
+    padding:10px 10px 0px 10px;
+    background: #eaeaea;
+}
+.g-con{
+    background: #fff;
+    padding: 5px;
+}
+.g-con img{
+    width: 100%;
+}
+.m-con{
+    position: relative;
+    overflow: hidden;
+    padding-right:80px;
+}
+.u-con{
+    width: 100%;
+    padding-right: 10px;
+}
+.m-con .u-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #37cdcc;
+    height: 100%;
+    width: 80px;
+    vertical-align: middle;
+    text-align: center;
+}
+.m-con .u-btn table,.m-con .u-btn table td{
+    height: 100%;
+    width: 100%;
+}
+.m-con .u-btn table td a{
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+}
+.f-bold{
+    font-weight: bold;
+}
+.f-red{
+    color: red;
+    padding-left: 30px;
+}
+.f-right{
+    float: right;
+}

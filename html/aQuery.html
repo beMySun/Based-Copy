@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	 <input class="weui_input" id = "user_teleNum" maxlength="11" type="tel" pattern="[0-9]*" placeholder="数字0-9">
+
+	  <input class="weui_input" id = "user_teleNum"  type="number" placeholder="数字0-9">
+
+</body>
+<script>
+	
+	var aQuery = function(selector,context) {
+		return new aQuery.prototype.init();
+	}
+
+	aQuery.prototype = {
+		init: function(){
+			return this;
+		},
+		name : function(){
+			return this.age;
+		},
+		age:20
+
+	}
+
+	aQuery.prototype.init.prototype = aQuery.prototype;
+	// 通过原型传递解决问题，把jQuery的原型传递给jQuery.prototype.init.prototype
+	// 换句话说jQuery的原型对象覆盖了init构造器的原型对象
+	//因为是引用传递所以不需要担心这个循环引用的性能问题
+	console.log(aQuery().name());
+
+
+
+
+</script>
+
+
+//第一段代码
+<script>
+    function Aaron() {
+        alert("hello");
+    };
+    Aaron(); //hello
+
+        function Aaron() {
+        alert("world");
+    };
+    Aaron(); //world
+</script>
+
+//第二段代码
+<script>
+    // function Aaron() {
+    //     alert("world");
+    // };
+    // Aaron(); //world
+</script>
+</html>

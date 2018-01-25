@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>发布－订阅</button>
+    <script>
+
+        var store = {};
+        store.clientList = [];
+
+        store.listen = function (fn) {
+            this.clientList.push(fn);
+        }
+
+        store.trigger = function () {
+            for (var i = 0, fn; fn = this.clientList[i++];) {
+                fn.apply(this, arguments);
+            }
+        }
+
+        store.listen(function (item, price) {
+            console.log('货物：' + item);
+            console.log('价格：' + price);
+        })
+
+
+        store.trigger('怡宝', '3'); 
+
+        // =============================================
+
+        var event = {
+            clientList: [],
+            listen: function (key, fn) {
+
+                if (!this.clientList[key]) {
+                    this.clientList[key] = [];
+                }
+
+                this.clientList[key].push(fn);
+            },
+            
+            trigger: function () {
+                
+                var key = Array.prototype.shift.call(arguments),
+                    fns = this.clientList[key];
+
+                if (!fns || fns.length === 0) {
+                    return false;
+                }
+
+                for (var i = 0, fn; fn = fns[i++];) {
+                    fn.apply(this, arguments);
+                }
+            }
+        };
+
+        var installEvent = function (obj) {
+            for (var i in event) {
+                obj[i] = event[i];
+            }
+        }
+
+
+        var login = {};
+
+        installEvent(login);
+      
+        var header = (function () {
+
+            login.listen('loginSucc', function (data) {
+                header.setAvatar(data);
+            });
+
+            return {
+                setAvatar: function (data) {
+                    console.log(data);
+                }
+            }
+
+        })();
+
+        login.trigger('loginSucc', {'data': 'set heraer data'});
+
+    </script>
+</body>
+
+</html>

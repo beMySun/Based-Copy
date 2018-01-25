@@ -1,0 +1,207 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta name="Android" content="Martin_Cui">
+    <link rel="stylesheet" href="../../css/wAlert.css">
+    <title>投保信息</title>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <a class="btn-back" href="javascript:window.history.back();">返回</a>
+            <p class="title">投保信息</p>
+        </header>
+        <div class="content content-applicantInfo">
+            <section id="petKind">
+                <h2 class="section-title">标的信息</h2>
+                <ul class="section-body">
+                    <li>
+                        <div class="form-group form-group-select">
+                            <p class="form-group-label">
+                                <span class="icon"><i class="icon-card"></i></span>宠物类型
+                            </p>
+                            <label>
+                                <select class="form-control form-control-select pet-type">
+                                    <option value="01">犬类</option>
+                                    <!-- <option value="02">猫类</option>
+                                    <option value="03">不限制</option> -->
+                                </select>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group form-group-select">
+                            <p class="form-group-label">
+                                <span class="icon"><i class="icon-kind"></i></span>宠物品种
+                            </p>
+                            <label>
+                                <input id="selectPetKind" class="form-control form-control-select pet-kind" readonly  placeholder="选择宠物品种" onfocus="this.blur();">
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group form-group-select">
+                            <p class="form-group-label">
+                                <span class="icon"><i class="icon-age"></i></span>宠物年龄
+                            </p>
+                            <label>
+                                <select class="form-control form-control-select pet-age">
+                                    <option value="0.5">0.5岁</option>
+                                    <option value="1">1岁</option>
+                                    <option value="2">2岁</option>
+                                    <option value="3">3岁</option>
+                                    <option value="4">4岁</option>
+                                    <option value="5">5岁</option>
+                                    <option value="6">6岁</option>
+                                    <option value="7">7岁</option>
+                                    <option value="8">8岁</option>
+                                    <option value="9">9岁</option>
+                                    <option value="10">10岁</option>
+                                    <option value="11">11岁</option>
+                                    <option value="12">12岁</option>
+                                    <option value="12岁以上">12岁以上</option>
+                                </select>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group form-group-select">
+                            <p class="form-group-label">
+                                <span class="icon"><i class="icon-sex"></i></span>宠物性别
+                            </p>
+                            <label>
+                                <select class="form-control form-control-select pet-sex">
+                                    <option value="01">公</option>
+                                    <option value="02">母</option>
+                                </select>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <p class="form-group-label only-p">
+                                <span class="icon"><i class="icon-num"></i></span>宠物身份证标识符
+                            </p>
+                            <label class="only-label">
+                                <input type="text" class="form-control to-validate pet-certificate" placeholder="必填">
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <p class="form-group-label">
+                                <span class="icon"><i class="icon-name"></i></span>宠物姓名
+                            </p>
+                            <label>
+                                <input class="form-control  to-validate  pet-name
+                                " type="text" placeholder="必填" maxlength="11">
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <p class="form-group-label">
+                                <span class="icon"><i class="icon-color"></i></span>宠物毛色
+                            </p>
+                            <label>
+                                <input type="text" class="form-control to-validate pet-color" placeholder="必填, 汉字">
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <p class="form-group-label">
+                                <span class="icon"><i class="icon-height"></i></span>身高
+                            </p>
+                            <label class="mark">
+                                    <input class="form-control  to-validate  pet-height" type="tel" placeholder="必填, 整数" maxlength="11">
+                                </label>
+                            <span class="unit">cm</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="form-group">
+                            <p class="form-group-label">
+                                <span class="icon"><i class="icon-weight"></i></span>体重
+                            </p>
+                            <label class="mark">
+                                    <input class="form-control  to-validate  pet-weight" type="tel" placeholder="必填, 整数" maxlength="11">
+                                </label>
+                            <span class="unit">kg</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="img-wrapper" id="uploader-box">
+                <p class="img-title">
+                    <span class="icon"><i class="icon-photo"></i></span>补充影像资料
+                </p>
+
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="img-container">
+                        <span class="upload-btn">+<input class="input-btn file" name="file" accept="image/*" type="file"/></span>
+                    </div>
+                </form>
+            </section>
+
+            <footer>
+                <a class="btn" href="javascript:void(0);"><span id="packageAmount"></span>元</a>
+                <a class="btn btn-red pay_tytj" href="javascript:void(0);" id="pay">下一步<span class="dotting"></span></a>
+            </footer>
+        </div>
+    </div>
+    <div class="layer">
+        <img src="">
+    </div>
+    <div class="suggest-Box">
+        <div class="search-bar">
+            <div class="s-form-search search-form">
+                <i class="icon-search"></i>
+                <input type="search" name="q" class="search-input" autocomplete="off" value="" placeholder="输入关键字查找你的爱宠">
+                <span class="clear-input"></span>
+            </div>
+            <div class="top-bar-btn close-search">取消</div>
+        </div>
+        <div class="suggest-container">
+            <ul class="suggest-sug">
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src='../../js/lib/zepto.min.js'></script>
+<script src='../../js/lib/LAB.min.js'></script>
+<script>
+    (function () {
+        var loader = {
+            addCssLink: function (href) {
+                var link = document.createElement('link');
+                link.rel = "stylesheet";
+                link.href = href;
+                document.querySelector('head').appendChild(link);
+            }
+        };
+
+        loader.addCssLink('../../css/newGeneration/reset.css');
+        loader.addCssLink('pet.css');
+        loader.addCssLink('../../css/newGeneration/datetime.css');
+
+        $LAB
+            .script("../../js/lib/datetime-picker.js")
+            .script("../../js/util/validate.js")
+            .script("../../js/util/wAlert.js")
+            .script("../../js/util/lrz.bundle.js")
+            .script("jquery-1.8.2.min.js")
+            .script("jquery.form.min.js")
+            .script("petKind.js")
+    })();
+
+</script>
+
+</html>

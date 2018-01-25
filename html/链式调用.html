@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>链式调用</title>
+</head>
+<body>
+	<p>
+		试一试
+	</p>
+	<div id="node">test</div>
+	<script>
+	window.onload = function(){
+
+		var jQuery = function(selector, context) {
+			return new jQuery.fn.init(selector, context);
+		}
+
+		jQuery.fn = jQuery.prototype = {
+			constructor: jQuery,
+			setColor: function(color){
+				for (var i = 0; i < this.length; i++) {
+					this[i].style.color = color;
+				}
+				return this;
+			},
+			first: function() {
+				return this[0];
+			},
+			text:function(val){
+				for (var i = 0; i < this.length; i++) {
+					this[i].innerHTML = val;
+				}
+				return this;
+			}
+		}
+
+
+		var init = jQuery.fn.init = function(selector, context) {
+
+			var elem = document.querySelectorAll(selector);
+
+			for (var i = 0; i < elem.length; i++) {
+				this[i] = elem[i];
+			}
+
+			this.length   = elem.length;
+			this.context = document;
+			this.selector = selector;
+
+			return this;
+		};
+
+		
+		init.prototype = jQuery.fn;
+
+		window.jQuery = window.$ = jQuery;
+
+		var $node = $('#node');
+
+		$node.setColor('red').text('123').text('456');
+		
+	}
+
+
+	</script>
+</body>
+</html>

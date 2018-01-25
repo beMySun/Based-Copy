@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+	<script src="http://rap.taobao.org/rap.plugin.js?projectId=12806"></script>
+	
+	<!-- 使用真实数据 -->
+	<!-- <script src="http://rap.taobao.org/rap.plugin.js?projectId=12806&mode=0"></script> -->
+	<script>
+		
+		$.ajax({
+			url:"data.json",
+			data: {
+				id: 103663
+			},
+			success:function(res){
+				console.log(res)
+			}
+		})
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

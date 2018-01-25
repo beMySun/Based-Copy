@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    (function () {
+        var App = function () {
+            this.state = 'loading'; // 设置初始状态
+        }
+
+        App.prototype.init = function () {
+            this.$finishButton = $('.button_done');
+            this.$cancelButton = $('.button_cancel');
+            this.$continueButton = $('.button_continue');
+            this.$tipText = $('.s-text');
+            this.$status = $('.status');
+
+            this.$policyNo = $('#policyNo');
+            this.$productName = $('#productName');
+            this.$insureBeginTime = $('#insureBeginTime');
+            this.$insureEndTime = $('#insureEndTime');
+            this.$insuranceAmount = $('#insuranceAmount');
+
+            this.setState(this.state);
+            this.requestData();
+            this.bindEvent();
+        }
+
+        App.prototype.bindEvent = function () {
+
+            // 完成
+            this.$finishButton.on('click', function () {
+                console.log('finish');
+                var sessionUrlParameters = JSON.parse(window.sessionStorage.getItem('urlParameters'));
+                var jumpToHref = '';
+                if (sessionUrlParameters && sessionUrlParameters.callBackUrl) {
+                    jumpToHref = sessionUrlParameters.callBackUrl;
+                } else {
+                    var searchStr = "?";
+                    for (var key in sessionUrlParameters) {
+                        searchStr += key + '=' + sessionUrlParameters[key] + '&';
+                    }
+                    jumpToHref = 'productDetail.html' + searchStr.slice(0, -1);
+                }
+
+                window.location.href = jumpToHref;
+            });
+
+            this.$cancelButton.on('click', function () {
+                console.log('cancel');
+            });
+
+            this.$continueButton.on('click', function () {
+                console.log('continue');
+            });
+
+        }
+
+        App.prototype.requestData = function () {
+            var self = this;
+            var urlParameters = {};
+
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                urlParameters[key] = value;
+            });
+
+            var postData = {
+                paymentDate: urlParameters.paymentDate,
+                paymentState: urlParameters.paymentState,
+                remark: (urlParameters.remark || '').split('_')[0],
+                bankOrderNo: urlParameters.bankOrderNo,
+                businessNo: urlParameters.businessNo,
+                userId: urlParameters.userId,
+                errorMsg: urlParameters.errorMsg,
+                ciphertext: urlParameters.ciphertext,
+                saleRecordId: urlParameters.partner_business_id
+            };
+
+            $.ajax({
+                url: "/icp/mobileSinglePlatform/npsWebPayCallBackForIcpCore.do",
+                data: postData,
+                dataType: "json",
+                success: function (res) {
+                    res && typeof res === 'string' && (res = JSON.parse(res));
+                    if (res && res.resultCode === '00') {
+                        self.setState('success');
+                        self.render(res);
+                    } else {
+                        self.setState('fail');
+                    }
+                },
+                error: function () {
+                    self.setState('loading');
+                }
+            });
+
+        }
+        App.prototype.render = function (res) {
+            this.$policyNo = res.policyNo || '';
+            this.$productName = res.productName || '';
+            this.$insureBeginTime = res.insureBeginTime || '';
+            this.$insureEndTime = res.insureEndTime || '';
+            this.$insuranceAmount = res.amount || '';
+        },
+            App.prototype.setState = function (state) {
+
+                this.state = state;
+
+                switch (state) {
+                    case 'loading':
+                        this.$status.removeClass().addClass('l-content status s-loading');
+                        this.$tipText.text('加载中...');
+                        break;
+                    case 'success':
+                        this.$status.removeClass().addClass('l-content status s-success');
+                        this.$tipText.text('恭喜您, 支付成功!');
+                        break;
+                    case 'fail':
+                        this.$status.removeClass().addClass('l-content status s-fail');
+                        this.$tipText.text('很抱歉, 支付失败');
+                        break;
+                }
+            }
+
+        var app = new App();
+
+        app.init();
+
+    }());
+
+</script>
+
+</html>

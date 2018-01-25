@@ -1,0 +1,160 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<meta name="Android" content="Martin_Cui">
+		<title>订单详情</title>
+	</head>
+	<body>
+		<!--#=没加载页面时-->
+		<div class="loading js-loading"></div>
+		<!--#=主要内容-->
+		<div class="contaitent" style="position:initial;">
+			<!--#=头部-->
+			<header>
+				<div class="contaitenttitle">
+					<img src="../img/btn_arrow_black_back@2x.png" id="goBackImg" class="head-img go-back" alt="返回">
+					<a class="icon-close" href="javascript:void(0);">关闭</a>
+					<strong class="title aacc">订单详情</strong>
+				</div>
+			</header>
+			<!--#=主要部分-->
+			<main class="content"  style="position:initial;">
+				<div class="big-box">
+					<div class="box">
+						<ul class="box-content">
+							<li class="box-li">
+								<span class="left">保单号:</span>
+								<span class="right" id="policyNo"></span>
+								<span class="active-span" style="display:none;"><button class="active-btn" id="activityBtn">查看礼品</button></span>
+							</li>
+							<li class="border-top">
+								<span class="left">产品名称:</span>
+								<span class="right" id="productName"></span>
+							</li>
+							<li>
+								<span class="box-span-left">
+									<span class="left">购买数量:</span>
+									<span id="haveNum"></span>张
+								</span>
+								<span class="box-span-right">
+									<span class="left">保费:</span>
+									<span id="premium"></span>元
+								</span>
+							</li>
+							<li>
+								<span class="box-span-left">
+									<span class="left">可赠送数量:</span>
+									<span id="okGiveNum"></span>张
+								</span>
+								<span class="box-span-right">
+									<button class="box-button" id="goToGive">去激活</button>
+								</span>
+							</li>
+							<li>
+								<span class="box-span-left">
+									<span class="left">已赠送人列表:</span>
+								</span>
+							</li>
+							<li class="li-table">
+								<table class="detail-table">
+									<tr>
+										<th>姓名</th>
+										<th>赠送数量</th>
+									</tr>
+									<tbody id="detail-tbody">
+										
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="detail-info">
+					
+				</div>
+			</main>
+		</div>
+		<div id="mask" style="display:none;">
+			<div class="mask"></div>
+			<div class="info">
+				<ul class="box-content1">
+					<li class="box-li">
+						<span class="left">被保险人信息填写</span>
+						<img src="../img/btn_close@2x.png" alt="" class="cancel-icon" id="cancel">
+					</li>
+					<li>
+						<p class="left">
+							<span class="red">*</span>姓名
+						</p>
+						<p class="right">
+							<input type="text" class="input" placeholder="请填写被保险人姓名" id="giveName">
+						</p>
+					</li>
+					<li>
+						<p class="left"><span class="red">*</span>卡数量</p>
+						<p class="right">
+							<img src="../img/btn_-_black@2x.png" alt="" id="minus" class="num">
+							<input type="text" value="1" class="numInput" id="numInput">
+							<img src="../img/btn_+_black@2x.png" alt="" id="plus" class="num">
+						</p>
+					</li>
+					<li>
+						<p class="left">
+							<span class="white">*</span><span class="left">手机号码</span>
+						</p>
+						<p class="right">
+							<input type="tel" maxlength="11" class="input" id="linkMobile" placeholder="用以接收卡号和卡密">
+						</p>
+					</li>
+					<li>
+						<p class="left">
+							<span class="white">*</span><span class="left">电子邮箱</span>
+						</p>
+						<p class="right">
+							<input type="text" id="linkEmail" class="input" placeholder="用以接收卡号和卡密">
+						</p>
+					</li>
+					<li class="top">
+						<p class="remark-p">
+							注：此页面信息用于接收自助卡卡号卡密等卡片激活信息，请输入被保险人的手机号码和邮箱
+						</p>
+					</li>
+					<li class="top">
+						<p class="box-p">
+							<button class="box-button" id="give">发送卡号卡密</button>
+						</p>
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<!-- <footer class="foot">
+        	<div class="copyright">©中国平安财产保险股份有限公司</div>
+        </footer> -->
+	</body>
+	<script src='../js/lib/zepto.min.js'></script>
+	<script src='../js/lib/LAB.min.js'></script>
+	<script type="text/javascript">
+		$(function() {
+		    //文件加载器
+		    var loader = {
+		        addCssLink: function(href) {
+		            var link = document.createElement('link');
+		            link.rel = "stylesheet";
+		            link.href = href;
+		            document.querySelector('head').appendChild(link);
+		        }
+		    };
+		    //加载css
+		    loader.addCssLink('../css/newGeneration/newCommon.css');
+		    loader.addCssLink('../css/newGeneration/orderDetail.css');
+
+		    //按次序加载js
+		    $LAB
+		        .script("../js/util/check.js")
+		        .script("../js/util/errCreat.js")
+		        .script("../js/newGeneration/orderDetail.js")
+		});
+	</script>
+</html>

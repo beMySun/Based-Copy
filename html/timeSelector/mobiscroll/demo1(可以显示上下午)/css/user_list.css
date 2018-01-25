@@ -1,0 +1,31 @@
+/*css---zzj*/
+.info_per_list li {
+    padding: 0;
+}
+.user_info_all {
+	overflow:hidden;
+	width:100%;
+}
+.show_user_detail {
+    padding: 20px;
+    float: left;
+    width:90%;
+}
+.user_list_box {
+    overflow: hidden;
+}
+.edit_more {
+    float: left;
+}
+.edit_b {
+    padding: 20px;
+    display: inline-block;
+}
+.delete_btn {
+    background: red;
+    color: #FFFFFF;
+}
+.modify_btn {
+    background: #37CDCC;
+    color: #FFFFFF;
+}

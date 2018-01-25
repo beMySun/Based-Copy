@@ -1,0 +1,415 @@
+@charset "utf-8";
+.section-first {
+    position: relative;
+    background: #FF3744 url('../img/icon_beijing.png') no-repeat;
+    background-size: 100% 100%;
+    background-position-y: -1px;
+    margin-bottom: -1px;
+}
+
+.btn-back {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    text-indent: -9999rem;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.banner {
+    padding: .4rem 0;
+}
+
+.banner img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.lottery {
+    position: relative;
+    padding-top: 100%;
+}
+
+.lottery .icon-lottery {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    height: 80%;
+}
+
+.lottery .icon_bg_lottery {
+    top: .3rem;
+}
+
+.lottery .icon-point {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.icon-point img {
+    width: 3rem;
+}
+
+.section-second {
+    background: #FF3744;
+    padding: 5% 16%;
+}
+
+.rule h2 {
+    position: relative;
+    margin-left: -6%;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.rule h2 img {
+    height: 100%;
+}
+
+.rule p {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: .7rem;
+}
+
+footer img {
+    width: 100%;
+    position: relative;
+    margin-top: -1px;
+}
+
+
+/*begin弹窗信息*/
+
+.alert {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.alert-body {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 14rem;
+    height: 18rem;
+}
+
+.alert-wrap {
+    text-align: center;
+    width: 80%;
+    line-height: 1.2rem;
+    padding: 2rem .5rem 0;
+}
+
+.alert-wrap h2 {
+    font-size: .8rem;
+}
+
+.alert-wrap p {
+    font-size: .7rem;
+    color: #5D5D5D;
+}
+
+.alert-wrap .icon-btn {
+    display: inline-block;
+    width: 6rem;
+    height: 1.5rem;
+    margin: 1rem 1rem 0;
+    background: url(../img/icon_btn_get.png) no-repeat center;
+    background-size: contain;
+}
+
+.alert.congratulation .alert-wrap .icon-btn {
+    background: url(../img/icon_btn_prize.png) no-repeat center;
+    background-size: contain;
+}
+
+.alert-wrap .icon-btn img {
+    height: 100%;
+}
+
+.alert-wrap .icon-close {
+    position: absolute;
+    right: .5rem;
+    top: 3rem;
+    text-indent: -9999rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.alert.sorry .alert-body {
+    background: url(../img/icon_bg_sorry.png) no-repeat center;
+    background-size: contain;
+}
+
+.alert.late .alert-body {
+    background: url(../img/icon_bg_late.png) no-repeat center;
+    background-size: contain;
+}
+
+.alert.congratulation .alert-body {
+    background: url(../img/icon_bg_congratulation.png) no-repeat center;
+    background-size: contain;
+}
+
+.alert.success .alert-body {
+    background: url(../img/icon_bg_success.png) no-repeat center;
+    background-size: contain;
+}
+
+
+/*end弹窗信息*/
+
+.banner-prize img {
+    width: 70%;
+    position: relative;
+    top: 1rem;
+}
+
+.prize {
+    position: relative;
+    padding-top: 100%;
+}
+
+.prize img {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    height: 60%;
+    width: 70%;
+    border: .6rem solid #F2CF06;
+    border-radius: .3rem;
+}
+
+.prize p {
+    position: absolute;
+    left: 0;
+    bottom: 14%;
+    width: 100%;
+    line-height: 1.5;
+    text-align: center;
+    font-size: .7rem;
+    color: #55113c;
+}
+
+.form-group {
+    padding: 5px 10px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.form-group label,
+.form-group .form-control {
+    float: left;
+    line-height: 1.5;
+    color: #55113c;
+    font-size: .7rem;
+}
+
+.form-group label {
+    width: 30%;
+}
+
+.form-group .form-control {
+    width: 70%;
+}
+
+.icon-submit,
+.icon-to-active {
+    display: block;
+    margin: 2rem 0;
+    height: 1.5rem;
+    text-align: center;
+}
+
+.icon-submit img,
+.icon-to-active img {
+    height: 100%;
+}
+
+.form-group-select {
+    position: relative;
+}
+
+.form-group-select:after {
+    content: '';
+    position: absolute;
+    right: .5rem;
+    top: 0;
+    display: block;
+    width: .8rem;
+    height: 100%;
+    background: transparent url(../img/icon_down.png) no-repeat center;
+    background-size: contain;
+}
+
+.form-container .form-desc {
+    font-size: .8rem;
+    text-align: center;
+    color: #55113c;
+    margin-top: 1rem;
+    word-break: break-word;
+}
+
+.form-group p {
+    width: 70%;
+    float: left;
+    line-height: 1.5;
+    color: #55113c;
+    font-size: .7rem;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+.bounceIn img {
+    -webkit-animation-name: bounceIn;
+    -moz-animation-name: bounceIn;
+    -ms-animation-name: bounceIn;
+    animation-name: bounceIn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: .4s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: .4s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-fill-mode: both;
+    -ms-animation-duration: 1s;
+    -ms-animation-delay: .4s;
+    -ms-animation-timing-function: ease;
+    -ms-animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-delay: .4s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+    }
+    70% {
+        -webkit-transform: scale(.9);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(.3);
+    }
+    50% {
+        opacity: 1;
+        -moz-transform: scale(1.05);
+    }
+    70% {
+        -moz-transform: scale(.9);
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+
+@-ms-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -ms-transform: scale(.3);
+    }
+    50% {
+        opacity: 1;
+        -ms-transform: scale(1.05);
+    }
+    70% {
+        -ms-transform: scale(.9);
+    }
+    100% {
+        -ms-transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

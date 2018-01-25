@@ -1,0 +1,39 @@
+html,body,.container{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    background: #eaeaea;
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+}
+.f-disBlock{
+    display: block;
+}
+.f-disNone{
+    display: none;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+.f-pf10{
+    padding-left:10px;
+}
+.f-mt10{
+    margin-top:10px;
+}
+.f-tac{
+    text-align: center;
+}
+.f-color{
+    color: #37cdcc;
+}
+input{
+    border: none;
+    border-radius: 4px;
+}
+a:hover,a:focus{
+    text-decoration: none;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .txp_overlay_loading {
+            pointer-events: none
+        }
+
+        .txp_overlay_loading .txp_icon_loading {
+            display: block;
+            width: 54px;
+            height: 20px;
+            margin: 0 auto 10px;
+            background: url(img/loading.png) 0 0 no-repeat;
+            background-size: 54px 600px;
+            -webkit-animation: loading 1s steps(30) infinite;
+            animation: loading 1s steps(30) infinite
+        }
+
+        @-webkit-keyframes loading {
+            from {
+                background-position: 0 0
+            }
+
+            to {
+                background-position: 0 -600px
+            }
+        }
+
+        @keyframes loading {
+            from {
+                background-position: 0 0
+            }
+
+            to {
+                background-position: 0 -600px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="txp_overlay_loading">
+        <div class="txp_icon_loading">
+            
+        </div>
+    </div>     
+</body>
+
+</html>

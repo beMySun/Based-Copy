@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <title>大转盘</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    .container {
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    img.big {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: 98;
+        margin-left: -256px;
+    }
+    
+    a.point {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: 99;
+        margin-left: -62px;
+        margin-top: 183px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="js_pointer" class="big" src="images/icon_choujiang.png" alt="">
+        <a class="point" href="javascript:;" onclick="go()"><img src="images/icon_like.png" alt=""></a>
+    </div>
+</body>f
+<script src="../dist/dial.js"></script>
+<script>
+var lottery = new LotteryDial(document.getElementById('js_pointer'), {
+    speed: 30, //每帧速度
+    areaNumber: 8 //奖区数量
+});
+var index = -1;
+lottery.on('start', function() {
+    //请求获取中奖结果
+    index = Math.round(Math.random() * 7);
+    lottery.setResult(index);
+    //假如请求出错
+    // setTimeout(function() {
+    //     // lottery.reset()
+    // }, 2000);
+    //0：2等
+    //1：1等
+    //2：4等
+    //3：3等
+    //4：2等
+    //5：1等  
+    //6：4等
+    //7：3等
+});
+lottery.on('end', function() {
+    console.log('中奖奖区：' + index);
+});
+
+function go() {
+    console.log(0);
+    lottery.draw();
+}
+</script>
+
+</html>

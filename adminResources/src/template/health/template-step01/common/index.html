@@ -1,0 +1,144 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head> 
+<body> 
+-->
+<div class="page">
+    <header>
+        <a class="icon-back" href="javascript:window.history.back();"></a>
+        <strong class="title"><!-- 平安健身宝保险计划（一年保障） --></strong>
+        <a class="icon-tel" href="tel:95511">咨询</a>
+    </header>
+    <div class="content">
+        <section class="step-section">
+            <div class="step-container">
+                <div class="step-first active">
+                    <div class="digit-desc">
+                        <p class="digit">1</p>
+                        <p class="desc">产品信息</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="digit-desc">
+                        <p class="digit">2</p>
+                        <p class="desc">投保人信息</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="digit-desc ">
+                        <p class="digit">3</p>
+                        <p class="desc">被保险人信息</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="digit-desc ">
+                        <p class="digit">4</p>
+                        <p class="desc">付款</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="date-section">
+            <!--            
+            <div class="date-row date-row-icon plan-to-select">
+                <label>选择方案</label>
+                <p>
+                    <select name="plan" class="plan">
+                        <option value="">套餐一套餐一套餐一套餐一套餐一套餐一</option>
+                        <option value="">套餐二</option>
+                        <option value="">套餐三</option>
+                    </select>
+                </p>
+            </div> 
+            -->
+            <div class="date-row date-row-icon date-to-select">
+                <label class="start-date-label">保险起期</label>
+                <p>
+                    <span class="ins-date ins-start-date">2000-01-01</span><span>00时</span>
+                    <input class="datePicker" type="text" id="J-datePicker">
+                </p>
+            </div>
+            <div class="date-row dynamic-date-select">
+                <label for="">保险止期</label>
+                <p>
+                    <span class="ins-date ins-end-date">2100-12-31</span><span>24时</span>
+                </p>
+            </div>
+        </section>
+        <!--
+        <section class="insurance-section">
+              <h2>
+                <span class="fn-left">保障范围</span>
+                <span class="fn-right ">保险金额</span>
+            </h2>
+        <ul>
+            <li>
+                <span class="fn-left">意外伤害医疗</span>
+                <span>2000</span>
+                <span>元</span>
+            </li>
+            <li>
+                <span class="fn-left ">意外伤害身故和残疾</span>
+                <span>0.92830</span>
+                <span>元</span>
+            </li>
+            <li>
+                <span class="fn-left ">意外外伤害意外伤害医疗</span>
+                <span>2222000.92830</span>
+                <span>元</span>
+            </li>
+        </ul>
+        <div class="standard-fee">
+            <span class="standard-fee-title">标准保费</span>
+            <span class="standard-fee-digit">100</span>
+            <span class="standard-fee-text">元/人</span>
+        </div> 
+        </section>
+        -->
+    </div>
+    <footer>
+        <a id="J-btn-buy" class="btn-buy" href="javascript:;">购买</a>
+        <p>©中国平安财产保险股份有限公司</p>
+    </footer>
+</div>
+<script type="text/javascript">
+(function() {
+    //文件加载器
+    var loader = {
+        addCssLink: function(href) {
+            var link = document.createElement('link');
+            link.rel = "stylesheet";
+            link.href = href;
+            document.querySelector('head').appendChild(link);
+        }
+    };
+
+    //加载css
+    loader.addCssLink('css/common.css');
+    loader.addCssLink('css/datetime-picker.css');
+    loader.addCssLink('template/health/template-step01/common/index.css');
+
+    $('.loading').hide();
+
+    //按次序加载js
+    $LAB
+        .script("js/util/removeTel.js")
+        .script("js/lib/datetime-picker.js")
+        .script("template/health/template-step01/common/index.js");
+})();
+</script>
+<!-- 
+</body> 
+</html> -->
+<!-- 
+模板说明：
+0、模板内容统一放置在 div.content 内部；
+1、除开body的内容外，其他部分全部要注释掉；
+2、模板的脚步和样式，以及引用的插件，全部通过手工加入，可参考上面方式；
+-->

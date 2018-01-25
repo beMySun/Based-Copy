@@ -1,0 +1,105 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<meta name="Android" content="Martin_Cui">
+		<title>支付结果</title>
+		<!-- <link rel="stylesheet" type="text/css" href="orderPayResult.css"> -->
+	</head>
+	<body>
+		<!--#=没加载页面时-->
+		<div class="loading js-loading"></div>
+		<!--#=主要内容-->
+		<div class="contaitent" style="position:initial;">
+			<!--#=头部-->
+			<header>
+				<div class="contaitenttitle">
+					<a href="javascript:void(0);" class="icon-back go-back" id="goBack" style="display:none;"></a>
+					<img src="../img/btn_arrow_black_back@2x.png" id="goBackImg" class="head-img go-back" alt="返回">
+					<a class="icon-close" href="javascript:void(0);" style="display:none;">关闭</a>
+					<strong class="title aacc">支付结果</strong>
+				</div>
+			</header>
+			<!--#=主要部分-->
+			<main class="content"  style="position:initial;">
+				<!--#=主体内容-->
+				<section class="contentner">
+					<div id="resultMsg">
+	            		<div id="successDiv" style="width:100%;display:none;"><img src="../img/btn_zhifushibai@2x.png" alt="" style="width:100%;"></div>
+	            		<div id="errDiv" style="display:none;"><span class="errSpan">正在承保中，请稍后刷新</span></div>
+					</div>
+					<table id="reslist" style="display:none;">
+						<tr>
+							<td class="left">
+								保单号:
+							</td>
+							<td id="policyNo" class="right"></td>
+						</tr>
+						<tr>
+							<td class="left">
+								产品名称:
+							</td>
+							<td id="planName" class="right"></td>
+						</tr>
+						<tr>
+							<td class="left">
+								保险期限:
+							</td>
+							<td class="right font">
+								<span id="insuranceBeginTime"></span> 
+								<span class="dateSpan">至</span>&nbsp;
+								<span id="insuranceEndTime"></span>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								保费:
+							</td>
+							<td class="right">&nbsp;<span id="amount"></span>元</td>
+						</tr>
+					</table>
+					<div id="refresh" style="display:none;"><button class="refresh-btn">刷新</button></div>
+					<div class="refresh" id="foot" style="display:none;">
+						<p>
+							<button class="activate-btn" id="refresh-a">去激活</button>
+						</p>
+						<br>
+						<span class="remark-span">注：此自助卡卡片已购买成功，需点击去激活按钮，<br>完成激活方可投保成功，未激活保单尚未生效。</span>
+					</div>
+				</section>
+			</main>
+			<!-- <footer class="clearfix footer">
+	        	<div class="copyright">©中国平安财产保险股份有限公司</div>
+	        </footer> -->
+		</div>
+	</body>
+	<script src='../js/lib/zepto.min.js'></script>
+	<script src='../js/lib/LAB.min.js'></script>
+	<script type="text/javascript">
+		(function() {
+		    //文件加载器
+		    //文件加载器
+		    var loader = {
+		        addCssLink: function(href) {
+		            var link = document.createElement('link');
+		            link.rel = "stylesheet";
+		            link.href = href;
+		            document.querySelector('head').appendChild(link);
+		        }
+		    };
+
+		    //加载css
+		    loader.addCssLink('../css/newGeneration/newCommon.css');
+		    loader.addCssLink('../css/newGeneration/orderPayResult.css');
+
+		    //按次序加载js
+		    $LAB
+		    	.script("../js/tool.js")
+		    	.script("../js/newGeneration/result.js")
+		    //     // .script("../mobileSinglePlatform/js/commonTools.js")
+		    //     // .script("../mobileSinglePlatform/js/wechatUtil.js")
+		    //     .script("../mobileSinglePlatform/js/orderPayResultInfo.js");
+		})();
+	</script>
+</html>

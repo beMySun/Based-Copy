@@ -1,0 +1,126 @@
+.m-head{
+    padding: 10px 20px;
+}
+.m-head .u-head{
+    padding: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+.u-conBox{
+    width: 100%;
+    overflow: hidden;
+}
+.u-img,.u-combo{
+    float: left;
+}
+.u-img{
+    width: 45%;
+}
+.u-combo{
+    width: 55%;
+    padding: 0px 0px 0px 20px;
+}
+.u-price{
+    padding: 0px 0px;
+}
+.u-price .f-f12{
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #999;
+    line-height: 20px;
+}
+.f-pf2em{
+    padding-left: 2em;
+}
+.f-txtRight{
+    text-align: right;
+    text-decoration: line-through;
+    font-weight: lighter;
+    color: #c8c8c8;
+}
+.f-weight{
+    font-weight: bold;
+}
+.f-fs12{
+    font-size: 14px;
+}
+.u-img img{
+    width: 100%;
+}
+.u-combo .u-title span{
+    font-weight: bold;
+}
+.u-combo span.f-red{
+    display: inline-block;
+    color: red;
+}
+.u-combo .u-con{
+    line-height: 24px;
+}
+.m-conBox{
+    height: 50px;
+    background: #fff;
+    font-size: 16px;
+}
+.m-conBox .u-tt{
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.m-conBox .u-select{
+    color: #37cdcc;
+    text-decoration:underline ;
+}
+.m-content{
+    padding: 20px;
+    overflow: hidden;
+    background: #eaeaea;
+    text-align: justify;
+    padding-bottom: 70px;
+}
+.m-content p .u-tt{
+    font-weight: bold;
+}
+.m-foot{
+    position: fixed;
+    width: 100%;
+    background: #eaeaea;
+    left: 0;
+    bottom: 0;
+}
+.m-foot .u-con{
+    background: #fff;
+    height: 50px;
+    padding:10px 20px;
+    vertical-align: inherit;
+}
+.m-foot .u-con span{
+    color: red;
+    display: inline-block;
+    font-weight: bold;
+}
+.m-foot .u-con .btn{
+    float: right;
+    color: #fff;
+}
+.btn-order{
+    background: #37cdcc;
+}
+.m-order{
+    display: none;
+}
+
+
+/*vip甄选*/
+.m-foot .u-vipCon{
+    padding:0px 20px;
+    background: none;
+    width: 100%;
+}
+.m-foot .u-vipCon .btn{
+    width: 100%;
+}

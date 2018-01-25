@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>load</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// var url = 'http://property.pingan.com/app/miuiProvision/32B847.css',
+
+	// head = document .getElementsByTagName( 'head' )[ 0 ];
+
+	// link = document .createElement( 'link' );
+
+	// link.type = "text/css" ;
+
+	// link.rel = "stylesheet"
+
+	// link.href = url;
+
+	// head.appendChild(link);
+
+	// link.onload = function () {
+
+	// 	// 加载完成
+	// 	console.log('loadded');
+
+	// }
+
+
+// function runScript(src) {
+//     return new Promise(function(resolve, reject) {
+//         var script = document.createElement('script');
+//         script.src = src;
+//         script.addEventListener('load',resolve);
+//         script.addEventListener('error',reject);
+//         (document.getElementsByTagName('head')[0] || document.body || document.documentElement).appendChild(script);
+//     })
+// }
+
+function insertStyle(src) {
+    return new Promise(function(resolve, reject) {
+        var link = document.createElement('link');
+        link.type = "text/css" ;
+        link.rel = "stylesheet";
+        link.href = src;
+        link.addEventListener('load',resolve);
+        link.addEventListener('error',reject);
+        (document.getElementsByTagName('head')[0] || document.body || document.documentElement).appendChild(link);
+    })
+}	
+
+insertStyle('http://property.pingan.com/app/miuiProvision/32B847.css')
+	.then(() => {
+		console.log('done');
+	})
+
+	
+</script>
+</html>

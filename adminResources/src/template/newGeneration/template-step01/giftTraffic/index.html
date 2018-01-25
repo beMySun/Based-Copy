@@ -1,0 +1,32 @@
+<div class="main">
+    <a href="javascript:void(0);" class="invisible-btn" id="get"></a>
+    <img src="img/kwwk_drive.png" class="product-img">
+</div>
+<div class="warn">
+    <span class="warn-icon"></span>
+    <p class="warn-text">
+        请使用微信打开
+    </p>
+</div>
+
+<script type="text/javascript">
+    (function () {
+        //文件加载器
+        var urlParams = JSON.parse(window.sessionStorage.getItem('urlParameters'));
+        var loader = {
+            addCssLink: function (href) {
+                var link = document.createElement('link');
+                link.rel = "stylesheet";
+                link.href = href;
+                document.querySelector('head').appendChild(link);
+            }
+        };
+        loader.addCssLink('css/newGeneration/reset.css');
+        loader.addCssLink('template/newGeneration/template-step01/giftTraffic/style.css');
+
+        //按次序加载js
+        $LAB
+            .script("template/newGeneration/template-step01/giftTraffic/kwwk.js");
+
+    })();
+</script>

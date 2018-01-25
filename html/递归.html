@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script language="javascript">
+      function Window_Load(){
+           
+          //自定义属性depth为2的所有html控件对象
+        var elements = getElementsByAttribute("depth","2");
+        alert(elements[0].outerHTML);
+        //取得所有width为29的html控件对象
+        var elements = getElementsByAttribute("width","29");  
+      }
+      var walk_the_DOM = function walk(node, func) {
+        debugger;
+        func(node);
+        node = node.firstChild;
+        while (node) {
+          walk(node, func);
+          node = node.nextSibling;
+        }
+      };
+       
+      var getElementsByAttribute = function (att, value) {
+        var results = [];
+   
+        walk_the_DOM(document.body, function (node) {
+          var actual = node.nodeType === 1 && node.getAttribute(att);
+          if (typeof actual === 'string' && 
+              (actual === value || typeof value !== 'string')) {
+            results.push(node)
+          }
+        });
+        return results;
+      };
+    </script>
+  </head>
+  <body onload="Window_Load();">
+    <div id="node1"> 
+        <div id="node11" depth="2" width="30"> dd </div>
+        <div id="node12" depth="2" width="29"> dd </div>
+        <div id="node13" depth="2" width="29"> dd </div>
+    </div>
+  </body>
+</html>

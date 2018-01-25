@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<meta name="Android" content="Martin_Cui">
+		<title>保险产品列表</title>
+		<!-- <link rel="stylesheet" type="text/css" href="orderPayResult.css"> -->
+	</head>
+	<body>
+		<!--#=没加载页面时-->
+		<div class="loading js-loading"></div>
+		<!--#=主要内容-->
+		<div class="contaitent" style="position:initial;">
+			<!--#=头部-->
+			<header>
+				<div class="contaitenttitle">
+					<img src="../img/btn_arrow_black_back@2x.png" id="goBackImg" class="head-img go-back" alt="返回">
+					<a class="icon-close" href="javascript:void(0);">关闭</a>
+					<strong class="title aacc">产品列表</strong>
+				</div>
+			</header>
+			<!--#=主要部分-->
+			<main class="content"  style="position:initial;">
+				<div id="box" class="box">
+					<div class="search">
+						<div class="search-input">
+							<img src="../img/btn_search@2x.png" alt="" class="search-img">
+							<input type="text" class="input" id="searchInput" placeholder="按名称搜索产品" >
+							<img src="../img/btn_delete@2x.png" alt="" class="search-img" id="detele" style="float:right;">
+						</div>
+						
+						<button class="search-button">查询</button>
+					</div>
+				</div>
+				<div class="box" id="productList" style="display:block;">
+					<ul class="product-ul">
+						<!-- <li class="product-li">
+							<div class="left">
+								<img src="../img/icon_xinping@2x.png" alt="" class="xin-icon">
+								<p class="picture"><a href=""><img src="../img/img_xionghaizi@2xlist.png"></a></p>
+								<div class="des">
+									<div class="des-box">
+										<p class="name">熊孩子综合熊孩子综合保障险保障险</p>
+										<p class="amout">500元起</p>
+										<p class="sale">1000人付款</p>
+									</div>
+								</div>
+							</div>
+						</li> -->
+					</ul>
+				</div>
+				<div id="search-box" style="display:none;">
+					<button class="product-button">少儿卫士</button>
+					<button class="product-button">成人保障</button>
+				</div>
+			</main>
+		</div>
+		<footer class="foot" style="display:block;">
+		</footer>
+	</body>
+	<script src='../js/lib/zepto.min.js'></script>
+	<script src='../js/lib/LAB.min.js'></script>
+	<script src="../js/lib/dropload.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+		    //文件加载器
+		    var loader = {
+		        addCssLink: function(href) {
+		            var link = document.createElement('link');
+		            link.rel = "stylesheet";
+		            link.href = href;
+		            document.querySelector('head').appendChild(link);
+		        }
+		    };
+		    //加载css
+		    loader.addCssLink('../css/newGeneration/newCommon.css');
+		    loader.addCssLink('../css/dropload.css');
+		    loader.addCssLink('../css/newGeneration/productList.css');
+
+		    //按次序加载js
+		     $LAB.script("../js/newGeneration/productList.js")
+		    
+		})();
+	</script>
+</html>

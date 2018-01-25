@@ -1,0 +1,49 @@
+.g-Box{
+    padding-bottom: 30px;
+    overflow: hidden;
+    background: #eaeaea;
+}
+.m-box{
+    padding: 10px 20px 0px;
+    background: #eaeaea;
+}
+.m-con{
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    padding-right:40px;
+
+}
+.u-conLeft{
+    width: 100%;
+    padding: 10px;
+}
+.u-conLeft p{
+    margin: 0px;
+    padding: 0px;
+}
+.u-conLeft .u-tag{
+    overflow: hidden;
+}
+.u-rightBox{
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #37cdcc;
+    text-align: center;
+    padding-left:10px;
+    padding-right:10px;
+    color:#fff;
+}
+.u-rightBox table{
+    width: 20px;
+    height: 100%;
+}
+.u-rightBox table td{
+    width: 20px;
+}
+.f-finish{
+    background: #ccc;
+}

@@ -1,0 +1,218 @@
+<!-- 选择国家 -->
+<style>
+html.selectCityActive {
+    font-size: 50px!important;
+}
+
+.list-city {
+    background: #fff;
+}
+
+.list-city .move-box {
+    background-color: #d3d3d3;
+    width: .6rem;
+    height: .6rem;
+}
+
+.list-city .search {
+    background-color: #E6E0E0;
+    position: fixed;
+    width: 100%;
+    height: .85rem;
+    z-index: 1;
+}
+
+.list-city .search-box {
+    position: relative;
+    top: .1rem;
+    width: 97%;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: .1rem;
+    text-align: left;
+}
+
+.list-city .search_icon {
+    width: 6%;
+    margin-top: .08rem;
+    margin-left: .2rem;
+}
+
+.list-city .search_input {
+    -webkit-appearance: none;
+    padding: 0;
+    width: 80%;
+    outline: 0;
+    border: none;
+    vertical-align: top;
+    font-size: .25rem;
+    margin-left: 3px;
+    line-height: 2;
+    padding-top: 2px;
+}
+
+.list-city #wrapper {
+    position: absolute;
+    top: 50px;
+    bottom: 43px;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.list-city .com_list_table_title {
+    margin: 0;
+    display: table;
+    width: 100%;
+    font-size: .25rem;
+    border-bottom: 1px solid #F1F1F1;
+    background-color: #F1F1F1;
+}
+
+.list-city .com_list_table_title span {
+    margin-left: 5%;
+    color: #b1b1b1;
+}
+
+.list-city .com_list_table,
+.list-city .com_list_table_area {
+    margin: 0;
+    display: table;
+    width: 100%;
+    height: .65rem;
+    font-size: .28rem;
+    line-height: .65rem;
+    background-color: #fff;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.list-city .com_list_table .img {
+    position: relative;
+    width: .4rem;
+    top: .1rem;
+    float: right;
+    margin-right: .3rem;
+    display: none;
+}
+
+.list-city .com_list_table .active-img {
+    display: block;
+}
+
+.list-city .com_list_table_title {
+    margin: 0;
+    display: table;
+    width: 100%;
+    font-size: .25rem;
+    border-bottom: 1px solid #F1F1F1;
+    background-color: #F1F1F1;
+}
+
+.list-city .com_list_table_title span {
+    margin-left: 5%;
+    color: #b1b1b1;
+}
+
+.list-city .disabled {
+    background-color: #F7F7F7;
+    pointer-events: none;
+}
+
+.list-city .com_list_table_title span {
+    margin-left: 5%;
+    color: #b1b1b1;
+}
+
+.list-city .com_list_table_title .chinese {
+    color: #000;
+}
+
+.list-city .com_list_table.disabled .chinese {
+    color: rgba(0, 0, 0, .3);
+}
+
+.list-city .sure {
+    display: -webkit-box;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.list-city .sure li {
+    -webkit-box-flex: 1;
+    font-size: .3rem;
+}
+
+.list-city .sure li:first-child {
+    background-color: #fff;
+    padding: .26rem;
+    color: #000;
+}
+
+.list-city .sure li:last-child {
+    background-color: #ff9500;
+    padding: .26rem;
+    color: #fff;
+}
+</style>
+<div class="list-city" id="city" style="display: none;height: 100%;">
+    <span class="move-box"></span>
+    <ul class="list-country" style="display:block ">
+        <li class="search">
+            <div class="search-box">
+                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAIAAABL1vtsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM3OEMyMkE3M0I3MDExRTY5MEIzRjEwQ0UwQTVBMkUzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM3OEMyMkE4M0I3MDExRTY5MEIzRjEwQ0UwQTVBMkUzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Mzc4QzIyQTUzQjcwMTFFNjkwQjNGMTBDRTBBNUEyRTMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Mzc4QzIyQTYzQjcwMTFFNjkwQjNGMTBDRTBBNUEyRTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5LiuHyAAABWklEQVR42uRUTauCUBBNffmBlbVIjLSgaKNb/0H/34VLU3EhSQUlURpp+g5ciDJSqM2DN4vLMMycOTNzlCrLsvWd0a2v7W9A/LyGbrfber3ebDZpmjIM0+/3VVXt9XrvIKjKOlFm2/bxeHxKoqjFYjGdTptZoD+p53l+MplIkpRlWRRFYOQ4DsdxiqI0QIRhSOpN0xQEgQSHw+FqtQqCwHVd+Bitbp3ohnc2m93ric3nc0QwYxzHDRdJkgRjDwaDahJNY6lwzudz81E/EOsThCiKePf7fSWpKIrD4QCn0+k0QIxGI7ye551Op8c4znG5XFiWxY0adIFulmWhYbvd1jSt2+3meY6jEl5YE45qGAacOmldr1dIg9B+lNY9DUwrKNTr/sAFnXe7HciTW6Bsu936vk8SxuOxrut1EO8MOyIowF0ul3Wf2TuDwCBNKFiW5bpd/Oe/1q8AAwAOS60s1q+dswAAAABJRU5ErkJggg==" class="search_icon"></span>
+                <input type="search" placeholder="输入关键字" class="search_input">
+            </div>
+        </li>
+    </ul>
+    <div id="wrapper">
+        <div>
+        </div>
+        <p id="title-city" class="com_list_table_title">
+            <span>热门</span></p>
+        <p class="com_list_table pseudo_province">
+            <span style="margin-left: 5%;" class="chinese">申根地区</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">Schengen Area</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">日本</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">Japan</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">韩国</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">Korea Rep</span><img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">泰国</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">Thailand</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">美国</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">United States</span><img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">英国</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">United Kingdom</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">法国</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">France</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">香港</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">Hong Kong</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">澳大利亚</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">Australia</span>
+            <img class="img active-img"></p>
+        <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">台湾</span>
+            <span style="margin-left:5%;color:#b1b1b1 ">Taiwan prov</span>
+            <img class="img active-img"></p>
+        <div id="id_province">
+        </div>
+    </div>
+    <div id="search" style="padding: 43px 0;width: 100%;height: 100%; overflow-y: scroll;background-color: rgb(255, 255, 255);display:none">
+        <div id="search-list" style="overflow-y: scroll;"></div>
+    </div>
+    <ul class="sure">
+        <li id="no"><span>取消</span></li>
+        <li id="yes">确定</li>
+    </ul>
+</div>
+<script>
+$LAB.script('js/util/selectCity.js');
+</script>

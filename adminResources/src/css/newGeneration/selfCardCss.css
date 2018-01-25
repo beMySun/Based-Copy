@@ -1,0 +1,37 @@
+/*自助卡配置样式*/
+
+html header{
+
+	background-color: #FFF; /*如果想定制头部背景色为白色 请改成#FFF*/
+
+}
+
+html .title{
+
+	color: #191919;
+
+}
+
+html .active,html .btn-active{
+
+	background: #FF7614;
+
+}
+
+html .confirm_know{
+
+	color: #FF7614;
+
+}
+
+html .amount,html .amout-p{
+
+	color: #d71e0b;
+
+}
+
+html .border-left,html .border-left p{
+
+	background: #d71e0b;
+
+}

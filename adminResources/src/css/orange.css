@@ -1,0 +1,35 @@
+html,
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+html header,
+html .step-first.active .digit,
+html .step.active .digit,
+html .btn-buy,
+html .list-city .sure li:last-child,
+html .hadSelected,
+html .vPopWin-title,
+html .label-title.insurant-title,
+html .submitBut {
+    background: #ff7614;
+}
+
+html .step.active:before {
+    border-color: #ff7614;
+}
+
+html .step-first.active .desc,
+html .step.active .desc,
+html .toolbar .picker-button,
+html .insurance-section .standard-fee-digit,
+html .insurance-section .standard-fee-text,
+html #addPerson,
+html .deleteThisRows,
+html #fontColor,
+html #clause,
+html #statement,
+html .modifyInfo,
+html .discount {
+    color: #ff7614;
+}

@@ -1,0 +1,231 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+ul>li,.pay-ul{
+    line-height: 30px;
+    display:-webkit-box;
+}
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.picker-item,.toolbar .title {
+    font-size: 16px;
+}
+.picker-button.close-picker {
+    font-size: 14px;
+}
+.pay-ul{
+    height:50px;
+    line-height: 50px;
+    font-size: 1.4rem;
+}
+
+.pay-ul>li{
+    width:50%;
+    border:1px solid #ccc;
+    text-align: center;
+}
+.border-left{
+    border-left: none;
+    background: #d71e0b;
+    color: #fff;
+    cursor:pointer
+}
+.pay-ul>li p{
+    width:100%;
+    line-height: 50px;
+}
+.box{
+    border:none;
+    width:88%;
+    margin:3% auto;
+}
+.left{
+    font-weight: bold;
+}
+.right{
+  font-size: 0.84rem;
+}
+.label-item {
+    position: relative;
+    line-height: 50px;
+    font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
+    background: #fff;
+    border-bottom: 1px solid #dcdcdc;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.num {
+  width: 2.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background: #ccc;
+    vertical-align: middle;
+    margin-left: .5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.amout-p{
+  color:#d71e0b;
+}
+.amout-li{
+    background: #fff;
+}
+.numInput {
+  width: 2rem;
+  text-align: center;
+  height: 1rem;
+  vertical-align: middle;
+  line-height: 1rem;
+}
+.margin-left{
+    margin-left: 0;
+}
+.label{
+    position: relative;
+    display: inline-block;
+    width:67%;
+}
+.label1{
+    display: inline-block;
+    padding-left: 16px;
+}
+.label-title {
+    line-height: 45px;
+    font-weight: 700;
+    color: #5f5f5f;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.3rem;
+}
+.label-title p{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.label-text {
+    width: 31%;
+}
+
+.label-select {
+    width:44%;
+    font-family: '微软雅黑';
+    background: #fff;
+}
+.input {
+    text-align: right;
+}
+.label .icon-r {
+    padding-right: 10px
+}
+
+
+.clear {
+    clear: both
+}
+
+[class*=icon-],
+[class^=icon-] {
+    display: inline-block
+}
+
+html .toolbar .picker-button {
+    color: #ff7614;
+}
+.label-space{
+    letter-spacing:28px;
+}
+.input input{
+    width: 100%;
+    padding-left: 3px;
+    line-height: 30px;
+    text-align: right;
+    font-family: '微软雅黑';
+    font-size: 14px;
+}
+.span-img {
+    width: 30px;
+    height: 30px;
+    margin-top: -4px;
+    vertical-align: middle;
+}
+.date-row label {
+    width: 110px;
+}
+.date-row p {
+    margin-left:110px;
+}
+
+.date-to-select:after {
+    top: 50%;
+    margin-top: -22px;
+    right: 0;
+    background-size: 12px;
+}
+
+#boy,#girl{
+    width: 1.2rem;
+  height: 1.2rem;
+  float: left;
+  margin-top: 3px;
+  margin-right:10px;
+}
+.errorText {
+    margin-bottom: 10px;
+    color: red;
+    line-height: 20px;
+    height: 20px;
+}
+
+.sexBox {
+    line-height: 22px;
+    width: 60%;
+}
+.box-sex {
+    text-align: right;
+}
+.checkEmail{
+    width: 1.0rem;
+    height: 1.0rem;
+}
+.email-label {
+    width: 63%;
+    padding-right: 4%;
+    display: inline-block;
+    text-align: right;
+    float: right
+}
+#u {
+    text-align: center;
+    border-bottom:none; 
+}
+#checkbox_send {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: 17px;
+    vertical-align: top;
+}
+#checkbox_send_footer {
+    width: 30px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+#confirm_read {
+    font-size: 1rem;
+    color: #686868;
+}
+.confirm_know{
+    color: #FF7614;
+}
+
+.icon-arrow-back{text-indent:-300px;display:block;width:14px;height:14px;border-bottom:2px solid #ccc;border-right:2px solid #ccc;position:absolute;top:50%;left:11px;margin-top:-6px;-webkit-transform:rotate(135deg);transform:rotate(135deg);border-radius:2px}
+

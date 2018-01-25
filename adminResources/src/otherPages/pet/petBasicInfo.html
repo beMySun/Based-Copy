@@ -1,0 +1,128 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+        <meta name="Android" content="Martin_Cui">
+        <link rel="stylesheet" href="../css/newGeneration/datetime.css">
+        <link rel="stylesheet" href="../css/newGeneration/reset.css">
+        <link rel="stylesheet" href="../css/wAlert.css">
+        <link rel="stylesheet" href="../css/newGeneration/pet.css">
+        <script src='../js/lib/zepto.min.js'></script>
+        <script src='../js/lib/datetime-picker.js'></script>
+        <script src='../js/util/validate.js'></script>
+        <script src='../js/util/wAlert.js'></script>
+        <title>投保信息</title>
+    </head>
+<body>
+    <div class="page">
+        <header>
+            <a class="btn-back" href="javascript:window.history.back();">返回</a>
+            <p class="title">投保信息</p>
+        </header>
+        <div class="content content-applicantInfo">
+            <section id="petInfo">
+                <h2 class="section-title">投保宠物健康医疗,需提供爱宠体检信息：</h2>
+                <ul class="section-body">
+                    <li>
+                        <div class="form-group">
+                            <p class="form-group-label">
+                                <span class=""><i class=""></i></span>体重
+                            </p>
+                            <label class="cw-label">
+                                <input type="text" class="form-control to-validate  to-validate-certificate" placeholder="必填">
+                            </label>
+                            <span class="danwei">kg</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <p class="form-group-label">
+                                <span class=""><i class=""></i></span>体温
+                            </p>
+                           <label class="cw-label">
+                                <input type="text" class="form-control to-validate  to-validate-certificate" placeholder="必填">
+                            </label>
+                            <span class="danwei">℃</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group form-group-select">
+                            <p class="form-group-label">
+                                <span class=""><i class=""></i></span>精神状态
+                            </p>
+                            <label>
+                                <select class="form-control form-control-select certificate-type">
+                                    <option value="0.5">良好</option>
+                                    <option value="1">差</option>
+                                </select>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group form-group-select">
+                            <p class="form-group-label">
+                                <span class=""><i class=""></i></span>食欲
+                            </p>
+                            <label>
+                                <select class="form-control form-control-select certificate-type">
+                                    <option value="0.5">良好</option>
+                                    <option value="1">差</option>
+                                </select>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group form-group-select">
+                            <p class="form-group-label">
+                                <span class=""><i class=""></i></span>是否绝育
+                            </p>
+                            <label>
+                                <select class="form-control form-control-select certificate-type">
+                                    <option value="N">否</option>
+                                    <option value="Y">是</option>
+                                </select>
+                            </label>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </section>
+            <section id="petInfo">
+                <p class="section-title no-top">
+                    <span class="icon"><i class="icon-photo"></i></span>
+                    补充影像资料</p>
+                <ul class="section-body">
+                    <li></li>
+                </ul>
+            </section>
+            <footer>
+                <a class="btn" href="javascript:void(0);"><span id="packageAmount"></span>元</a>
+                <a class="btn btn-red pay_tytj" href="javascript:void(0);" id="pay">下一步<span class="dotting"></span></a>
+            </footer>
+        </div>
+    </div>
+</body> 
+<script>
+(function() {
+    var loader = {
+        addCssLink: function(href) {
+            var link = document.createElement('link');
+            link.rel = "stylesheet";
+            link.href = href;
+            document.querySelector('head').appendChild(link);
+        }
+    };
+
+    loader.addCssLink('css/newGeneration/reset.css');
+    loader.addCssLink('template/newGeneration/template-step02/occupantsAccident/occupants.css');
+    loader.addCssLink('css/newGeneration/datetime.css');
+
+    $LAB
+        .script("js/lib/datetime-picker.js")
+        .script("js/util/validate.js")
+        .script("template/newGeneration/template-step02/occupantsAccident/occupants.js")
+        .script("template/newGeneration/template-step02/occupantsAccident/session.js");
+})();
+</script>
+</html>

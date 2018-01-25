@@ -1,0 +1,625 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+.table2 {
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.table2 td {
+    padding: 6px 0;
+}
+
+.table2Div {
+    color: #000;
+    opacity: 0.7;
+}
+
+.table2DivBF {
+    text-align: center;
+    color: #000;
+    opacity: 0.7;
+}
+
+.bF {
+    text-align: center;
+    padding: 2% 0 2% 0;
+    font-family: "微软雅黑";
+}
+
+#quotePrice {
+    color: #f63;
+    font-size: 20px;
+}
+
+.BFDiv {
+    position: relative;
+    z-index: 9999;
+}
+
+.ljtb {
+    border: 0px;
+    background-color: #ccc;
+    border-radius: 10px;
+    color: #Fff;
+    font: 18px "微软雅黑";
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 25%;
+    outline: none;
+    width: 90%;
+    margin-left: 5%;
+    line-height: 30px;
+}
+
+.table2Div2 {
+    margin-top: 3px;
+    text-align: center;
+}
+
+.table2Div2 span {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#totalBE, .number-font-color {
+    color: #f63;
+}
+
+.table2P {
+    color: #000;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.table2Td2 {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    opacity: .7;
+}
+
+#fEInput {
+    width: 30px;
+    border: 0;
+    text-align: center;
+    vertical-align: top;
+    height: 30px;
+}
+
+.employDiv {
+    margin-left: 25px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 0 0 0 10px;
+    position: relative;
+}
+
+.selectTBDX {
+    margin-left: 25px;
+    font-size: 10px;
+    font-family: '微软雅黑';
+}
+
+.ren {
+    position: absolute;
+    top: 9%;
+    right: 10%;
+}
+
+.fEspan {
+    margin: 0 5px;
+    border: 0px;
+    display: inline-block;
+}
+
+.nobaoxian {
+    color: red;
+    font-family: "微软雅黑";
+    text-align: center;
+}
+
+#select_city {
+    z-index: 999;
+    position: absolute;
+    top: 50px;
+}
+
+.com_textfield {
+    width: 87%;
+    padding: 6px 1px 6px 30px;
+    line-height: 30px;
+    color: #5d5d5d;
+    border: 1px solid #C5C5C5;
+    box-shadow: 1px 0 1px #999 inset;
+    border-radius: 8px;
+    font-size: 15px;
+    background: url(../images/icon_right.png) 10px center no-repeat;
+    background-size: 6%;
+    outline: none;
+}
+
+.com_list_table_area, .com_list_table {
+    display: table;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border-bottom: 1px solid #D0D0D0;
+    line-height: 40px;
+}
+
+.com_list_header_left {
+    display: table-cell;
+    padding-left: 37px;
+    width: 90%;
+}
+
+.com_list_header_right {
+    display: table-cell;
+    line-height: 42px;
+}
+
+.com_list_header_right_img {
+    width: 12px;
+    vertical-align: middle;
+}
+
+.loadingDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-color: #000;
+    z-index: 99999999;
+}
+
+.loadingDiv img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+span.com_list_table_lcell {
+    line-height: 40px;
+    padding-left: 37px;
+    display: inline-block;
+    width: 90%;
+}
+
+.bottom {
+    margin-bottom: 5px;
+}
+
+.contenttop_icon {
+    clear: both;
+    margin: 5px 0 0 10px;
+}
+
+.Consolebar {
+    width: 88%;
+    height: 21px;
+    margin: 0 auto;
+    background: url(../images/banner_icon.png)repeat 0px -195px;
+    position: relative;
+    margin-top: 31px;
+}
+
+.i_left, .i_right {
+    display: inline-block;
+    width: 10px;
+    height: 21px;
+    position: absolute;
+    top: -5px;
+}
+
+.color01 {
+    color: #f63;
+}
+
+.i_left {
+    background: url(../images/banner_icon.png)no-repeat 0px -130px;
+    left: -10px;
+}
+
+.i_right {
+    background: url(../images/banner_icon.png)no-repeat right -160px;
+    right: -10px;
+}
+
+.banner_cut {
+    position: absolute;
+    top: -8px;
+    left: 5%;
+    width: 29px;
+    height: 29px;
+    z-index: 10;
+    background: url(../images/banner_icon.png)no-repeat 0px -80px;
+    ;
+}
+
+.bannerNav {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 21px;
+}
+
+.bannerNav li {
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 29px;
+    font: 14px/24px "微软雅黑";
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.bannerNav li.item01 {
+    left: 5%;
+}
+
+.bannerNav li .node {
+    display: inline-block;
+    width: 30px;
+    height: 21px;
+    background: url(../images/banner_icon.png)no-repeat 0px -222px;
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    margin-left: -15px;
+}
+
+.bannerNav li.item02 {
+    left: 40%;
+}
+
+.bannerNav li.item03 {
+    left: 85%;
+}
+
+.selectCity {
+    height: 50px;
+    width: 80%;
+    padding-left: 7%;
+    outline: none;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #CCC;
+    margin-left: 10%;
+    font-family: "微软雅黑";
+    color: #666;
+    line-height: 40px;
+}
+
+em {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 6px solid #ccc;
+    border-bottom: 0px;
+    position: absolute;
+    bottom: 30px;
+    right: 35px;
+}
+
+.selectCityDivTd01 {
+    background-color: #FFB35F;
+    width: 42%;
+    color: #fff;
+    line-height: 35px;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 15px;
+}
+
+.backgroundColor {
+    background-color: #FE9A4C;
+}
+
+.selectCityDivTd01 div {
+    float: left;
+}
+
+.selectCityDivTd01 i {
+    display: inline-block;
+    width: 24px;
+    height: 32px;
+    background: url(../images/index-ico01.png)no-repeat;
+    margin: 8px 0 0 10px;
+}
+
+.selectCityDivTd01 .img {
+    position: absolute;
+    right: -10px;
+    bottom: 26px;
+}
+
+.span01 {
+    margin: 5px 0 0 5px;
+}
+
+.span02 {
+    margin: -10px 0 0 3px;
+}
+
+.Td02 i {
+    background: url(../images/index-ico02.png)no-repeat;
+}
+
+.f16 {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.pr20 {
+    font-size: 13px;
+}
+
+.Td02Div03 {
+    margin-left: 10%;
+}
+
+.employNumber {
+    height: 40px;
+    width: 80%;
+    padding-left: 7%;
+    outline: none;
+    font-size: 13px;
+    border-radius: 20px;
+    border: 1px solid #CCC;
+    margin-left: 10%;
+    font-family: "微软雅黑";
+    color: #666;
+    line-height: 36px;
+}
+
+.contentner_contentDiv {
+    postion: relative;
+    z-index: 0;
+    /*height:170px;*/
+}
+
+.insuranceRange {
+    /*height:170px;*/
+    width: 98%;
+    margin: 0 auto;
+    /*border-top:1px solid #ccc;*/
+    border-bottom: 1px solid #ccc;
+    overflow-y: auto;
+    position: relative;
+    z-index: 0;
+}
+
+.holderType {
+    display: none;
+}
+
+.vam {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/radio_01.png)no-repeat;
+    vertical-align: top;
+    margin-top: 14px;
+}
+
+.RadioChecked {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/radio_02.png)no-repeat;
+}
+
+.Consolebar .consolebarImg {
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    z-index: 55;
+}
+
+#employNumber, #selectCityDIV, #startYear, #startMonth, #startDay, #startDay+span, #endYear, #endMonth, #endDay, #endDay+span {
+    color: #666;
+}
+
+.contentner .contentnertimeer p .theColor {
+    font-weight: bold;
+}
+
+.shareLimite {
+    text-align: center;
+    font-size: 15px;
+    color: red;
+    font-weight: bold;
+}
+
+
+/*4.5  2.0版本*/
+
+.premium {
+    position: fixed;
+    bottom: 0;
+    line-height: 40px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.theProductTrait {
+    width: 86%;
+    margin: 15px auto;
+}
+
+.cheap {
+    margin-left: 20px;
+    margin-top: -11px;
+    color: #4F71AB;
+}
+
+.applicativeC {
+    width: 90%;
+    margin: 0 auto;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 20%;
+}
+
+.BF2 {
+    width: 50%;
+    background-color: #000;
+    height: 0%;
+    float: left;
+    text-align: center;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.promptlyInsurance {
+    width: 50%;
+    text-align: center;
+    float: left;
+    background-color: #e43;
+    color: #fff;
+}
+
+.theBox {
+    background-color: #fff;
+    position: absolute;
+    top: 33%;
+    width: 85%;
+    left: 8%;
+    border-radius: 5px;
+    z-index: 999999999;
+}
+
+p#theName {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+label.SJnum {
+    width: 40%;
+}
+
+input.thePhoneNum {
+    width: 80%;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.thePhoneButton {
+    padding: 3px 3px;
+    font-family: '微软雅黑';
+    width: 33%;
+    font-size: 14px;
+    border: 0;
+    background-color: #ccc;
+    color: #fdfdfd;
+    margin-left: 5%;
+    border-radius: 5px;
+    line-height: 26px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input.theCheckCode {
+    font-size: 14px;
+    width: 40%;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 20px;
+}
+
+.beSureInputIndex {
+    font-size: 16px;
+    color: #FDFDFD;
+    font-weight: bold;
+    border: 0;
+    outline: none;
+    background-color: #ccc;
+    padding: 5px 30px;
+    border-radius: 5px;
+    outline: none;
+    width: 80%;
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+.daojishi {
+    color: transparent;
+}
+
+p#theDetails {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.limitArea {
+    color: red;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.settlement {
+    border: 1px solid #ccc;
+    width: 90%;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+span.setSpan {
+    color: #ff7614;
+}
+
+.settlement i {
+    background-color: #ccc;
+    border-radius: 50%;
+    padding: 3px 4px 3px 2px;
+}
+
+.problems {
+    font-size: 13px;
+    background-color: #e5e5e5;
+    color: #ff7614;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+span#tips {
+    margin: 10px 20px;
+    font-size: 13px;
+    color: red;
+}
+
+img#closeBox {
+    float: right;
+    margin-top: -10px;
+    margin-right: -10px;
+}
+
+#loadingDiv {
+    opacity: 0.6;
+}

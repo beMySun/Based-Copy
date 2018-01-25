@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>promise ajax</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// var getJson = function (url) {
+	// 	var promise = new Promise((resolve, reject) => {
+	// 		var client = new XMLHttpRequest();
+	// 		client.open("GET", url);
+	// 		client.onreadystatechange = handler;
+	// 		client.responseType = "json";
+	// 		client.setRequestHeader = ("Accept", "application/json");
+	// 		client.send();
+
+	// 		function handler(){
+	// 			if(this.readyState !== 4) {
+	// 				return;
+	// 			}
+	// 			if(this.status === 200) {
+	// 				resolve(this.response);
+	// 			} else {
+	// 				reject(new Error(this.statusText()));
+	// 			}
+	// 		}
+	// 	});
+
+	// 	return promise;
+	// }
+	// getJson('someUrl/.json').then(function(data){
+	// 	console.log(data);
+	// }, function(error) {
+	// 	console.log('Error:' + error);
+	// });
+
+
+
+function get(uri){
+    return http(uri, 'GET', null);
+}
+
+function post(uri,data){
+    if(typeof data === 'object' && !(data instanceof String || (FormData && data instanceof FormData))) {
+        var params = [];
+        for(var p in data) {
+            if(data[p] instanceof Array) {
+                for(var i = 0; i < data[p].length; i++) {
+                    params.push(encodeURIComponent(p) + '[]=' + encodeURIComponent(data[p][i]));
+                }
+            } else {
+                params.push(encodeURIComponent(p) + '=' + encodeURIComponent(data[p]));
+            }
+        }
+        data = params.join('&');
+    }
+
+    return http(uri, 'POST', data || null, {
+        "Content-type":"application/x-www-form-urlencoded"
+    });
+}
+
+function http(uri,method,data,headers){
+    return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method,uri,true);
+        if(headers) {
+            for(var p in headers) {
+                xhr.setRequestHeader(p, headers[p]);
+            }
+        }
+        xhr.addEventListener('readystatechange',function(e){
+            if(xhr.readyState === 4) {
+                if(String(xhr.status).match(/^2\d\d$/)) {
+                    resolve(xhr.responseText);
+                } else {
+                    reject(xhr);
+                }
+            }
+        });
+        xhr.send(data);
+    })
+}
+
+
+get('https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js').then( data => {
+	console.log(data);
+})
+
+
+
+</script>
+</html>

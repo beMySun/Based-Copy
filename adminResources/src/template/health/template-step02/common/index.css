@@ -1,0 +1,11 @@
+.date-row label{width:110px}
+.date-row p{margin-left:110px}
+.sexBox{line-height:22px;padding:0 20px}
+.sexBox:nth-child(1){border-right:1px solid #dfdfdf}
+.sexText{margin-right:10px}
+.email-label{width:63%;padding-right:6%;display:inline-block;text-align:right;float:right}
+footer{margin-top:-110px}
+.singleText{width:14px}
+.right-icon{padding-right:6%;float:right}
+.icon{width:.8em;height:1em;background-size:contain;vertical-align:middle}
+.label-section{padding-bottom:50px}

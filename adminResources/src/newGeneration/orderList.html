@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<meta name="Android" content="Martin_Cui">
+		<title>产险自助卡订单</title>
+		<!-- <link rel="stylesheet" type="text/css" href="orderPayResult.css"> -->
+	</head>
+	<body style="background: #f2f2f2;">
+		<!--#=没加载页面时-->
+		<div class="loading js-loading"></div>
+		<!--#=主要内容-->
+		<div class="contaitent" style="position:initial;">
+			<!--#=头部-->
+			<header>
+				<div class="contaitenttitle">
+					<img src="../img/btn_arrow_black_back@2x.png" id="goBackImg" class="head-img go-back" alt="返回">
+					<a class="icon-close" href="javascript:void(0);">关闭</a>
+					<strong class="title aacc">订单列表</strong>
+				</div>
+			</header>
+			<!--#=主要部分-->
+			<main class="content1"  style="position:initial;">
+				<!-- <div class="box">
+					<ul class="box-content">
+						<li class="box-li">
+							<span class="left">保单号:</span>
+							<span class="right">P32132113212122</span>
+						</li>
+						<li class="border-top">
+							<span class="left">产品名称:</span>
+							<span class="right">熊孩子综合保障险</span>
+						</li>
+						<li>
+							<span class="box-span-left">
+								<span class="left">购买数量:</span>
+								<span>1032</span>张
+							</span>
+							<span class="box-span-right">
+								<span class="left">可赠送数量:</span>
+								<span>1022</span>张
+							</span>
+						</li>
+						<li>
+							<p class="box-p">
+								<button class="box-button">去赠送</button>
+							</p>
+							<p class="box-p-url" style="display:none;">
+								该保单已赠送完，可<a class="box-a" href="./productDetail.html">重新购买</a>
+							</p>
+						</li>
+					</ul>
+				</div>-->
+				
+			</main>
+		</div>
+		<div class="foot">
+		</div>
+		<!-- <footer class="foot">
+        	<div class="copyright">©中国平安财产保险股份有限公司</div>
+        </footer> -->
+	</body>
+	<script src='../js/lib/zepto.min.js'></script>
+	<script src='../js/lib/LAB.min.js'></script>
+	<script src="../js/lib/dropload.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+		    //文件加载器
+		    //文件加载器
+		    var loader = {
+		        addCssLink: function(href) {
+		            var link = document.createElement('link');
+		            link.rel = "stylesheet";
+		            link.href = href;
+		            document.querySelector('head').appendChild(link);
+		        }
+		    };
+		    
+
+		    //加载css
+		    loader.addCssLink('../css/newGeneration/newCommon.css');
+		    loader.addCssLink('../css/dropload.css');
+		    loader.addCssLink('../css/newGeneration/orderList.css');
+
+		    //按次序加载js
+		    $LAB.script("../js/newGeneration/orderList.js");
+		})();
+	</script>
+</html>

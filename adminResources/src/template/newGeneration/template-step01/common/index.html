@@ -1,0 +1,195 @@
+<!-- <!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<meta name="Android" content="Martin_Cui">
+		<title>产品详情</title>
+		<link rel="stylesheet" type="text/css" href="../../../../css/newGeneration/newCommon.css">
+		<link rel="stylesheet" type="text/css" href="productDetail.css">
+	</head> 
+	<body id="body"> -->
+		<div class="loading js-loading"></div>
+		<!--#=主要内容-->
+		<div class="contaitent" style="position:initial;overflow: auto;display:block">
+			<!--#=头部-->
+			<header>
+				<div class="contaitenttitle">
+					<a href="javascript:window.history.back(-1);" class="icon-arrow-back"></a> 
+					<a class="icon-close" href="javascript:void(0);" style="display:none;">关闭</a>
+					<strong class="title aacc">投保信息</strong>
+				</div>
+			</header>
+			<!--#=主要部分-->
+			<main class="content"  style="position:initial;">
+				<section class="show-picture" id="showPicture">
+					<img src="" alt="" class="show-img img" id="bgImg">
+					<p class="show-des"><span id="showDes"></span></p>
+				</section>
+				<section class="" id="tab1">
+					<div class="tab-div">
+						<ul class="tab-ul">
+							<li><a href="#product" id="js" class="a a-active tj-product" data-id="01">产品介绍</a></li>
+							<li><a href="#insurance" id="tx" class="a tj-know" data-id="02">投保须知</a></li>
+							<li><a href="#claim" id="lz" class="a tj-claim" data-id="03">理赔指南</a></li>
+							<li><a href="#quesion" class="a tj-question" id="cj" data-id="04">常见问题</a></li>
+						</ul>
+					</div>
+				</section>
+				<section class="" id="tab" style="display:none;">
+					<div class="tab-div">
+						<ul class="tab-ul">
+							<li><a href="#product" id="jsFixed" class="a a-active tj-product" data-id="01">产品介绍</a></li>
+							<li><a href="#insurance" id="txFixed" class="a tj-know" data-id="02">投保须知</a></li>
+							<li><a href="#claim" id="lzFixed" class="a tj-claim" data-id="03">理赔指南</a></li>
+							<li><a href="#quesion" class="a tj-question" id="cjFixed" data-id="04">常见问题</a></li>
+						</ul>
+					</div>
+				</section>
+				<section class="product" id="product">
+					<div class="product-ts">
+						<div id="productDes">
+							<p class="name">产品特色:</p>
+							<img src="" alt="" class="img">
+						</div>
+					</div>
+					<div class="product-tc">
+						<ul id="tcUl" class="tcUl">
+							
+						</ul>
+						<div class="tc-detail">
+							<p class="tc-detail-title">
+								<span>保障内容</span>
+								<span class="money">保障金额(元)</span>
+							</p>
+							<ul id="tcDetailText" class="tc-detail-text">
+							</ul>
+						</div>
+						<div class="more" id="more" data-code="">更多详情请查看《保险条款》</div>
+					</div>
+				</section>
+				<section id="insurance">
+					<p class="title-head"><span>投保须知</span></p>
+					<p class="tb-picture"><img src="" alt="" class="tb-img img"></p>
+				</section>
+				<section id="claim">
+					<p class="title-head"><span>理赔指南</span></p>
+					<p class="lp-picture"><img src="" alt="" class="lp-img img"></p>
+				</section>
+				<section id="quesion">
+					<p class="title-head"><span>常见问题</span></p>
+					<p class="cw-picture"><img src="" alt="" class="cw-img img"></p>
+				</section>
+			</main>
+		</div>
+		<footer class="footer" style="display:block;z-index: 90;">
+			<ul class="pay-ul">
+        		<li class="amount" id="amount">
+        			500元
+        		</li>
+        		<li class="border-left buy_tytj" id="pay">
+        			立即投保
+        		</li>
+        	</ul>
+		</footer>
+		<div id="mask" style="display:none;z-index: 90;">
+			<div class="mask"></div>
+			<div class="info">
+				<ul class="box-content1">
+					<li class="box-li1" id="plans">
+						<p class="info-left">
+							保障方案
+						</p>
+						<p class="info-right" id="choosePlan">
+						</p>
+					</li>
+					<li class="box-li">
+						<p class="info-left">
+							保险起期
+						</p>
+						<p class="info-right1">
+							<span class="span">
+							<span class="span">
+								<span class="ins-date ins-start-date" id="startSpanTime"></span>
+	                    		<input class="datePicker" type="text" id="J-datePicker">
+								<span class="sd">00时</span>
+								<img src="./img/icon_right.png" alt="" class="start-img">
+							</span>
+							</span>
+						</p>
+					</li>
+					<li class="box-li">
+						<p class="info-left">
+							保险止期
+						</p>
+						<p class="info-right1">
+							<span id="endSpanTime" class="ins-date ins-start-date" style="color: #5e5e5e;"></span>
+							<span class="ds"> 24时</span>
+						</p>
+					</li>
+					<li class="box-li">
+						<p class="info-left">
+							保险期限
+						</p>
+						<p class="info-right1">
+							<span class="ds" id="maxInsurance"></span>
+						</p>
+					</li>
+					<li class="box-li" style="border-bottom: none;">
+						<p class="info-left">
+							投保份数
+						</p>
+						<p class="info-right1">
+							<span class="span">
+								<img src="img/btn_-_black@2x.png" alt="" class="num" id="minus">
+								<input type="text" class="input-num" value="1" id="inputNum">
+								<img src="img/btn_+_black@2x.png" alt="" class="num" id="plus">
+							</span>
+						</p>
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<div id="hideInsuranceClause" style="display:none">
+		    <div class="contaitenttitle ruleHeader">
+				<a href="javascript:window.history.back(-1);" class="icon-arrow-back" id="ruleBack"></a> 
+				<span id="title" class="title">保险条款</span>
+			</div>
+		    <div id="hideContent" class="hideContent">
+		    </div>
+		</div>
+	<!-- </body> -->
+	<script type="text/javascript">
+		(function() {
+		    //文件加载器
+		    $("#commonCss").remove();
+		    var urlParams = JSON.parse(window.sessionStorage.getItem('urlParameters'));
+		    var loader = {
+		        addCssLink: function(href) {
+		            var link = document.createElement('link');
+		            link.rel = "stylesheet";
+		            link.href = href;
+		            document.querySelector('head').appendChild(link);
+		        }
+		    };
+		    $(".icon-close").on('click',function(){
+		    	window.location.href = 'newGeneration/productList.html?agentNo='+urlParams.agentNo+'&ciph='+urlParams.ciph+'&flag='+urlParams.flag;
+		    });
+		    // $('#ruleBack').on('click',function(e) {
+		    // 	window.history.back(-1);
+		    // });
+		    //加载css template/newGeneration/template-step01/common
+		    loader.addCssLink('css/newGeneration/newdatetime.css');
+		    loader.addCssLink('css/newGeneration/newCommon.css');
+		    loader.addCssLink('template/newGeneration/template-step01/common/productDetail.css');
+
+		    //按次序加载js
+		    $LAB.script("js/lib/datetime-picker.js")
+		    .script("js/util/check.js")
+		    .script("js/util/errCreat.js")
+		    .script("js/checkEXX.js")
+		    .script("template/newGeneration/template-step01/common/productDetail.js");
+		    
+		})();
+	</script>
+<!-- </html> -->

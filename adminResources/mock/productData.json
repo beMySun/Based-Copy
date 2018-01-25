@@ -1,0 +1,209 @@
+{
+  "template": "ptsDriver|ptsDriver",
+  "templateType": "newGeneration",
+  "color": "/icp_core_dmz/web/blue.css",
+  "PRODUCTCODE": "ICPP100095",
+  "accountInfo": {
+    "AGENT_DOT_CODE": null,
+    "BRANCH_DEPART_CODE": "205",
+    "SUB_AGENT_CONFER_NO": null,
+    "ACCOUNT": "b3b6800d98134293869b359d6bc65f14",
+    "IS_VALID": "1",
+    "BROKER_NAME": null,
+    "BUSINESS_SOURCE_CODE": null,
+    "SALE_AGENT_NAME": "苑兵博",
+    "BROKER_CHARGE_PROPORTION": null,
+    "userId": null,
+    "CHANNEL_SOURCE_DETAIL_CODE": null,
+    "DEPARTMENT_CODE": "20560",
+    "AGENT_DOT_NAME": null,
+    "BUSINESS_SOURCE_DETAIL_CODE": null,
+    "DEPARTMENT_CHN_NAME": "宝安支公司",
+    "BROKER_CODE": null,
+    "mediaSource": "icp-core",
+    "productCode": "ICPP100095",
+    "ACCOUNT_NAME": "寿险E行销",
+    "AGENT_CONFER_NO": null,
+    "AGENT_CHINESE_NAME": null,
+    "BONUSES_CODE": "0",
+    "BRANCH_DEPART_CHN_NAME": "深圳分公司",
+    "SALE_AGENT_CODE": "2050002445",
+    "APPLICANT_BUSINESS_TYPE": null,
+    "CHANNEL_SOURCE_CODE": null,
+    "CSS_ID": "1010",
+    "AGENT_CODE": null
+  },
+  "code": "00",
+  "ACCOUNT": "b3b6800d98134293869b359d6bc65f14",
+  "msg": "ok",
+  "planInfoList": [
+    {
+      "localProMap": {
+        "isDynamicAmount": "1",
+        "planName": "前程无忧计划一",
+        "resultMsg": "操作成功",
+        "maxUnderWriteDay": "90",
+        "maxUnderWriteMonth": "",
+        "pageTemplateId": "ptsOverseaCommon|ptsOverseaCommon",
+        "resultCode": "00",
+        "ID_ICP_MP_CX_PLAN_INFO": "8448db9caa794dd0ae0a711eb24dfed1",
+        "premiumDiscount": "",
+        "applicantMaxAge": "35",
+        "cssId": "1010",
+        "typeCode": "01",
+        "planSource": "N",
+        "insuredLimitedSex": "0",
+        "maxInsuranceMonth": "",
+        "smsCode": "",
+        "planCode": "MP03000152",
+        "applicantMiniAge": "12",
+        "payType": "1,2,3",
+        "isContainPackage": "1",
+        "applicantLimitedSex": "0",
+        "applicantStatement": "投保人声明",
+        "maxInsuranceDay": "365",
+        "planDesc": "前程无忧",
+        "id": "8448db9caa794dd0ae0a711eb24dfed1",
+        "productImageTopUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427564107379577762.png&channelType=1",
+        "productImageIproblemUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565601267918507.png&channelType=1",
+        "productImageMiddleUrl": null,
+        "productImageNoticeUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565552983777659.png&channelType=1",
+        "productImageIntroduceUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565090978054341.png&channelType=1",
+        "applicantStatementUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565623895957502.png&channelType=1",
+        "productImageClaimUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565578929126450.png&channelType=1",
+        "amount": null
+      },
+      "packageList": [
+        {
+          "insuredMiniAge": "12",
+          "insuredMaxAge": "35",
+          "packageName": "套餐1",
+          "packageId": "be2042a391414546a75901e486e2aa0c",
+          "packageAmount": 0,
+          "packageCode": "PK00002486",
+          "liabilityList": [
+            {
+              "liabilityDesc": "意外伤害身故、残疾",
+              "liabilityCode": "CVYA012",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外伤害身故、残疾111",
+              "liabilityId": "b736503e00dd489db6618891d1ba24c1",
+              "insuranceTypeCode": "PL03Y0067",
+              "deductiblesType": "",
+              "insuranceCoverage": "100000"
+            },
+            {
+              "liabilityDesc": "意外伤害身故、残疾",
+              "liabilityCode": "CVYA012",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外伤害身故、残疾112",
+              "liabilityId": "b736503e00dd489db6618891d1ba24c1",
+              "insuranceTypeCode": "PL03Y0067",
+              "deductiblesType": "",
+              "insuranceCoverage": "100001"
+            }            
+          ]
+        },
+        {
+          "insuredMiniAge": "12",
+          "insuredMaxAge": "35",
+          "packageName": "套餐2",
+          "packageId": "be2042a391414546a75901e486e2aa0c",
+          "packageAmount": 0,
+          "packageCode": "PK00002486",
+          "liabilityList": [
+            {
+              "liabilityDesc": "意外伤害身故、残疾",
+              "liabilityCode": "CVYA012",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外伤害身故、残疾111222",
+              "liabilityId": "b736503e00dd489db6618891d1ba24c1",
+              "insuranceTypeCode": "PL03Y0067",
+              "deductiblesType": "",
+              "insuranceCoverage": "200000"
+            }
+          ]
+        }        
+      ]
+    },
+    {
+      "localProMap": {
+        "isDynamicAmount": "100",
+        "planName": "前程无忧计划二",
+        "resultMsg": "操作成功",
+        "maxUnderWriteDay": "90",
+        "maxUnderWriteMonth": "",
+        "pageTemplateId": "ptsOverseaCommon|ptsOverseaCommon",
+        "resultCode": "00",
+        "ID_ICP_MP_CX_PLAN_INFO": "8448db9caa794dd0ae0a711eb24dfed1",
+        "premiumDiscount": "",
+        "applicantMaxAge": "35",
+        "cssId": "1010",
+        "typeCode": "01",
+        "planSource": "N",
+        "insuredLimitedSex": "0",
+        "maxInsuranceMonth": "",
+        "smsCode": "",
+        "planCode": "MP03000152",
+        "applicantMiniAge": "12",
+        "payType": "1,2,3",
+        "isContainPackage": "1",
+        "applicantLimitedSex": "0",
+        "applicantStatement": "投保人声明",
+        "maxInsuranceDay": "365",
+        "planDesc": "前程无忧",
+        "id": "8448db9caa794dd0ae0a711eb24dfed1",
+        "productImageTopUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427564107379577762.png&channelType=1",
+        "productImageIproblemUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565601267918507.png&channelType=1",
+        "productImageMiddleUrl": null,
+        "productImageNoticeUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565552983777659.png&channelType=1",
+        "productImageIntroduceUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565090978054341.png&channelType=1",
+        "applicantStatementUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565623895957502.png&channelType=1",
+        "productImageClaimUrl": "http://icp-core-stg1.paic.com.cn/icp-admin/downloadFile.do?fileName=80427565578929126450.png&channelType=1",
+        "amount": null
+      },
+      "packageList": [
+        {
+          "insuredMiniAge": "12",
+          "insuredMaxAge": "35",
+          "packageName": "套餐1",
+          "packageId": "be2042a391414546a75901e486e2aa0c",
+          "packageAmount": 0,
+          "packageCode": "PK00002486",
+          "liabilityList": [
+            {
+              "liabilityDesc": "意外伤害身故、残疾",
+              "liabilityCode": "CVYA012",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外伤害身故、残疾222",
+              "liabilityId": "b736503e00dd489db6618891d1ba24c1",
+              "insuranceTypeCode": "PL03Y0067",
+              "deductiblesType": "",
+              "insuranceCoverage": "100000"
+            }
+          ]
+        },
+        {
+          "insuredMiniAge": "12",
+          "insuredMaxAge": "35",
+          "packageName": "套餐12",
+          "packageId": "be2042a391414546a75901e486e2aa0c",
+          "packageAmount": 0,
+          "packageCode": "PK00002486",
+          "liabilityList": [
+            {
+              "liabilityDesc": "意外伤害身故、残疾",
+              "liabilityCode": "CVYA012",
+              "insuranceDeductibles": "",
+              "liabilityName": "意外伤害身故、残疾222333",
+              "liabilityId": "b736503e00dd489db6618891d1ba24c1",
+              "insuranceTypeCode": "PL03Y0067",
+              "deductiblesType": "",
+              "insuranceCoverage": "100000"
+            }
+          ]
+        }        
+      ]
+    }    
+  ]
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button data-action="lucky-draw">Lucky Draw</button>
+	<button data-action="some-action">Button</button>
+	<a href="#" data-action="another-action">Link</a>
+	<a href="#" data-action="another-action-2">Link</a>
+	
+	
+	
+
+	<div id="element" class="some">some slement</div>
+	<div id="button">button</div>
+	<script src="jquery-3.1.1.js"></script>
+	<script>
+		var $body = $(document.body);
+		var actionList = {
+			'lucky-draw' : function(){
+				console.log('lucky draw');
+			},
+			'another-action' : function(){
+				console.log('another-action');
+			}
+		}
+		$body.on('click','[data-action]',function(){
+
+			var actionName = $(this).data('action');
+			
+			var action = actionList[actionName];// 因为对象列表中，健值名字不是合法的，所以只能用键访问的方式，用属访问得到的值是undefined.
+
+			if($.isFunction(action)) action();
+		});
+
+		//拓展方法
+		$.extend(actionList, {
+			'more-action':function(){
+				// ...
+			}
+		})
+	</script>
+
+	<script>
+		// 函数的绑定
+		let sendMsg = {
+			ele: document.querySelector('#element'),
+			change: function(){
+				this.ele.classList.toggle('active');
+			}
+		}
+
+		// document.querySelector('#button').addEventListener('click',function(){
+
+		// 	// this.ele.classList.toggle('.active'); 抛出错误 找不到ele ; 原因出现在，绑定事件的回调函数是在全局作用域中执行的。
+
+		// 	//使用闭包解决
+		// 	sendMsg.change();
+		// });
+
+		//addEventListener中的第三个参 数是useCapture, 一个bool类型。
+		//当为false时为冒泡获取(由里向外, 默认为false)， 事件句柄在冒泡阶段执行
+		//true为capture方式(由外向里)。事件句柄在捕获阶段执行
+
+
+		function bind(fn, context) {
+
+				var args = Array.prototype.slice.call(arguments, 2); //获取上面两个参数以外的其余参数
+
+				return function(){
+					var innerArgs = Array.prototype.slice.call(arguments);
+					var final = args.concat(innerArgs);
+					fn.apply(context,final); //使用apply解析参数并调用.
+				}
+		}
+
+		// 上面的闭包可以改为：
+
+		//document.querySelector('#button').addEventListener('click', bind(sendMsg.change, sendMsg),false);
+		//或者
+		document.querySelector('#button').addEventListener('click', sendMsg.change.bind(sendMsg),false); // for IE 9+
+
+	</script>
+
+</body>
+</html>

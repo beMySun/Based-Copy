@@ -1,0 +1,197 @@
+<div class="page">
+    <header>
+        <a class="icon-back" href="javascript:window.history.back();"></a>
+        <strong class="title"><!-- 财产险通用模板 --></strong>
+        <a class="icon-tel" href="tel:95511">咨询</a>
+    </header>
+    <div class="content">
+        <section class="step-section">
+            <div class="step-container">
+                <div class="step-first active">
+                    <div class="digit-desc">
+                        <p class="digit">1</p>
+                        <p class="desc">产品信息</p>
+                    </div>
+                </div>
+                <div class="step active">
+                    <div class="digit-desc">
+                        <p class="digit">2</p>
+                        <p class="desc">投保人信息</p>
+                    </div>
+                </div>
+                <div class="step ">
+                    <div class="digit-desc ">
+                        <p class="digit">3</p>
+                        <p class="desc">被保险人信息</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="digit-desc ">
+                        <p class="digit">4</p>
+                        <p class="desc">付款</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="label-section">
+            <p class="label-title">投保人信息</p>
+            <!-- 投保人信息集合 -->
+            <div class="label-collections" id="applicantDatas">
+                <div class="label-item">
+                    <div class="label label-text">
+                        <p class="label-space">姓名</p>
+                    </div>
+                    <div class="label input">
+                        <input type="text" placeholder="请输入投保人姓名" id="applicantName">
+                    </div>
+                    <div class="label right-icon">
+                        <span class="icon icon-right"></span>
+                    </div>
+                </div>
+                <div id="link-man-id-datas">
+                    <div class="label-item">
+                        <div class="label label-text">
+                            <p>证件类型</p>
+                        </div>
+                        <div class="label input">
+                            <select id="applicantCertType" class="label-select">
+                                <option value="01">身份证</option>
+                                <option value="02">护照</option>
+                                <option value="03">军官证</option>
+                                <option value="05">驾驶证</option>
+                                <option value="06">港澳回乡证或台胞证</option>
+                                <option value="99">其他</option>
+                            </select>
+                        </div>
+                        <div class="label right-icon">
+                            <span class="icon icon-right"></span>
+                        </div>
+                    </div>
+                    <div class="label-item">
+                        <div class="label label-text">
+                            <p>证件号码</p>
+                        </div>
+                        <div class="label input">
+                            <input type="text" placeholder="证件号码中X用*号代替" id="applicantCertNo">
+                        </div>
+                        <div class="label right-icon">
+                            <span class="icon icon-right"></span>
+                        </div>
+                    </div>
+                    <div class="label-item" style="display:none" id="birthData">
+                        <div class="label label-text">
+                            <p>出生日期</p>
+                        </div>
+                        <div class="label input">
+                            <input class="" type="text" id="applicantBirthday" placeholder="请点击选择出生日期">
+                        </div>
+                    </div>
+                    <div class="label-item" style="display:none" id="sexData">
+                        <div class="label label-text">
+                            <p class="label-space">性别</p>
+                        </div>
+                        <p class="label sexbox">
+                            <label for="boy" class="label sexBox">
+                                <span class="sexText">男</span>
+                                <input type="radio" name="sex" value="M" id="boy">
+                            </label>
+                            <label for="girl" class="label sexBox">
+                                <span class="sexText">女</span>
+                                <input type="radio" name="sex" value="F" id="girl">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="label-item clear">
+                    <div class="label label-text">
+                        <p>手机号码</p>
+                    </div>
+                    <div class="label input">
+                        <input type="tel" placeholder="请输入手机号码" id="telephone" maxlength="11">
+                    </div>
+                    <div class="label right-icon">
+                        <span class="icon icon-right"></span>
+                    </div>
+                </div>
+                <div class="label-item clear">
+                    <div class="label label-text">
+                        <p>车牌号码</p>
+                    </div>
+                    <div class="label input">
+                        <input type="text" placeholder="请输入车牌号码" id="licenseNo">
+                    </div>
+                    <div class="label right-icon">
+                        <span class="icon icon-right"></span>
+                    </div>
+                </div>
+                <div class="label-item clear">
+                    <div class="label label-text">
+                        <p>车架号码</p>
+                    </div>
+                    <div class="label input">
+                        <input type="text" placeholder="请输入车架号码" id="skeletonNo">
+                    </div>
+                    <div class="label right-icon">
+                        <span class="icon icon-right"></span>
+                    </div>
+                </div>
+                <div class="label-item  clear">
+                    <div class="label label-text send">
+                        <p>发送电子保单</p>
+                    </div>
+                    <label for="email" class="email-label" id="email-label">
+                        <input type="checkbox" id="email" class="checkEmail">
+                    </label>
+                </div>
+                <div class="label-item last" id="show-email" style="display:none;">
+                    <div class="label label-text">
+                        <p class="label-space">邮箱</p>
+                    </div>
+                    <div class="label input">
+                        <input type="email" placeholder="请输入邮箱" id="applicantEmail">
+                    </div>
+                    <div class="label right-icon">
+                        <span class="icon icon-right"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div id="error" class="errorText" align="center"></div>
+        <a id="nextStep" class="btn-buy clear" href="javascript:;">下一步</a>
+        <p>©中国平安财产保险股份有限公司</p>
+    </footer>
+</div>
+<script type="text/javascript">
+(function() {
+    //文件加载器
+    var loader = {
+        //添加样式文件
+        addCssLink: function(href) {
+            var link = document.createElement('link');
+            link.rel = "stylesheet";
+            link.href = href;
+            document.querySelector('head').appendChild(link);
+        },
+        //添加脚步文件
+        addJsLink: function(href) {
+            var script = document.createElement('script');
+            script.src = href;
+            document.querySelector('body').appendChild(script);
+        }
+    };
+
+    //异步加载样式和脚本
+    loader.addCssLink('css/common.css');
+    loader.addCssLink('template/property/template-step02/commonCar/index.css');
+    loader.addCssLink('css/datetime-picker.css');
+
+    $LAB
+        .script("js/lib/datetime-picker.js")
+        .script('js/util/check.js')
+        .script("js/util/removeTel.js")
+        .script('template/property/template-step02/commonCar/index.js');
+
+})();
+</script>

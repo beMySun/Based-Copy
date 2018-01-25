@@ -1,0 +1,188 @@
+
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<meta name="Android" content="Martin_Cui">
+		<title>添加被保人信息</title>
+		<link href="css/common.css" type="text/css" rel="stylesheet">
+        <link href="css/miuiall.css" type="text/css" rel="stylesheet">
+        <link href="css/miuitraffic.css" type="text/css" rel="stylesheet">
+        <link href="css/plugins/mobiscroll/css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css" />
+        <link href="css/trafficBeInsured.css" type="text/css" rel="stylesheet">      
+	</head>
+	<body>
+		<!--#=没加载页面时-->
+		<div class="loadingDiv"><img src="images/ajax-loader.gif"></div>
+		<!--#=主要内容-->
+		<div class="contaitent" id="mainInfo">
+			<!--#=头部-->
+			<header>
+				<div class="left contaitentback"><a onclick="javascript:history.back(-1);"><img src="images/icon_back.png"></a></div>
+				<div class="right contaientAdvisory"><a href="tel:95511">咨询</a></div>
+				<div class="right contaitenttitle">团体交通意外险——优选型</div>
+			</header>
+			<!--#=主要部分-->
+			<main class="content">
+				<!--#=主体引导-->
+				<section class="contenttop">
+					<!--#=主体图标引导-->
+					<div class="contenttopicon">
+						<div class="contentchoiceicon">
+							<span class="left contentchoiceicontu">
+								<!--<img src="images/icon01.png">-->
+								<div class="icon01"></div>
+							</span>
+							<span class="left contentchoiceiconbiao">
+								<!-- <img src="images/icon_yellow.png"> -->
+								<div class="icon_bar"></div>
+							</span>
+							<span class="left contentchoiceicontu">
+								<!-- <img src="images/icon02.png"> -->
+								<div class="icon02"></div>
+							</span>
+							<span class="left contentchoiceiconbiao">
+								<!-- <img src="images/icon_yellow.png"> -->
+								<div class="icon_bar"></div>
+							</span>
+							<span class="left contentchoiceicontu">
+								<!-- <img src="images/icon03.png"> -->
+								<div class="icon03"></div>
+							</span>
+							<span class="left hide contentchoiceiconbiao">
+								<!-- <img src="images/icon_yellow.png"> -->
+								<div class="icon_bar"></div>
+							</span>
+							<span class="left hide contentchoiceicontu">
+								<!-- <img src="images/icon04.png"> -->
+								<div class="icon04"></div>
+							</span>
+						</div>
+					</div>
+					<!--#=主体文字引导-->
+					<div class="contenttoptext">
+						<span class="left contenttoptext01 color01">产品信息</span>
+						<span class="left contenttoptext02 color01">投保人信息</span>
+						<span class="left contenttoptext03 color01">被保险人信息</span>
+						<span class="left contenttoptext04">付款</span>
+					</div>
+				</section>
+				<!--#=主体内容-->
+				<section class="contentner">
+
+						 
+						 <!--#=保险时间选择-->
+						 <div class="contentner_title">
+						 	<span class="left">被投保人信息（不得少于三人）</span>
+						 	<div class="right contentner_addperson" style="width: 26%;"><a><span id="addPerson">+被保险人</span></a></div>
+						 </div>
+						 <div class="contentnertimeer_2" id="beInsuredList">
+						 	
+						 </div>
+						 <!--#=保险内容-->
+						 <div class="contentner_content_2">
+						 	<!--#=保险主要内容-->
+						 	<table>
+						 		<tr>
+							 		<td colspan="2">
+							 			<input id="isagreeinsuredbox" type="checkbox" class="contentner_checkebox left"  onchange="functions.agree_02(this)" style="margin-top: 4px;">
+							 			<label for="isagreeinsuredbox" class="left fsize01" style="padding-left: 10px;">我已阅读并同意<a href="javascript:;" id="shiyongTiaokuan">《适用条款》</a>及<a href="javascript:;" id="toubaorenState">《投保人声明》</a></label>
+							 		</td>
+							 	</tr>
+							 	<tr>
+							 		<td colspan="2">
+							 		</td>
+							 	</tr>
+							 	
+							 		
+							 		
+							 			<tr>
+									 		<td colspan="2">
+									 			<div class="left fsize03 fwight">应付保费&nbsp;<font id="fontColor"><span id="allAmount">0</span>元</font></div>
+									 		</td>
+									 	</tr>
+							 		
+							 	
+							 	<tr>
+							 		<td colspan="2">
+							 			<div id="error" name="error" class="contentner_contenterror fsize02 color03" align="center"></div>
+							 		</td>
+							 	</tr>
+						 	</table>
+						 	<!--#=购买-->
+						 	<div class="contentner_submitBut">
+						 		<input type="button" value="支付" class="submitBut_disabled" id="gotopay" disabled="disabled"/>
+						 	</div>
+
+
+
+						 	<footer class="clearfix footer">
+					        	<div class="copyright">©中国平安财产保险股份有限公司</div>
+					        </footer>
+						 </div>
+					
+				</section>
+			</main>
+		</div>
+		<form name="savebeinsured" id="savebeinsured" action="" method="post">
+			<!-- 团意产品 -->
+			 <input type="hidden" name="groupName" value="1"/>
+			 <input type="hidden" name="industryCode" value="a01"/>
+			 <input type="hidden" name="groupCertificateType" value="01"/>
+			 <input type="hidden" name="groupCertificateNo" value="1"/>
+			 <input type="hidden" name="linkManName" value="1"/>
+			 <input type="hidden" name="linkManMobileTelephone" value="15611111111"/>
+			 <input type="hidden" name="account" value="CZBX18"/>
+			 <input type="hidden" name="plansId" value=""/>
+			 <input type="hidden" name="productCode" value="00508"/>
+			 <input type="hidden" name="productName" value="团体交通意外险——优选型"/>
+			 <input type="hidden" name="insuranceBeginTime" value="2016-12-22"/>
+			 <input type="hidden" name="insuranceEndTime" value="2016-12-21"/>
+			 <input type="hidden" name="oldDigestTexts" value="5dce9efcdcd283dbd9699e5a25b4fff3fa71d452"/>
+			 <input type="hidden" name="startDate" value=""/>
+			 <input type="hidden" name="endDate" value=""/>
+			 <input type="hidden" name="applicantCertType" value="01"/>
+			 <input type="hidden" name="applicantCertNo" value=""/>
+			 <input type="hidden" name="applicantName" value=""/>
+			 <input type="hidden" name="telephone" value=""/>
+			 <input type="hidden" name="applicantEmail" value=""/>
+			 <input type="hidden" name="insuranceMonth" value=""/>
+			 <input type="hidden" name="insuranceDay" value="0"/>
+			 <input type="hidden" name="topAcceptInsurAge" value="80"/>
+			 <input type="hidden" name="leastAcceptInsurAge" value="18"/>
+			 <input type="hidden" name="applicantLimitedSex" value="0"/>
+		     <input type="hidden" name="applicantBirthday" value="1991-12-21"/>
+		     <input type="hidden" name="applicantSex" value="M"/>
+		     <input type="hidden" name="amount" value="50"/><!-- 标准保费 -->
+		     <input type="hidden" name="discountAmount" value=""/><!-- 优惠金额 -->
+			 <input type="hidden" value="1、适用人群：18周岁-80周岁；2、3人以上才可以投保团体产品；3、每人限投一份，多投无效。" id="cuiStatement" />
+			<input type="hidden" name="secondMediaSource" value=""/>
+			<input type="hidden" name="mediaSource" value="PACZ_CBPS"/>
+			<input type="hidden" name="orderNo" value=""/>
+			<input type="hidden" name="salesManCode" value=""/>
+			<input type="hidden" name="saleCode" value=""/>
+			<input type="hidden" name="applicantIdNo" value=""/>
+			<input type="hidden" name="remark" value=""/>
+			<input type="hidden" name="recommendCode" />
+			<input type="hidden" name="currentUserRecommendCode" />
+		</form>
+		<!-- 适用条款 -->
+		<div class="contaitent" style="display: none; z-index: 99999999999; position: absolute;" id="sytkInfo">
+			<header style="position: fixed;">
+				<div class="left contaitentback">
+					<a onclick="javascript:history.back(-1);"><img src="images/icon_back.png"></a>
+				</div>
+				<div class="right contaitenttitle" id="contaitentTitle"></div>
+			</header>
+			<div style="width:100%;line-height:20px;margin-bottom:10px;margin-top:50px;word-wrap: break-word;font-size:14px;font-weight:normal;overflow: auto; height: 90%;" id="cui_tbsm_container">
+			</div>
+		</div>
+	</body>
+    <script src="js/libs/seajs/2.3.0/sea.js" id="seajsnode" ></script>
+    <script src="js/config-seajs.js" ></script>
+    <script type="text/javascript">
+            seajs.use('ahsInsuranceForGroupInsurant');
+    </script>
+
+</html>

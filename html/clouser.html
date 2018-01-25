@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+</head>
+<body>
+	
+	<div class="tabs">
+		<li class="tab">some text1</li>
+		<li class="tab">some text2</li>
+		<li class="tab">some text3</li>
+	</div>
+</body>
+<script>
+
+var handler2 = function(nodes) {
+
+	for(var i = 0, l = nodes.length; i < l ; i++) {
+		
+		//nodes[i].index = i;
+
+		nodes[i].onclick = function(){
+
+			console.log(i);
+
+	    // for(var j = 0; j < nodes.length; j++){
+
+	    // 	nodes[j].className = '';
+
+	    // }
+
+	    //     this.className = 'selected';
+      		
+
+		}
+	}
+}
+
+var handler3 = function(nodes) {
+
+	var helper = function(i){
+		return function(e){
+			console.log(i);
+		}
+	}
+
+	for(var i = 0, l = nodes.length; i < l ; i++) {
+		
+		nodes[i].onclick = helper(i);
+	}
+}
+
+var handler = function(nodes) {
+
+	for(let i = 0, l = nodes.length; i < l ; i++) {
+		
+		//nodes[i].index = i;
+
+		nodes[i].onclick = function(){
+
+			console.log(i);
+
+
+		}
+	}
+}
+
+var tabs = document.querySelectorAll('.tabs .tab');
+
+	handler(tabs);
+
+	// function a() {
+	// 	var a = 1;
+
+	// 	function b() {
+	// 		console.log(a);
+
+	// 	}
+
+	// 	return b;
+
+	// }
+
+	// var c = a();
+
+	// c(); // 1
+
+	// a 执行完毕之后，通常会期待 a 的内部被销毁，内存被回收，但是由于 B 
+	// 的位置在a的内部，他拥有覆盖a内部作用域的闭包，使得该作用域一直存活，以供b 在之后的其它时间进行引用，
+	// 而这个引用，就叫做闭包。
+
+</script>
+</html>

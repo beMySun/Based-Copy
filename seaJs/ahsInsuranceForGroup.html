@@ -1,0 +1,509 @@
+
+        <!DOCTYPE>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport"
+            content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+            <meta name="Android" content="Martin_Cui">
+            <title>团体意外险套餐</title>
+            
+            <link href="css/miuiall.css" type="text/css" rel="stylesheet">
+            <link href="css/miuitraffic.css" type="text/css" rel="stylesheet">
+            <link href="css/plugins/mobiscroll/css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css" />
+            <link href="css/common.css" type="text/css" rel="stylesheet">
+            <link href="css/plugins/layer/layer.min.css" rel="stylesheet">
+        </head>
+
+        <body >
+  
+        <!--#=没加载页面时-->
+        <div class="loadingDiv" id="loadingDiv"><img src="images/ajax-loader.gif"></div>
+        <!--#=主要内容-->
+        <div class="contaitent">
+            <!--#=头部-->
+            <header>
+                <div class="left contaitentback"><a onclick="goBack()"><img src="images/icon_back.png"></a></div>
+                <div class="right contaientAdvisory">
+                    <a href="tel:95511">咨询</a>
+                </div>
+                <div class="right contaitenttitle">员工保障计划A款</div>
+            </header>
+            <!--#=主要部分-->
+            <main class="content">
+            <!--#=主体引导-->
+            <section class="contenttop">
+            <!--#=主体图标引导-->
+            <div class="contenttopicon">
+            <div class="contentchoiceicon">
+            <span class="left contentchoiceicontu">
+            <!--<img src="images/icon01.png">-->
+            <div class="icon01"></div>
+            </span>
+            <span class="left hide contentchoiceiconbiao">
+            <!-- <img src="images/icon_yellow.png"> -->
+            <div class="icon_bar"></div>
+            </span>
+            <span class="left hide contentchoiceicontu">
+            <!-- <img src="images/icon02.png"> -->
+            <div class="icon02"></div>
+            </span>
+            <span class="left hide contentchoiceiconbiao">
+            <!-- <img src="images/icon_yellow.png"> -->
+            <div class="icon_bar"></div>
+            </span>
+            <span class="left hide contentchoiceicontu">
+            <!-- <img src="images/icon03.png"> -->
+            <div class="icon03"></div>
+            </span>
+            <span class="left hide contentchoiceiconbiao">
+            <!-- <img src="images/icon_yellow.png"> -->
+            <div class="icon_bar"></div>
+            </span>
+            <span class="left hide contentchoiceicontu">
+            <!-- <img src="images/icon04.png"> -->
+            <div class="icon04"></div>
+            </span>
+            </div>
+            </div>
+            <!--#=主体文字引导-->
+            <div class="contenttoptext">
+            <span class="left contenttoptext01 color01">产品信息</span>
+            <span class="left contenttoptext02">投保人信息</span>
+            <span class="left contenttoptext03">被保险人信息</span>
+            <span class="left contenttoptext04">付款</span>
+            </div>
+            </section>
+                <!--#=主体内容-->
+                <section class="contentner">
+                <!--#=保险时间选择-->
+                <div class="contentnertimeer">
+
+                 <p>
+                    <label class="left">选择方案</label>
+                    <span class="selectdiv left">
+                        <select id="taocan" data-clickAction="change" style="padding:2px 0 2px 0px;" class="selectDisabled"  >
+                            <optgroup label="请选择"></optgroup>
+                            <option value="53030">畅游九州—经济套餐0</option>
+                            <option value="53031">畅游九州—经济套餐1</option>
+                        </select>
+                    </span>
+                     <span class="right tc"><img src="images/icon_right.png"></span>
+                </p>
+
+
+                 <p>
+                    <label class="left">旅行目的地</label>
+                    <span class="selectdiv left">
+                        <input type="text" placeholder="请选择" id="selectCityDIV" readonly="readonly" class="list-ct" style="margin: 0;width: 100%;color:#0097fb">
+                    </span>
+                     <span class="right tc"><img src="images/icon_right.png"></span>
+                </p>
+
+                <p>
+                <label class="left">保险起期</label>
+                <input type="text" id="dateInput" class="left" style="opacity:1;"  min="" />
+                <span class="right tc"><img src="images/icon_right.png" /></span>
+                <label class="right" style="width: 25%;color: #0079FB;height: 30px;line-height: 30px;margin-top:
+                8px;">00时</label>
+                </p>
+                <p>
+                <label class="left">保险止期</label>
+                <input type="text" id="drivingCardBirthday" class="left" style="opacity:1;" />
+                <span class="right tc"><img src="images/icon_right.png"></span>
+                <label class="right" style="width: 25%;color: #0079FB;height: 30px;line-height: 30px;margin-top:
+                8px;">24时</label>
+                </p>
+                </div>
+                <!--#=保险内容-->
+<!--                 <div class="contentner_content">
+
+                    <table class="fsize02">
+
+
+                        <tr>
+                            <th width="60%" align="left">保障范围</th>
+                            <th width="40%" align="right">保险金额</th>
+                        </tr>
+                        <tr>
+                            <td width="60%" align="left">意外住院和门急诊</td>
+                            <td width="40%" align="right">10000元</td>
+                        </tr>
+                        
+                        <tr>
+                            <td width="60%" align="left">汽车意外伤害身故和残疾</td>
+                            <td width="40%" align="right">10000元</td>
+                        </tr>
+                    
+                        <tr>
+                            <td width="60%" align="left">意外伤害身故和残疾</td>
+                            <td width="40%" align="right">100000元</td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td colspan="2">
+                         
+                                <div class="left fsize04" style="margin-top:20px;">标准保费&nbsp;<font id="fontColor"><span id="amount">
+                                </span>元/人</font></div>
+                            </td>
+                        </tr>
+                    <tr>
+                    <td colspan="2">
+                    <div id="error" name="error" class="contentner_contenterror fsize02 color03" align="center"></div>
+                    </td>
+                    </tr>
+                    </table>
+                 
+                    <div class="contentner_submitBut">
+                        <input type="button" value="购买" class="submitBut" id="toubaoButton"  data-action="applyInsurance"/>
+                    </div>
+
+                    <footer class="clearfix footer">
+                        <div class="copyright">©中国平安财产保险股份有限公司</div>
+                    </footer>
+
+                </div> -->
+
+<div class="contentner_content">
+
+                        <table class="fsize02">
+                            <tbody><tr>
+                                <th width="60%" align="left">保障范围</th>
+                                <th width="40%" align="right">保险金额</th>
+                            </tr>
+
+
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">遗体/骨灰送返</td>
+                                        <td width="40%" align="right">100000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">安排并支付未成年子女回国</td>
+                                        <td width="40%" align="right">5000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">亲属前往处理后事保险金</td>
+                                        <td width="40%" align="right">5000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">医疗运送和送返</td>
+                                        <td width="40%" align="right">500000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">意外和疾病住院和门急诊</td>
+                                        <td width="40%" align="right">100000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">意外伤害身故和残疾</td>
+                                        <td width="40%" align="right">200000元</td>
+                                    </tr>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+
+
+                        </tbody></table>
+
+                        <table id="moreTable" style="display:none">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <tbody><tr>
+                                        <td width="60%" align="left">行李损失</td>
+                                        <td width="40%" align="right">5000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">票证损失</td>
+                                        <td width="40%" align="right">3000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">钱财损失</td>
+                                        <td width="40%" align="right">1000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">旅行延误</td>
+                                        <td width="40%" align="right">600元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">行李延误</td>
+                                        <td width="40%" align="right">1000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">家庭财产损失</td>
+                                        <td width="40%" align="right">1000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">第三者责任</td>
+                                        <td width="40%" align="right">600000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">旅行变更</td>
+                                        <td width="40%" align="right">5000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">绑架及非法拘禁</td>
+                                        <td width="40%" align="right">12000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">签证拒签补偿</td>
+                                        <td width="40%" align="right">300元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">账户资金损失</td>
+                                        <td width="40%" align="right">3000元</td>
+                                    </tr>
+                                
+                            
+                                
+                                    <tr>
+                                        <td width="60%" align="left">赎金及协助处理费用</td>
+                                        <td width="40%" align="right">300000元</td>
+                                    </tr>
+                                
+                            
+                        </tbody></table>
+
+                        
+                            <div style="margin-left:5%;font-size:14px;margin-top:3%;">
+                                <a href="#" id="moreContent" data-action="showMoreContent">查看详情内容</a>
+                            </div>
+                        
+
+
+                        
+
+                        <table>    
+                            
+                                
+
+                                
+                                    <tbody><tr>
+                                        <td colspan="2">
+                                            <!--#=保费-->
+                                            <div class="left fsize04" style="margin-top:20px;">标准保费&nbsp;<font id="fontColor"><span id="amount">855.0</span>元/人</font></div>
+                                        </td>
+                                    </tr>
+                                
+                            
+                            <tr>
+                                <td colspan="2">
+                                    <div id="error" name="error" class="contentner_contenterror fsize02 color03" align="center"></div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <div class="contentner_submitBut">
+                            <input type="button" value="购买" class="submitBut" id="toubaoButton" data-action="applyInsurance">
+                        </div>
+                    </div>
+
+                </section>
+            </main>
+        </div>
+        
+        <!--国家选择页面-->
+        <div class="list-city" id="city" style="display: none;height: 100%;">
+            <span class="move-box"></span>
+            <ul class="list-country" style="display:block ">
+                <li class="search">
+                    <div class="search-box">
+                        <span><img src="images/icon_sousuo.png" class="search_icon"></span>
+                        <input type="search" placeholder="输入关键字" class="search_input">
+                    </div>
+                </li>
+            </ul>
+            <div id="wrapper">
+                <div>
+                </div>
+                <p id="title-city" class="com_list_table_title">
+                    <span>热门</span></p>
+
+                <p class="com_list_table pseudo_province">
+                    <span style="margin-left: 5%;" class="chinese">申根地区</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">Schengen Area</span>
+                    <img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">日本</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">Japan</span>
+                    <img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">韩国</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">Korea Rep</span><img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">泰国</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">Thailand</span>
+                    <img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">美国</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">United States</span><img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">英国</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">United Kingdom</span>
+                    <img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">法国</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">France</span>
+                    <img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">香港</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">Hong Kong</span>
+                    <img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">澳大利亚</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">Australia</span>
+                    <img class="img active-img"></p>
+
+                <p class="com_list_table pseudo_province"><span style="margin-left: 5%;" class="chinese">台湾</span>
+                    <span style="margin-left:5%;color:#b1b1b1 ">Taiwan prov</span>
+                    <img class="img active-img"></p>
+
+                <div id="id_province">
+                </div>
+                <!--<div style="height:0.8rem;width: 100%; background-color: #e8e8e8"></div>-->
+            </div>
+            <div id="search"
+                 style="padding-top: 0.86rem; margin-bottom: 1rem;width: 100%;height: 9rem; overflow-y: scroll;background-color: rgb(255, 255, 255);display:none">
+                <div id="search-list" style="overflow-y: scroll;"></div>
+            </div>
+            <ul class="sure">
+                <li id="no"><span>取消</span></li>
+                <li id="yes">确定</li>
+            </ul>
+
+        </div>
+
+        <form name="bicycleInsurance" id="bicycleInsurance" action="" method="post">
+            <input type="hidden" name="account" value="CZBX18"/>
+            <input type="hidden" name="plansId" value=""/>
+            <input type="hidden" name="productCode" value="00505"/>
+            <input type="hidden" name="productName" value="员工保障计划A款"/>
+            <input type="hidden" name="insuranceCategory" value="A"/>
+            <input type="hidden" name="pageView" value="ahsForGroupPersonPrice"/>
+
+            <input type="hidden" name="insuranceMonth" value=""/>
+            <input type="hidden" name="insuranceDay" value="90"/>
+
+            <input type="hidden" name="underwriteMonth" value=""/>
+            <input type="hidden" name="underwriteDay" value="60"/>
+            <input type="hidden" name="leastBeginDate" value="2016-12-19 15:31:49"/>
+            <input type="hidden" name="insuranceWasCurrday" value="0"/>
+            <input type="hidden" name="insuranceBeginExplanation" value=""/>
+            <input type="hidden" name="oldDigestTexts" value=""/>
+            <input type="hidden" name="amount" value=""/><!-- 标准保费 -->
+            <input type="hidden" name="discountAmount" value=""/><!-- 优惠金额 -->
+
+            <input type="hidden" name="insuranceBeginTime" id="insuranceBeginTime" value=""/>
+            <input type="hidden" name="insuranceEndTime" id="insuranceEndTime" value=""/>
+
+            <input type="hidden" name="secondMediaSource"/>
+            <input type="hidden" name="mediaSource"/>
+            <input type="hidden" name="orderNo"/>
+            <input type="hidden" name="salesManCode"/>
+            <input type="hidden" name="saleCode"/>
+            <input type="hidden" name="applicantIdNo"/>
+            <input type="hidden" name="remark"/>
+            <!-- 赋值过来 -->
+            <input type="hidden" name="taocan" value=""/>
+        </form>
+
+    </body>
+
+    <!-- 网站统计 -->
+<!--     <script src="http://www.pingan.com/app_js/sdc/prd/sdc9_m.js"> </script>
+    <script src="js/test_webtrends.js"></script>
+    <script type="text/javascript">
+        console.log('1');
+        initWebtrends();
+    </script>
+ -->
+    <script src="js/libs/seajs/2.3.0/sea.js" id="seajsnode" ></script>
+    <script src="js/config-seajs.js" ></script>
+
+    <script type="text/javascript">
+            seajs.use('ahsInsuranceForGroup');
+    </script>
+
+
+</html>

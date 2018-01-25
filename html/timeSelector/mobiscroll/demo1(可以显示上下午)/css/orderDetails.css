@@ -1,0 +1,60 @@
+.m-box{
+    padding: 10px 20px;
+    background: #eaeaea;
+}
+.u-box{
+    background: #fff;
+}
+.u-box .u-title{
+    height: 40px;
+    color: #fff;
+    background: #37cdcc;
+    padding: 10px;
+}
+.u-detail{
+    padding: 10px;
+}
+.f-padd{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.f-bac{
+    background: #eaeaea;
+    /*background: #ccc;*/
+    padding-left: 10px;
+}
+.f-bac p{
+    padding-right: 10px;
+    padding-top: 20px;
+    border-left: 1px solid #ccc;
+    position: relative;
+}
+.f-bac p i{
+    width: 9px;
+    height: 9px;
+    border-radius: 4px;
+    display: inline-block;
+    background: #37cdcc;
+    position: absolute;
+    left: -5px;
+    bottom: 7px;
+}
+.f-fr{
+    float: right;
+}
+.u-btnBox{
+    padding-top:40px;
+    padding-bottom:30px;
+}
+.u-btnBox .btn{
+    width: 40%;
+    color: #fff;
+    background: #d1d1d1;
+}
+.u-btnBox .btn-pay{
+    float: right;
+    background: #37cdcc;
+}
+.u-cancel .btn{
+    width: 100%;
+}

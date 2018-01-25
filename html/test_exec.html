@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test & exec</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.test {
+			position: fixed;
+		    z-index: 5000;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    background: rgba(17, 17, 17, .7);
+		    text-align: center;
+		    border-radius: 5px;
+		    color: #fff;
+		    line-height: 1.6;
+		    padding: .5em 1.6em;			
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="node">
+		<span>1</span>
+		<p>2</p>
+		</br>
+	</div>
+	
+	<div class="test">
+		this is some test
+	</div>
+
+<script>
+
+	var string = '<html><body bgcolor=linen><p>this is <b>bold</b>!</p></body></html>';
+	var text = document.getElementById('node').innerHTML;
+	var tags = /[^<>]+|<(\/?)([A-Za-z]+)([^<>]*)>/g
+	var array , i , result = [];
+
+   while (( array = tags.exec(string)))
+    for( i = 0 ; i < array.length; i++) {
+    	// document.writeln(('// [' + i  + '] :' + array[i]).entityify());
+    	 result.push(array[i]) ;
+    	
+    } 
+    console.log(result);
+</script>
+</body>
+</html>

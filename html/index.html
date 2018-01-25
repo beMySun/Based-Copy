@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双飞翼</title>
+	<style>
+		.main {
+			float:left; width:100%;margin-bottom:-3000px; padding-bottom:3000px;background:#F90;
+		}
+		.left {
+			float:left; margin-left:-100%; width:150px; background:#6C0; margin-bottom:-3000px; padding-bottom:3000px;
+		}
+		.right {
+
+			float:left; margin-left:-200px; width:200px; background:#F9F; margin-bottom:-3000px; padding-bottom:3000px;
+		}
+
+		.main-wrap-2 {   margin:0 200px 0 150px;  }
+	</style>
+</head>
+<body>
+	
+	<section class="container">
+		<!-- 优先加载关键在于重要内容在html里面必须在前面，所有main部分移到了最上面 -->
+		<div class="main">
+			 <div class="main-wrap-2">main-wrap</div>
+		</div>
+		<div class="left">
+			left
+		</div>
+		<div class="right">
+			right
+		</div>
+	</section>
+	
+</body>
+</html>

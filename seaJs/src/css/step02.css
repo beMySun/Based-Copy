@@ -1,0 +1,14 @@
+	
+	input[type=text], select {
+		-webkit-appearance: none;
+		background: 0 0;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	}
+
+    footer { 
+        position: relative;
+        padding-top: 10px;
+ 
+    }
+
